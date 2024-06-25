@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\pcb\micro-mixer-pcb\micro-mixer-pcb.kicad_sch</source>
+    <date>4/4/2023 9:57:31 PM</date>
+    <tool>Eeschema (6.0.0)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>micro-mixer-pcb.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>470n</value>
+      <footprint>Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="micro-mixer-pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c370ddff-d1f7-49c5-96cc-8821c3646f90</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>470n</value>
+      <footprint>Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="micro-mixer-pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f1996ffe-9edc-4584-af39-e248395b1d61</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>D_Small</value>
+      <footprint>Diode_THT:D_DO-34_SOD68_P7.62mm_Horizontal</footprint>
+      <libsource lib="Device" part="D_Small" description="Diode, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="micro-mixer-pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>738b6d82-56f4-4001-9949-0aa61cea2090</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>D_Small</value>
+      <footprint>Diode_THT:D_DO-34_SOD68_P7.62mm_Horizontal</footprint>
+      <libsource lib="Device" part="D_Small" description="Diode, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="micro-mixer-pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>50f6cee5-01c5-46ca-bdb8-eeaa20a4d3fa</tstamps>
+    </comp>
+    <comp ref="D3">
+      <value>D_Small</value>
+      <footprint>Diode_THT:D_DO-34_SOD68_P7.62mm_Horizontal</footprint>
+      <libsource lib="Device" part="D_Small" description="Diode, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="micro-mixer-pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1e3c9d89-6d13-402c-8ab5-fedd03f3562b</tstamps>
+    </comp>
+    <comp ref="D4">
+      <value>D_Small</value>
+      <footprint>Diode_THT:D_DO-34_SOD68_P7.62mm_Horizontal</footprint>
+      <libsource lib="Device" part="D_Small" description="Diode, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="micro-mixer-pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>86a83ef7-95a4-48c3-933b-ddaadd2e6d7f</tstamps>
+    </comp>
+    <comp ref="D5">
+      <value>D_Small</value>
+      <footprint>Diode_THT:D_DO-34_SOD68_P7.62mm_Horizontal</footprint>
+      <libsource lib="Device" part="D_Small" description="Diode, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="micro-mixer-pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>62c82b65-86a1-45cf-a4a7-6c286715b289</tstamps>
+    </comp>
+    <comp ref="D6">
+      <value>D_Small</value>
+      <footprint>Diode_THT:D_DO-34_SOD68_P7.62mm_Horizontal</footprint>
+      <libsource lib="Device" part="D_Small" description="Diode, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="micro-mixer-pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>eb6abbf9-28d7-4cd1-8021-020ca2072603</tstamps>
+    </comp>
+    <comp ref="D7">
+      <value>D_Small</value>
+      <footprint>Diode_THT:D_DO-34_SOD68_P7.62mm_Horizontal</footprint>
+      <libsource lib="Device" part="D_Small" description="Diode, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="micro-mixer-pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2461cb42-992c-435a-97c9-1032bc82ad8d</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>USB_C_Receptacle_USB2.0</value>
+      <footprint>Connector_USB:USB_C_Receptacle_GCT_USB4085</footprint>
+      <datasheet>https://www.usb.org/sites/default/files/documents/usb_type-c.zip</datasheet>
+      <libsource lib="Connector" part="USB_C_Receptacle_USB2.0" description="USB 2.0-only Type-C Receptacle connector"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="micro-mixer-pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>237078a2-56a5-469b-bc01-a374e87be018</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>Conn_PIC_ICSP_ICD</value>
+      <footprint>Connector_PinHeader_1.00mm:PinHeader_1x06_P1.00mm_Horizontal</footprint>
+      <datasheet>http://ww1.microchip.com/downloads/en/devicedoc/30277d.pdf</datasheet>
+      <libsource lib="Connector" part="Conn_PIC_ICSP_ICD" description="Microchip PIC In-Circuit Serial Programming/Debugging (ICSP/ICD) connector"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="micro-mixer-pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>202d7b16-5e13-4a5a-b074-0be90f7be4b3</tstamps>
+    </comp>
+    <comp ref="MX1">
+      <value>MX-LED</value>
+      <footprint>MX_Only:MXOnly-1U</footprint>
+      <libsource lib="MX_Alps_Hybrid" part="MX-LED" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="micro-mixer-pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2253370d-12cf-4262-a529-90c112007713</tstamps>
+    </comp>
+    <comp ref="MX2">
+      <value>MX-NoLED</value>
+      <footprint>MX_Only:MXOnly-1U-NoLED</footprint>
+      <libsource lib="MX_Alps_Hybrid" part="MX-NoLED" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="micro-mixer-pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a61d8458-beb9-47e6-8eb5-4dbc161c1363</tstamps>
+    </comp>
+    <comp ref="MX3">
+      <value>MX-LED</value>
+      <footprint>MX_Only:MXOnly-1U</footprint>
+      <libsource lib="MX_Alps_Hybrid" part="MX-LED" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="micro-mixer-pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cef596ca-f125-41f7-be73-6e729033c8e0</tstamps>
+    </comp>
+    <comp ref="MX4">
+      <value>MX-NoLED</value>
+      <footprint>MX_Only:MXOnly-1U-NoLED</footprint>
+      <libsource lib="MX_Alps_Hybrid" part="MX-NoLED" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="micro-mixer-pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a3636109-3746-4c11-b0be-d0fc1b1b9b43</tstamps>
+    </comp>
+    <comp ref="MX5">
+      <value>MX-LED</value>
+      <footprint>MX_Only:MXOnly-1U</footprint>
+      <libsource lib="MX_Alps_Hybrid" part="MX-LED" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="micro-mixer-pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5c1bc532-2bc9-4100-88f1-0b5bd8b7e8c6</tstamps>
+    </comp>
+    <comp ref="MX6">
+      <value>MX-NoLED</value>
+      <footprint>MX_Only:MXOnly-1U-NoLED</footprint>
+      <libsource lib="MX_Alps_Hybrid" part="MX-NoLED" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="micro-mixer-pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>da3d3ea2-928f-4442-b0f8-693fa0016d37</tstamps>
+    </comp>
+    <comp ref="MX7">
+      <value>MX-LED</value>
+      <footprint>MX_Only:MXOnly-1U</footprint>
+      <libsource lib="MX_Alps_Hybrid" part="MX-LED" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="micro-mixer-pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9fa7821b-852b-4e0b-9a6b-f904d499249c</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>5.1k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="micro-mixer-pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a4d28a09-1a34-4c35-be61-d46c68375ccf</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>5.1k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="micro-mixer-pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>80e18b6f-cec6-4e76-9aa8-af6529a35095</tstamps>
+    </comp>
+    <comp ref="RV1">
+      <value>R_Potentiometer</value>
+      <footprint>Slider:PTB0143</footprint>
+      <libsource lib="Device" part="R_Potentiometer" description="Potentiometer"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="micro-mixer-pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ee0a4574-d90d-40aa-90a1-2ba95987a259</tstamps>
+    </comp>
+    <comp ref="RV2">
+      <value>R_Potentiometer</value>
+      <footprint>Slider:PTB0143</footprint>
+      <libsource lib="Device" part="R_Potentiometer" description="Potentiometer"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="micro-mixer-pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a184c6d9-7d6d-46a8-a6f6-1443430ed9e8</tstamps>
+    </comp>
+    <comp ref="RV3">
+      <value>R_Potentiometer</value>
+      <footprint>Slider:PTB0143</footprint>
+      <libsource lib="Device" part="R_Potentiometer" description="Potentiometer"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="micro-mixer-pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0e170302-fbd6-4296-9ccf-cc2482ac6b87</tstamps>
+    </comp>
+    <comp ref="RV4">
+      <value>R_Potentiometer</value>
+      <footprint>Slider:PTB0143</footprint>
+      <libsource lib="Device" part="R_Potentiometer" description="Potentiometer"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="micro-mixer-pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b3f2046a-f9d8-40f8-87a4-f354bf438e57</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>USBLC6-2SC6</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-6</footprint>
+      <datasheet>https://www.st.com/resource/en/datasheet/usblc6-2.pdf</datasheet>
+      <libsource lib="Power_Protection" part="USBLC6-2SC6" description="Very low capacitance ESD protection diode, 2 data-line, SOT-23-6"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="micro-mixer-pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f70e5b7c-8c88-4583-b7a3-66c7cee6ebd4</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>PIC18F24K50-xSP</value>
+      <footprint>Package_DIP:DIP-28_W7.62mm</footprint>
+      <datasheet>http://ww1.microchip.com/downloads/en/devicedoc/30000684B.pdf</datasheet>
+      <libsource lib="MCU_Microchip_PIC18" part="PIC18F24K50-xSP" description="16K Flash, 2K SRAM, 256 EEPROM, USB, nanoWatt XLP, 2.3V to 5.5V, SPDIP28"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="micro-mixer-pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>da705721-b14e-4b7b-a011-53f998595d6a</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="Conn_PIC_ICSP_ICD">
+      <description>Microchip PIC In-Circuit Serial Programming/Debugging (ICSP/ICD) connector</description>
+      <docs>http://ww1.microchip.com/downloads/en/devicedoc/30277d.pdf</docs>
+      <footprints>
+        <fp>PinHeader*1x06*P2.54mm*</fp>
+        <fp>PinSocket*1x06*P2.54mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_PIC_ICSP_ICD</field>
+        <field name="Datasheet">http://ww1.microchip.com/downloads/en/devicedoc/30277d.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~{MCLR}/VPP" type="passive"/>
+        <pin num="2" name="VDD" type="passive"/>
+        <pin num="3" name="VSS" type="power_in"/>
+        <pin num="4" name="PGD/ICSPDAT" type="bidirectional"/>
+        <pin num="5" name="PGC/ICSPCLK" type="output"/>
+        <pin num="6" name="PGM/LVP" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="USB_C_Receptacle_USB2.0">
+      <description>USB 2.0-only Type-C Receptacle connector</description>
+      <docs>https://www.usb.org/sites/default/files/documents/usb_type-c.zip</docs>
+      <footprints>
+        <fp>USB*C*Receptacle*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">USB_C_Receptacle_USB2.0</field>
+        <field name="Datasheet">https://www.usb.org/sites/default/files/documents/usb_type-c.zip</field>
+      </fields>
+      <pins>
+        <pin num="A1" name="GND" type="passive"/>
+        <pin num="A4" name="VBUS" type="passive"/>
+        <pin num="A5" name="CC1" type="bidirectional"/>
+        <pin num="A6" name="D+" type="bidirectional"/>
+        <pin num="A7" name="D-" type="bidirectional"/>
+        <pin num="A8" name="SBU1" type="bidirectional"/>
+        <pin num="A9" name="VBUS" type="passive"/>
+        <pin num="A12" name="GND" type="passive"/>
+        <pin num="B1" name="GND" type="passive"/>
+        <pin num="B4" name="VBUS" type="passive"/>
+        <pin num="B5" name="CC2" type="bidirectional"/>
+        <pin num="B6" name="D+" type="bidirectional"/>
+        <pin num="B7" name="D-" type="bidirectional"/>
+        <pin num="B8" name="SBU2" type="bidirectional"/>
+        <pin num="B9" name="VBUS" type="passive"/>
+        <pin num="B12" name="GND" type="passive"/>
+        <pin num="S1" name="SHIELD" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Small">
+      <description>Unpolarized capacitor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Small</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_Small">
+      <description>Diode, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Small</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R_Potentiometer">
+      <description>Potentiometer</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Potentiometer*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">RV</field>
+        <field name="Value">R_Potentiometer</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R_Small">
+      <description>Resistor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R_Small</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MCU_Microchip_PIC18" part="PIC18F24K50-xSP">
+      <description>16K Flash, 2K SRAM, 256 EEPROM, USB, nanoWatt XLP, 2.3V to 5.5V, SPDIP28</description>
+      <docs>http://ww1.microchip.com/downloads/en/devicedoc/30000684B.pdf</docs>
+      <footprints>
+        <fp>SPDIP*W7.62mm*</fp>
+        <fp>DIP*W7.62mm*</fp>
+        <fp>PDIP*W7.62mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">PIC18F24K50-xSP</field>
+        <field name="Footprint">Package_DIP:DIP-28_W7.62mm</field>
+        <field name="Datasheet">http://ww1.microchip.com/downloads/en/devicedoc/30000684B.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="RE3/Vpp/~{MCLR}" type="input"/>
+        <pin num="2" name="RA0" type="bidirectional"/>
+        <pin num="3" name="RA1" type="bidirectional"/>
+        <pin num="4" name="RA2" type="bidirectional"/>
+        <pin num="5" name="RA3" type="bidirectional"/>
+        <pin num="6" name="RA4" type="bidirectional"/>
+        <pin num="7" name="RA5" type="bidirectional"/>
+        <pin num="8" name="VSS" type="power_in"/>
+        <pin num="9" name="RA7/OSC1/CLKI" type="input"/>
+        <pin num="10" name="RA6/OSC2/CLKO" type="output"/>
+        <pin num="11" name="RC0" type="bidirectional"/>
+        <pin num="12" name="RC1" type="bidirectional"/>
+        <pin num="13" name="RC2" type="bidirectional"/>
+        <pin num="14" name="VUSB3V3/VDDCORE" type="bidirectional"/>
+        <pin num="15" name="D-" type="bidirectional"/>
+        <pin num="16" name="D+" type="bidirectional"/>
+        <pin num="17" name="RC6" type="bidirectional"/>
+        <pin num="18" name="RC7" type="bidirectional"/>
+        <pin num="19" name="VSS" type="power_in"/>
+        <pin num="20" name="VDD" type="power_in"/>
+        <pin num="21" name="RB0" type="bidirectional"/>
+        <pin num="22" name="RB1" type="bidirectional"/>
+        <pin num="23" name="RB2" type="bidirectional"/>
+        <pin num="24" name="RB3" type="bidirectional"/>
+        <pin num="25" name="RB4" type="bidirectional"/>
+        <pin num="26" name="RB5" type="bidirectional"/>
+        <pin num="27" name="RB6/PGC" type="bidirectional"/>
+        <pin num="28" name="RB7/PGD" type="bidirectional"/>
+      </pins>
+    </libpart>
+    <libpart lib="MX_Alps_Hybrid" part="MX-LED">
+      <fields>
+        <field name="Reference">MX</field>
+        <field name="Value">MX-LED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="COL" type="passive"/>
+        <pin num="2" name="ROW" type="passive"/>
+        <pin num="3" name="LED" type="input"/>
+        <pin num="4" name="LEDGND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MX_Alps_Hybrid" part="MX-NoLED">
+      <fields>
+        <field name="Reference">MX</field>
+        <field name="Value">MX-NoLED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="COL" type="passive"/>
+        <pin num="2" name="ROW" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Power_Protection" part="USBLC6-2SC6">
+      <description>Very low capacitance ESD protection diode, 2 data-line, SOT-23-6</description>
+      <docs>https://www.st.com/resource/en/datasheet/usblc6-2.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">USBLC6-2SC6</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="Datasheet">https://www.st.com/resource/en/datasheet/usblc6-2.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="I/O1" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+        <pin num="3" name="I/O2" type="passive"/>
+        <pin num="4" name="I/O2" type="passive"/>
+        <pin num="5" name="VBUS" type="passive"/>
+        <pin num="6" name="I/O1" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Connector.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="MCU_Microchip_PIC18">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/MCU_Microchip_PIC18.kicad_sym</uri>
+    </library>
+    <library logical="MX_Alps_Hybrid">
+      <uri>C:\Users\jakel\Documents\KiCad\Function generator PCB\MX_Alps_Hybrid-master\Schematic Library\MX_Alps_Hybrid.lib</uri>
+    </library>
+    <library logical="Power_Protection">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Power_Protection.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="AIN0">
+      <node ref="RV1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="RA0" pintype="bidirectional"/>
+    </net>
+    <net code="2" name="AIN1">
+      <node ref="RV2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="RA1" pintype="bidirectional"/>
+    </net>
+    <net code="3" name="AIN2">
+      <node ref="RV3" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U2" pin="17" pinfunction="RC6" pintype="bidirectional"/>
+    </net>
+    <net code="4" name="AIN3">
+      <node ref="RV4" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U2" pin="18" pinfunction="RC7" pintype="bidirectional"/>
+    </net>
+    <net code="5" name="COL0">
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U2" pin="26" pinfunction="RB5" pintype="bidirectional"/>
+    </net>
+    <net code="6" name="COL1">
+      <node ref="D3" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D4" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U2" pin="25" pinfunction="RB4" pintype="bidirectional"/>
+    </net>
+    <net code="7" name="COL2">
+      <node ref="D5" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D6" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U2" pin="24" pinfunction="RB3" pintype="bidirectional"/>
+    </net>
+    <net code="8" name="COL3">
+      <node ref="D7" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U2" pin="23" pinfunction="RB2" pintype="bidirectional"/>
+    </net>
+    <net code="9" name="D+">
+      <node ref="J1" pin="A6" pinfunction="D+" pintype="bidirectional"/>
+      <node ref="J1" pin="B6" pinfunction="D+" pintype="bidirectional"/>
+      <node ref="U1" pin="4" pinfunction="I/O2" pintype="passive"/>
+    </net>
+    <net code="10" name="D-">
+      <node ref="J1" pin="A7" pinfunction="D-" pintype="bidirectional"/>
+      <node ref="J1" pin="B7" pinfunction="D-" pintype="bidirectional"/>
+      <node ref="U1" pin="6" pinfunction="I/O1" pintype="passive"/>
+    </net>
+    <net code="11" name="D_NEG_MCU">
+      <node ref="U1" pin="1" pinfunction="I/O1" pintype="passive"/>
+      <node ref="U2" pin="15" pinfunction="D-" pintype="bidirectional"/>
+    </net>
+    <net code="12" name="D_POS_MCU">
+      <node ref="U1" pin="3" pinfunction="I/O2" pintype="passive"/>
+      <node ref="U2" pin="16" pinfunction="D+" pintype="bidirectional"/>
+    </net>
+    <net code="13" name="GND">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="J1" pin="A1" pinfunction="GND" pintype="passive"/>
+      <node ref="J1" pin="A12" pinfunction="GND" pintype="passive"/>
+      <node ref="J1" pin="B1" pinfunction="GND" pintype="passive"/>
+      <node ref="J1" pin="B12" pinfunction="GND" pintype="passive"/>
+      <node ref="J1" pin="S1" pinfunction="SHIELD" pintype="passive"/>
+      <node ref="J2" pin="3" pinfunction="VSS" pintype="power_in"/>
+      <node ref="MX1" pin="4" pinfunction="LEDGND" pintype="passive"/>
+      <node ref="MX3" pin="4" pinfunction="LEDGND" pintype="passive"/>
+      <node ref="MX5" pin="4" pinfunction="LEDGND" pintype="passive"/>
+      <node ref="MX7" pin="4" pinfunction="LEDGND" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="RV1" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="RV2" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="RV3" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="RV4" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="U2" pin="19" pinfunction="VSS" pintype="power_in"/>
+      <node ref="U2" pin="8" pinfunction="VSS" pintype="power_in"/>
+    </net>
+    <net code="14" name="ICSPCLK">
+      <node ref="J2" pin="5" pinfunction="PGC/ICSPCLK" pintype="output"/>
+      <node ref="U2" pin="27" pinfunction="RB6/PGC" pintype="bidirectional"/>
+    </net>
+    <net code="15" name="ICSPDAT">
+      <node ref="J2" pin="4" pinfunction="PGD/ICSPDAT" pintype="bidirectional"/>
+      <node ref="U2" pin="28" pinfunction="RB7/PGD" pintype="bidirectional"/>
+    </net>
+    <net code="16" name="LED0">
+      <node ref="MX1" pin="3" pinfunction="LED" pintype="input"/>
+      <node ref="U2" pin="6" pinfunction="RA4" pintype="bidirectional"/>
+    </net>
+    <net code="17" name="LED1">
+      <node ref="MX3" pin="3" pinfunction="LED" pintype="input"/>
+      <node ref="U2" pin="7" pinfunction="RA5" pintype="bidirectional"/>
+    </net>
+    <net code="18" name="LED2">
+      <node ref="MX5" pin="3" pinfunction="LED" pintype="input"/>
+      <node ref="U2" pin="10" pinfunction="RA6/OSC2/CLKO" pintype="output"/>
+    </net>
+    <net code="19" name="LED3">
+      <node ref="MX7" pin="3" pinfunction="LED" pintype="input"/>
+      <node ref="U2" pin="9" pinfunction="RA7/OSC1/CLKI" pintype="input"/>
+    </net>
+    <net code="20" name="Net-(C2-Pad1)">
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="U2" pin="14" pinfunction="VUSB3V3/VDDCORE" pintype="bidirectional"/>
+    </net>
+    <net code="21" name="Net-(D1-Pad1)">
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="MX1" pin="1" pinfunction="COL" pintype="passive"/>
+    </net>
+    <net code="22" name="Net-(D2-Pad1)">
+      <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="MX2" pin="1" pinfunction="COL" pintype="passive"/>
+    </net>
+    <net code="23" name="Net-(D3-Pad1)">
+      <node ref="D3" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="MX3" pin="1" pinfunction="COL" pintype="passive"/>
+    </net>
+    <net code="24" name="Net-(D4-Pad1)">
+      <node ref="D4" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="MX4" pin="1" pinfunction="COL" pintype="passive"/>
+    </net>
+    <net code="25" name="Net-(D5-Pad1)">
+      <node ref="D5" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="MX5" pin="1" pinfunction="COL" pintype="passive"/>
+    </net>
+    <net code="26" name="Net-(D6-Pad1)">
+      <node ref="D6" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="MX6" pin="1" pinfunction="COL" pintype="passive"/>
+    </net>
+    <net code="27" name="Net-(D7-Pad1)">
+      <node ref="D7" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="MX7" pin="1" pinfunction="COL" pintype="passive"/>
+    </net>
+    <net code="28" name="Net-(J1-PadA5)">
+      <node ref="J1" pin="A5" pinfunction="CC1" pintype="bidirectional"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+    </net>
+    <net code="29" name="Net-(J1-PadB5)">
+      <node ref="J1" pin="B5" pinfunction="CC2" pintype="bidirectional"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+    </net>
+    <net code="30" name="ROW0">
+      <node ref="MX1" pin="2" pinfunction="ROW" pintype="passive"/>
+      <node ref="MX3" pin="2" pinfunction="ROW" pintype="passive"/>
+      <node ref="MX5" pin="2" pinfunction="ROW" pintype="passive"/>
+      <node ref="MX7" pin="2" pinfunction="ROW" pintype="passive"/>
+      <node ref="U2" pin="12" pinfunction="RC1" pintype="bidirectional"/>
+    </net>
+    <net code="31" name="ROW1">
+      <node ref="MX2" pin="2" pinfunction="ROW" pintype="passive"/>
+      <node ref="MX4" pin="2" pinfunction="ROW" pintype="passive"/>
+      <node ref="MX6" pin="2" pinfunction="ROW" pintype="passive"/>
+      <node ref="U2" pin="13" pinfunction="RC2" pintype="bidirectional"/>
+    </net>
+    <net code="32" name="VDD">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="J1" pin="A4" pinfunction="VBUS" pintype="passive"/>
+      <node ref="J1" pin="A9" pinfunction="VBUS" pintype="passive"/>
+      <node ref="J1" pin="B4" pinfunction="VBUS" pintype="passive"/>
+      <node ref="J1" pin="B9" pinfunction="VBUS" pintype="passive"/>
+      <node ref="J2" pin="2" pinfunction="VDD" pintype="passive"/>
+      <node ref="RV1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="RV2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="RV3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="RV4" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="VBUS" pintype="passive"/>
+      <node ref="U2" pin="20" pinfunction="VDD" pintype="power_in"/>
+    </net>
+    <net code="33" name="VPP">
+      <node ref="J2" pin="1" pinfunction="~{MCLR}/VPP" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="RE3/Vpp/~{MCLR}" pintype="input"/>
+    </net>
+    <net code="34" name="unconnected-(J1-PadA8)">
+      <node ref="J1" pin="A8" pinfunction="SBU1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="35" name="unconnected-(J1-PadB8)">
+      <node ref="J1" pin="B8" pinfunction="SBU2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="36" name="unconnected-(J2-Pad6)">
+      <node ref="J2" pin="6" pinfunction="PGM/LVP" pintype="output+no_connect"/>
+    </net>
+    <net code="37" name="unconnected-(U2-Pad4)">
+      <node ref="U2" pin="4" pinfunction="RA2" pintype="bidirectional"/>
+    </net>
+    <net code="38" name="unconnected-(U2-Pad5)">
+      <node ref="U2" pin="5" pinfunction="RA3" pintype="bidirectional"/>
+    </net>
+    <net code="39" name="unconnected-(U2-Pad11)">
+      <node ref="U2" pin="11" pinfunction="RC0" pintype="bidirectional"/>
+    </net>
+    <net code="40" name="unconnected-(U2-Pad21)">
+      <node ref="U2" pin="21" pinfunction="RB0" pintype="bidirectional"/>
+    </net>
+    <net code="41" name="unconnected-(U2-Pad22)">
+      <node ref="U2" pin="22" pinfunction="RB1" pintype="bidirectional"/>
+    </net>
+  </nets>
+</export>

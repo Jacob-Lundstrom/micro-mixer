@@ -1,0 +1,1169 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F24K50 ]
+[d frameptr 4065 ]
+"141 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer/usb/src/usb_device.c
+[e E5031 . `uc
+DETACHED_STATE 0
+ATTACHED_STATE 1
+POWERED_STATE 2
+DEFAULT_STATE 4
+ADR_PENDING_STATE 8
+ADDRESS_STATE 16
+CONFIGURED_STATE 32
+]
+"717
+[e E4972 . `ui
+EVENT_NONE 0
+EVENT_DEVICE_STACK_BASE 1
+EVENT_HOST_STACK_BASE 100
+EVENT_HUB_ATTACH 101
+EVENT_STALL 102
+EVENT_VBUS_SES_REQUEST 103
+EVENT_VBUS_OVERCURRENT 104
+EVENT_VBUS_REQUEST_POWER 105
+EVENT_VBUS_RELEASE_POWER 106
+EVENT_VBUS_POWER_AVAILABLE 107
+EVENT_UNSUPPORTED_DEVICE 108
+EVENT_CANNOT_ENUMERATE 109
+EVENT_CLIENT_INIT_ERROR 110
+EVENT_OUT_OF_MEMORY 111
+EVENT_UNSPECIFIED_ERROR 112
+EVENT_DETACH 113
+EVENT_TRANSFER 114
+EVENT_SOF 115
+EVENT_RESUME 116
+EVENT_SUSPEND 117
+EVENT_RESET 118
+EVENT_DATA_ISOC_READ 119
+EVENT_DATA_ISOC_WRITE 120
+EVENT_OVERRIDE_CLIENT_DRIVER_SELECTION 121
+EVENT_1MS 122
+EVENT_ALT_INTERFACE 123
+EVENT_HOLD_BEFORE_CONFIGURATION 124
+EVENT_GENERIC_BASE 400
+EVENT_MSD_BASE 500
+EVENT_HID_BASE 600
+EVENT_PRINTER_BASE 700
+EVENT_CDC_BASE 800
+EVENT_CHARGER_BASE 900
+EVENT_AUDIO_BASE 1000
+EVENT_USER_BASE 10000
+EVENT_BUS_ERROR 32767
+]
+"2022
+[e E5040 . `uc
+EVENT_CONFIGURED 1
+EVENT_SET_DESCRIPTOR 2
+EVENT_EP0_REQUEST 3
+EVENT_ATTACH 4
+EVENT_TRANSFER_TERMINATED 5
+]
+"51 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer/demo_src/usb_events.c
+[e E4812 . `ui
+EVENT_NONE 0
+EVENT_DEVICE_STACK_BASE 1
+EVENT_HOST_STACK_BASE 100
+EVENT_HUB_ATTACH 101
+EVENT_STALL 102
+EVENT_VBUS_SES_REQUEST 103
+EVENT_VBUS_OVERCURRENT 104
+EVENT_VBUS_REQUEST_POWER 105
+EVENT_VBUS_RELEASE_POWER 106
+EVENT_VBUS_POWER_AVAILABLE 107
+EVENT_UNSUPPORTED_DEVICE 108
+EVENT_CANNOT_ENUMERATE 109
+EVENT_CLIENT_INIT_ERROR 110
+EVENT_OUT_OF_MEMORY 111
+EVENT_UNSPECIFIED_ERROR 112
+EVENT_DETACH 113
+EVENT_TRANSFER 114
+EVENT_SOF 115
+EVENT_RESUME 116
+EVENT_SUSPEND 117
+EVENT_RESET 118
+EVENT_DATA_ISOC_READ 119
+EVENT_DATA_ISOC_WRITE 120
+EVENT_OVERRIDE_CLIENT_DRIVER_SELECTION 121
+EVENT_1MS 122
+EVENT_ALT_INTERFACE 123
+EVENT_HOLD_BEFORE_CONFIGURATION 124
+EVENT_GENERIC_BASE 400
+EVENT_MSD_BASE 500
+EVENT_HID_BASE 600
+EVENT_PRINTER_BASE 700
+EVENT_CDC_BASE 800
+EVENT_CHARGER_BASE 900
+EVENT_AUDIO_BASE 1000
+EVENT_USER_BASE 10000
+EVENT_BUS_ERROR 32767
+]
+"74
+[e E4602 . `uc
+SYSTEM_STATE_USB_START 0
+SYSTEM_STATE_USB_SUSPEND 1
+SYSTEM_STATE_USB_RESUME 2
+]
+"111
+[e E4880 . `uc
+EVENT_CONFIGURED 1
+EVENT_SET_DESCRIPTOR 2
+EVENT_EP0_REQUEST 3
+EVENT_ATTACH 4
+EVENT_TRANSFER_TERMINATED 5
+]
+"32 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer/demo_src/main.c
+[e E4602 . `uc
+SYSTEM_STATE_USB_START 0
+SYSTEM_STATE_USB_SUSPEND 1
+SYSTEM_STATE_USB_RESUME 2
+]
+"106 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer\Micro_Mixer.X\system.c
+[e E4602 . `uc
+SYSTEM_STATE_USB_START 0
+SYSTEM_STATE_USB_SUSPEND 1
+SYSTEM_STATE_USB_RESUME 2
+]
+"117 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer/demo_src/app_device_custom_hid.h.c
+[e E297 . `uc
+DETACHED_STATE 0
+ATTACHED_STATE 1
+POWERED_STATE 2
+DEFAULT_STATE 4
+ADR_PENDING_STATE 8
+ADDRESS_STATE 16
+CONFIGURED_STATE 32
+]
+"167
+[e E5295 . `uc
+COMMAND_RELAY_ALL_INFO 128
+COMMAND_UPDATE_MUTE_STATUS 129
+COMMAND_CONNECT 130
+]
+"84
+[v _MixerInitialize MixerInitialize `(v  1 e 1 0 ]
+"111
+[v _MixerTasks MixerTasks `(v  1 e 1 0 ]
+"175
+[v _readSliders readSliders `(v  1 e 1 0 ]
+"30 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer/demo_src/main.c
+[v _main main `(v  1 e 1 0 ]
+"51 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer/demo_src/usb_events.c
+[v _USER_USB_CALLBACK_EVENT_HANDLER USER_USB_CALLBACK_EVENT_HANDLER `(a  1 e 1 0 ]
+"281 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer/usb/src/usb_device.c
+[v _USBDeviceInit USBDeviceInit `(v  1 e 1 0 ]
+[v i2_USBDeviceInit USBDeviceInit `(v  1 e 1 0 ]
+"481
+[v _USBDeviceTasks USBDeviceTasks `(v  1 e 1 0 ]
+"882
+[v _USBEnableEndpoint USBEnableEndpoint `(v  1 e 1 0 ]
+"999
+[v _USBTransferOnePacket USBTransferOnePacket `(*.39v  1 e 2 0 ]
+[v i2_USBTransferOnePacket USBTransferOnePacket `(*.39v  1 e 2 0 ]
+"1357
+[v _USBDeviceAttach USBDeviceAttach `(v  1 e 1 0 ]
+"1421
+[v _USBCtrlEPAllowStatusStage USBCtrlEPAllowStatusStage `(v  1 e 1 0 ]
+"1493
+[v _USBCtrlEPAllowDataStage USBCtrlEPAllowDataStage `(v  1 e 1 0 ]
+"1548
+[v _USBConfigureEndpoint USBConfigureEndpoint `(v  1 s 1 USBConfigureEndpoint ]
+"1621
+[v _USBCtrlEPServiceComplete USBCtrlEPServiceComplete `(v  1 s 1 USBCtrlEPServiceComplete ]
+"1776
+[v _USBCtrlTrfTxService USBCtrlTrfTxService `(v  1 s 1 USBCtrlTrfTxService ]
+"1857
+[v _USBCtrlTrfRxService USBCtrlTrfRxService `(v  1 s 1 USBCtrlTrfRxService ]
+"1973
+[v _USBStdSetCfgHandler USBStdSetCfgHandler `(v  1 s 1 USBStdSetCfgHandler ]
+"2048
+[v _USBStdGetDscHandler USBStdGetDscHandler `(v  1 s 1 USBStdGetDscHandler ]
+"2134
+[v _USBStdGetStatusHandler USBStdGetStatusHandler `(v  1 s 1 USBStdGetStatusHandler ]
+"2210
+[v _USBStallHandler USBStallHandler `(v  1 s 1 USBStallHandler ]
+"2253
+[v _USBSuspend USBSuspend `(v  1 s 1 USBSuspend ]
+"2311
+[v _USBWakeFromSuspend USBWakeFromSuspend `(v  1 s 1 USBWakeFromSuspend ]
+"2380
+[v _USBCtrlEPService USBCtrlEPService `(v  1 s 1 USBCtrlEPService ]
+"2473
+[v _USBCtrlTrfSetupHandler USBCtrlTrfSetupHandler `(v  1 s 1 USBCtrlTrfSetupHandler ]
+"2546
+[v _USBCtrlTrfOutHandler USBCtrlTrfOutHandler `(v  1 s 1 USBCtrlTrfOutHandler ]
+"2600
+[v _USBCtrlTrfInHandler USBCtrlTrfInHandler `(v  1 s 1 USBCtrlTrfInHandler ]
+"2694
+[v _USBCheckStdRequest USBCheckStdRequest `(v  1 s 1 USBCheckStdRequest ]
+"2762
+[v _USBStdFeatureReqHandler USBStdFeatureReqHandler `(v  1 s 1 USBStdFeatureReqHandler ]
+"2999
+[v _USBIncrement1msInternalTimers USBIncrement1msInternalTimers `(v  1 e 1 0 ]
+"161 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer/usb/src/usb_device_hid.c
+[v _USBCheckHIDRequest USBCheckHIDRequest `(v  1 e 1 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\memcpy.c
+[v _memcpy memcpy `(*.39v  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\memset.c
+[v _memset memset `(*.39v  1 e 2 0 ]
+[v i2_memset memset `(*.39v  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"106 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer\Micro_Mixer.X\system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+[v i2_SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"149
+[v _SYSTEM_Tasks SYSTEM_Tasks `(v  1 e 1 0 ]
+"160
+[v _SYS_InterruptHigh SYS_InterruptHigh `IIH(v  1 e 1 0 ]
+"45 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer/demo_src/app_device_custom_hid.h.c
+[v _ReceivedDataBuffer ReceivedDataBuffer `[64]uc  1 e 64 @1280 ]
+"46
+[v _ToSendDataBuffer ToSendDataBuffer `[64]uc  1 e 64 @1344 ]
+"55
+[v _USBOutHandle USBOutHandle `*.39VEv  1 e 2 0 ]
+"56
+[v _USBInHandle USBInHandle `*.39VEv  1 e 2 0 ]
+"58
+[v _keysPressed keysPressed `uc  1 e 1 0 ]
+"59
+[v _lastMuteAction lastMuteAction `uc  1 e 1 0 ]
+"60
+[v _muteStates muteStates `uc  1 e 1 0 ]
+[s S589 _USB_DEVICE_DESCRIPTOR 18 `uc 1 bLength 1 0 `uc 1 bDescriptorType 1 1 `us 1 bcdUSB 2 2 `uc 1 bDeviceClass 1 4 `uc 1 bDeviceSubClass 1 5 `uc 1 bDeviceProtocol 1 6 `uc 1 bMaxPacketSize0 1 7 `us 1 idVendor 2 8 `us 1 idProduct 2 10 `us 1 bcdDevice 2 12 `uc 1 iManufacturer 1 14 `uc 1 iProduct 1 15 `uc 1 iSerialNumber 1 16 `uc 1 bNumConfigurations 1 17 ]
+"152 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer/demo_src/usb_descriptors.c
+[v _device_dsc device_dsc `CS589  1 e 18 0 ]
+"171
+[v _configDescriptor1 configDescriptor1 `C[41]uc  1 e 41 0 ]
+[s S1961 . 4 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[1]us 1 string 2 2 ]
+"220
+[v _sd000 sd000 `CS1961  1 e 4 0 ]
+[s S1965 . 52 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[25]us 1 string 50 2 ]
+"225
+[v _sd001 sd001 `CS1965  1 e 52 0 ]
+[s S1969 . 46 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[22]us 1 string 44 2 ]
+"232
+[v _sd002 sd002 `CS1969  1 e 46 0 ]
+[s S1916 . 29 `[29]uc 1 report 29 0 ]
+"239
+[v _hid_rpt01 hid_rpt01 `CS1916  1 e 29 0 ]
+"259
+[v _USB_CD_Ptr USB_CD_Ptr `C[1]*.25Cuc  1 e 2 0 ]
+"265
+[v _USB_SD_Ptr USB_SD_Ptr `C[3]*.25Cuc  1 e 6 0 ]
+"141 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer/usb/src/usb_device.c
+[v _USBDeviceState USBDeviceState `VEE5031  1 e 1 0 ]
+"142
+[v _USBActiveConfiguration USBActiveConfiguration `VEuc  1 e 1 0 ]
+"143
+[v _USBAlternateInterface USBAlternateInterface `VE[1]uc  1 e 1 0 ]
+[s S32 . 1 `uc 1 BC8 1 0 :1:0 
+`uc 1 BC9 1 0 :1:1 
+`uc 1 BSTALL 1 0 :1:2 
+`uc 1 DTSEN 1 0 :1:3 
+`uc 1 INCDIS 1 0 :1:4 
+`uc 1 KEN 1 0 :1:5 
+`uc 1 DTS 1 0 :1:6 
+`uc 1 UOWN 1 0 :1:7 
+]
+"144
+[s S41 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID0 1 0 :1:2 
+`uc 1 PID1 1 0 :1:3 
+`uc 1 PID2 1 0 :1:4 
+`uc 1 PID3 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+]
+[s S48 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID 1 0 :4:2 
+`uc 1 . 1 0 :2:6 
+]
+[u S52 _BD_STAT 1 `uc 1 Val 1 0 `S32 1 . 1 0 `S41 1 . 1 0 `S48 1 . 1 0 ]
+[s S57 . 4 `S52 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S62 . 4 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`us 1 ADR 2 2 ]
+[u S66 __BDT 4 `S57 1 . 4 0 `S62 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v _pBDTEntryEP0OutCurrent pBDTEntryEP0OutCurrent `*.39VES66  1 e 2 0 ]
+"145
+[v _pBDTEntryEP0OutNext pBDTEntryEP0OutNext `*.39VES66  1 e 2 0 ]
+"146
+[v _pBDTEntryOut pBDTEntryOut `[2]*.39VES66  1 e 4 0 ]
+"147
+[v _pBDTEntryIn pBDTEntryIn `[2]*.39VES66  1 e 4 0 ]
+"148
+[v _shortPacketStatus shortPacketStatus `VEuc  1 e 1 0 ]
+"149
+[v _controlTransferState controlTransferState `VEuc  1 e 1 0 ]
+[u S71 . 3 `*.2uc 1 bRam 3 0 `*.2Cuc 1 bRom 3 0 `*.2us 1 wRam 3 0 `*.2Cus 1 wRom 3 0 ]
+"150
+[s S76 . 1 `uc 1 ctrl_trf_mem 1 0 :1:0 
+`uc 1 reserved 1 0 :5:1 
+`uc 1 includeZero 1 0 :1:6 
+`uc 1 busy 1 0 :1:7 
+]
+[u S81 . 1 `S76 1 bits 1 0 `uc 1 Val 1 0 ]
+[s S84 . 2 `uc 1 LB 1 0 `uc 1 HB 1 1 ]
+[u S87 . 2 `us 1 Val 2 0 `[2]uc 1 v 2 0 `S84 1 byte 2 0 ]
+[s S91 . 6 `S71 1 pSrc 3 0 `S81 1 info 1 3 `S87 1 wCount 2 4 ]
+[v _inPipes inPipes `VE[1]S91  1 e 6 0 ]
+[u S95 . 3 `*.2uc 1 bRam 3 0 `*.2us 1 wRam 3 0 ]
+"151
+[s S98 . 1 `uc 1 reserved 1 0 :7:0 
+`uc 1 busy 1 0 :1:7 
+]
+[u S101 . 1 `S98 1 bits 1 0 `uc 1 Val 1 0 ]
+[s S105 . 8 `S95 1 pDst 3 0 `S101 1 info 1 3 `S87 1 wCount 2 4 `*.37(v 1 pFunc 2 6 ]
+[v _outPipes outPipes `VE[1]S105  1 e 8 0 ]
+"152
+[v _pDst pDst `*.39VEuc  1 e 2 0 ]
+"153
+[v _RemoteWakeup RemoteWakeup `VEa  1 e 1 0 ]
+"154
+[v _USBBusIsSuspended USBBusIsSuspended `VEa  1 e 1 0 ]
+[s S110 . 1 `uc 1 filler1 1 0 :1:0 
+`uc 1 ping_pong 1 0 :1:1 
+`uc 1 direction 1 0 :1:2 
+`uc 1 endpoint_number 1 0 :4:3 
+]
+"155
+[u S115 __USTAT 1 `S110 1 . 1 0 `uc 1 Val 1 0 ]
+[v _USTATcopy USTATcopy `VES115  1 e 1 0 ]
+"156
+[v _endpoint_number endpoint_number `VEuc  1 e 1 0 ]
+"157
+[v _BothEP0OutUOWNsSet BothEP0OutUOWNsSet `VEa  1 e 1 0 ]
+[s S118 . 1 `uc 1 ping_pong_state 1 0 :1:0 
+`uc 1 transfer_terminated 1 0 :1:1 
+]
+"158
+[u S121 . 1 `S118 1 bits 1 0 `uc 1 Val 1 0 ]
+[v _ep_data_in ep_data_in `VE[2]S121  1 e 2 0 ]
+"159
+[v _ep_data_out ep_data_out `VE[2]S121  1 e 2 0 ]
+"160
+[v _USBStatusStageTimeoutCounter USBStatusStageTimeoutCounter `VEuc  1 e 1 0 ]
+"161
+[v _USBDeferStatusStagePacket USBDeferStatusStagePacket `VEa  1 e 1 0 ]
+"162
+[v _USBStatusStageEnabledFlag1 USBStatusStageEnabledFlag1 `VEa  1 e 1 0 ]
+"163
+[v _USBStatusStageEnabledFlag2 USBStatusStageEnabledFlag2 `VEa  1 e 1 0 ]
+"164
+[v _USBDeferINDataStagePackets USBDeferINDataStagePackets `VEa  1 e 1 0 ]
+"165
+[v _USBDeferOUTDataStagePackets USBDeferOUTDataStagePackets `VEa  1 e 1 0 ]
+"166
+[v _USB1msTickCount USB1msTickCount `VEul  1 e 4 0 ]
+"167
+[v _USBTicksSinceSuspendEnd USBTicksSinceSuspendEnd `VEuc  1 e 1 0 ]
+"174
+[v _BDT BDT `VE[8]S66  1 e 32 @1024 ]
+[s S124 . 8 `uc 1 bmRequestType 1 0 `uc 1 bRequest 1 1 `us 1 wValue 2 2 `us 1 wIndex 2 4 `us 1 wLength 2 6 ]
+"179
+[s S151 . 8 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`S87 1 W_Value 2 2 `S87 1 W_Index 2 4 `S87 1 W_Length 2 6 ]
+[s S157 . 8 `uc 1 Recipient 1 0 :5:0 
+`uc 1 RequestType 1 0 :2:5 
+`uc 1 DataDir 1 0 :1:7 
+`uc 1 . 1 1 :8:0 
+`uc 1 bFeature 1 2 `uc 1 . 1 3 :8:0 
+`uc 1 . 1 4 :8:0 
+`uc 1 . 1 5 :8:0 
+`uc 1 . 1 6 :8:0 
+`uc 1 . 1 7 :8:0 
+]
+[s S168 . 1 `uc 1 recipient 1 0 :5:0 
+`uc 1 type 1 0 :2:5 
+`uc 1 direction 1 0 :1:7 
+]
+[u S172 . 1 `uc 1 bmRequestType 1 0 `S168 1 . 1 0 ]
+[s S175 . 1 `S172 1 requestInfo 1 0 ]
+[s S177 . 8 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`uc 1 bDscIndex 1 2 `uc 1 bDescriptorType 1 3 `us 1 wLangID 2 4 `uc 1 . 1 6 :8:0 
+`uc 1 . 1 7 :8:0 
+]
+[s S185 . 8 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`uc 1 bDevADR 1 2 `uc 1 bDevADRH 1 3 `uc 1 . 1 4 :8:0 
+`uc 1 . 1 5 :8:0 
+`uc 1 . 1 6 :8:0 
+`uc 1 . 1 7 :8:0 
+]
+[s S194 . 8 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`uc 1 bConfigurationValue 1 2 `uc 1 bCfgRSD 1 3 `uc 1 . 1 4 :8:0 
+`uc 1 . 1 5 :8:0 
+`uc 1 . 1 6 :8:0 
+`uc 1 . 1 7 :8:0 
+]
+[s S203 . 8 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`uc 1 bAltID 1 2 `uc 1 bAltID_H 1 3 `uc 1 bIntfID 1 4 `uc 1 bIntfID_H 1 5 `uc 1 . 1 6 :8:0 
+`uc 1 . 1 7 :8:0 
+]
+[s S212 . 8 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`uc 1 . 1 2 :8:0 
+`uc 1 . 1 3 :8:0 
+`uc 1 bEPID 1 4 `uc 1 bEPID_H 1 5 `uc 1 . 1 6 :8:0 
+`uc 1 . 1 7 :8:0 
+]
+[s S221 . 8 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`uc 1 . 1 2 :8:0 
+`uc 1 . 1 3 :8:0 
+`uc 1 EPNum 1 4 :4:0 
+`uc 1 . 1 4 :3:4 
+`uc 1 EPDir 1 4 :1:7 
+`uc 1 . 1 5 :8:0 
+`uc 1 . 1 6 :8:0 
+`uc 1 . 1 7 :8:0 
+]
+[u S232 . 8 `S124 1 . 8 0 `S151 1 . 8 0 `S157 1 . 8 0 `S175 1 . 1 0 `S177 1 . 8 0 `S185 1 . 8 0 `S194 1 . 8 0 `S203 1 . 8 0 `S212 1 . 8 0 `S221 1 . 8 0 ]
+[v _SetupPkt SetupPkt `VES232  1 e 8 @1056 ]
+"180
+[v _CtrlTrfData CtrlTrfData `VE[8]uc  1 e 8 @1064 ]
+"87 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer/usb/src/usb_device_hid.c
+[v _idle_rate idle_rate `uc  1 s 1 idle_rate ]
+"88
+[v _active_protocol active_protocol `uc  1 s 1 active_protocol ]
+"361 C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h
+[v _UCON UCON `VEuc  1 e 1 @3936 ]
+[s S288 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 SUSPND 1 0 :1:1 
+`uc 1 RESUME 1 0 :1:2 
+`uc 1 USBEN 1 0 :1:3 
+`uc 1 PKTDIS 1 0 :1:4 
+`uc 1 SE0 1 0 :1:5 
+`uc 1 PPBRST 1 0 :1:6 
+]
+"377
+[u S296 . 1 `S288 1 . 1 0 ]
+[v _UCONbits UCONbits `VES296  1 e 1 @3936 ]
+"412
+[v _USTAT USTAT `VEuc  1 e 1 @3937 ]
+"472
+[v _UCFG UCFG `VEuc  1 e 1 @3938 ]
+"551
+[v _UADDR UADDR `VEuc  1 e 1 @3939 ]
+"615
+[v _UIE UIE `VEuc  1 e 1 @3940 ]
+[s S327 . 1 `uc 1 URSTIE 1 0 :1:0 
+`uc 1 UERRIE 1 0 :1:1 
+`uc 1 ACTVIE 1 0 :1:2 
+`uc 1 TRNIE 1 0 :1:3 
+`uc 1 IDLEIE 1 0 :1:4 
+`uc 1 STALLIE 1 0 :1:5 
+`uc 1 SOFIE 1 0 :1:6 
+]
+"631
+[u S335 . 1 `S327 1 . 1 0 ]
+[v _UIEbits UIEbits `VES335  1 e 1 @3940 ]
+"671
+[v _UIR UIR `VEuc  1 e 1 @3941 ]
+[s S308 . 1 `uc 1 URSTIF 1 0 :1:0 
+`uc 1 UERRIF 1 0 :1:1 
+`uc 1 ACTVIF 1 0 :1:2 
+`uc 1 TRNIF 1 0 :1:3 
+`uc 1 IDLEIF 1 0 :1:4 
+`uc 1 STALLIF 1 0 :1:5 
+`uc 1 SOFIF 1 0 :1:6 
+]
+"687
+[u S316 . 1 `S308 1 . 1 0 ]
+[v _UIRbits UIRbits `VES316  1 e 1 @3941 ]
+"727
+[v _UEIE UEIE `VEuc  1 e 1 @3942 ]
+"778
+[v _UEIR UEIR `VEuc  1 e 1 @3943 ]
+"954
+[v _UEP0 UEP0 `VEuc  1 e 1 @3946 ]
+[s S623 . 1 `uc 1 EPSTALL 1 0 :1:0 
+`uc 1 EPINEN 1 0 :1:1 
+`uc 1 EPOUTEN 1 0 :1:2 
+`uc 1 EPCONDIS 1 0 :1:3 
+`uc 1 EPHSHK 1 0 :1:4 
+]
+"982
+[s S629 . 1 `uc 1 EP0STALL 1 0 :1:0 
+`uc 1 EP0INEN 1 0 :1:1 
+`uc 1 EP0OUTEN 1 0 :1:2 
+`uc 1 EP0CONDIS 1 0 :1:3 
+`uc 1 EP0HSHK 1 0 :1:4 
+]
+[s S635 . 1 `uc 1 EPSTALL0 1 0 :1:0 
+`uc 1 EPINEN0 1 0 :1:1 
+`uc 1 EPOUTEN0 1 0 :1:2 
+`uc 1 EPCONDIS0 1 0 :1:3 
+`uc 1 EPHSHK0 1 0 :1:4 
+]
+[u S641 . 1 `S623 1 . 1 0 `S629 1 . 1 0 `S635 1 . 1 0 ]
+[v _UEP0bits UEP0bits `VES641  1 e 1 @3946 ]
+"1062
+[v _UEP1 UEP1 `VEuc  1 e 1 @3947 ]
+[s S2325 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"2977
+[s S2334 . 1 `uc 1 INT0 1 0 :1:0 
+`uc 1 INT1 1 0 :1:1 
+`uc 1 INT2 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 PGM 1 0 :1:5 
+`uc 1 PGC 1 0 :1:6 
+`uc 1 PGD 1 0 :1:7 
+]
+[s S2342 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+[u S2345 . 1 `S2325 1 . 1 0 `S2334 1 . 1 0 `S2342 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES2345  1 e 1 @3969 ]
+"3057
+[v _PORTC PORTC `VEuc  1 e 1 @3970 ]
+"4155
+[v _TRISA TRISA `VEuc  1 e 1 @3986 ]
+"4377
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+"4599
+[v _TRISC TRISC `VEuc  1 e 1 @3988 ]
+"5241
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @3995 ]
+[s S243 . 1 `uc 1 TMR1GIE 1 0 :1:0 
+`uc 1 TMR3GIE 1 0 :1:1 
+`uc 1 USBIE 1 0 :1:2 
+`uc 1 CTMUIE 1 0 :1:3 
+]
+"5998
+[s S248 . 1 `uc 1 RXB0IE 1 0 :1:0 
+`uc 1 RXB1IE 1 0 :1:1 
+`uc 1 TXB0IE 1 0 :1:2 
+`uc 1 TXB1IE 1 0 :1:3 
+]
+[s S253 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RXBNIE 1 0 :1:1 
+]
+[u S256 . 1 `S243 1 . 1 0 `S248 1 . 1 0 `S253 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES256  1 e 1 @4003 ]
+[s S350 . 1 `uc 1 TMR1GIF 1 0 :1:0 
+`uc 1 TMR3GIF 1 0 :1:1 
+`uc 1 USBIF 1 0 :1:2 
+`uc 1 CTMUIF 1 0 :1:3 
+]
+"6065
+[s S355 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RXBNIF 1 0 :1:1 
+]
+[u S358 . 1 `S350 1 . 1 0 `S355 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES358  1 e 1 @4004 ]
+[s S509 . 1 `uc 1 TMR1GIP 1 0 :1:0 
+`uc 1 TMR3GIP 1 0 :1:1 
+`uc 1 USBIP 1 0 :1:2 
+`uc 1 CTMUIP 1 0 :1:3 
+]
+"6112
+[s S514 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RXBNIP 1 0 :1:1 
+]
+[u S517 . 1 `S509 1 . 1 0 `S514 1 . 1 0 ]
+[v _IPR3bits IPR3bits `VES517  1 e 1 @4005 ]
+"7401
+[v _ACTCON ACTCON `VEuc  1 e 1 @4021 ]
+[s S2200 . 1 `uc 1 ADCS 1 0 :3:0 
+`uc 1 ACQT 1 0 :3:3 
+`uc 1 . 1 0 :1:6 
+`uc 1 ADFM 1 0 :1:7 
+]
+"8848
+[s S2205 . 1 `uc 1 ADCS0 1 0 :1:0 
+`uc 1 ADCS1 1 0 :1:1 
+`uc 1 ADCS2 1 0 :1:2 
+`uc 1 ACQT0 1 0 :1:3 
+`uc 1 ACQT1 1 0 :1:4 
+`uc 1 ACQT2 1 0 :1:5 
+]
+[u S2212 . 1 `S2200 1 . 1 0 `S2205 1 . 1 0 ]
+[v _ADCON2bits ADCON2bits `VES2212  1 e 1 @4032 ]
+[s S2169 . 1 `uc 1 NVCFG 1 0 :2:0 
+`uc 1 PVCFG 1 0 :2:2 
+`uc 1 . 1 0 :3:4 
+`uc 1 TRIGSEL 1 0 :1:7 
+]
+"8921
+[s S2174 . 1 `uc 1 NVCFG0 1 0 :1:0 
+`uc 1 NVCFG1 1 0 :1:1 
+`uc 1 PVCFG0 1 0 :1:2 
+`uc 1 PVCFG1 1 0 :1:3 
+]
+[s S2179 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CHSN3 1 0 :1:3 
+]
+[u S2182 . 1 `S2169 1 . 1 0 `S2174 1 . 1 0 `S2179 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES2182  1 e 1 @4033 ]
+[s S2109 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_NOT_DONE 1 0 :1:1 
+]
+"9006
+[s S2112 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :5:2 
+]
+[s S2116 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 DONE 1 0 :1:1 
+]
+[s S2119 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[s S2122 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_DONE 1 0 :1:1 
+]
+[s S2125 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S2128 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GODONE 1 0 :1:1 
+]
+[s S2131 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+]
+[u S2134 . 1 `S2109 1 . 1 0 `S2112 1 . 1 0 `S2116 1 . 1 0 `S2119 1 . 1 0 `S2122 1 . 1 0 `S2125 1 . 1 0 `S2128 1 . 1 0 `S2131 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES2134  1 e 1 @4034 ]
+"9068
+[v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
+[s S442 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+]
+"11367
+[s S444 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_POR 1 0 :1:1 
+]
+[s S447 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_PD 1 0 :1:2 
+]
+[s S450 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 NOT_TO 1 0 :1:3 
+]
+[s S453 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 NOT_RI 1 0 :1:4 
+]
+[s S456 . 1 `uc 1 nBOR 1 0 :1:0 
+`uc 1 nPOR 1 0 :1:1 
+`uc 1 nPD 1 0 :1:2 
+`uc 1 nTO 1 0 :1:3 
+`uc 1 nRI 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 SBOREN 1 0 :1:6 
+`uc 1 IPEN 1 0 :1:7 
+]
+[s S465 . 1 `uc 1 BOR 1 0 :1:0 
+`uc 1 POR 1 0 :1:1 
+`uc 1 PD 1 0 :1:2 
+`uc 1 TO 1 0 :1:3 
+`uc 1 RI 1 0 :1:4 
+]
+[u S471 . 1 `S442 1 . 1 0 `S444 1 . 1 0 `S447 1 . 1 0 `S450 1 . 1 0 `S453 1 . 1 0 `S456 1 . 1 0 `S465 1 . 1 0 ]
+[v _RCONbits RCONbits `VES471  1 e 1 @4048 ]
+"11485
+[v _OSCCON2 OSCCON2 `VEuc  1 e 1 @4050 ]
+[s S2084 . 1 `uc 1 LFIOFS 1 0 :1:0 
+`uc 1 HFIOFR 1 0 :1:1 
+`uc 1 PRISD 1 0 :1:2 
+`uc 1 SOSCGO 1 0 :1:3 
+`uc 1 PLLEN 1 0 :1:4 
+`uc 1 INTSRC 1 0 :1:5 
+`uc 1 SOSCRUN 1 0 :1:6 
+`uc 1 PLLRDY 1 0 :1:7 
+]
+"11502
+[u S2093 . 1 `S2084 1 . 1 0 ]
+[v _OSCCON2bits OSCCON2bits `VES2093  1 e 1 @4050 ]
+"11547
+[v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
+[s S529 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"12448
+[s S538 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S547 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S551 . 1 `S529 1 . 1 0 `S538 1 . 1 0 `S547 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES551  1 e 1 @4082 ]
+"30 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer/demo_src/main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"61
+} 0
+"281 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer/usb/src/usb_device.c
+[v _USBDeviceInit USBDeviceInit `(v  1 e 1 0 ]
+{
+"283
+[v USBDeviceInit@i i `uc  1 a 1 12 ]
+"375
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\memset.c
+[v _memset memset `(*.39v  1 e 2 0 ]
+{
+"6
+[v memset@s s `*.39uc  1 a 2 10 ]
+"7
+[v memset@k k `ui  1 a 2 8 ]
+"4
+[v memset@dest dest `*.39v  1 p 2 0 ]
+[v memset@c c `i  1 p 2 2 ]
+[v memset@n n `ui  1 p 2 4 ]
+"90
+} 0
+"1357 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer/usb/src/usb_device.c
+[v _USBDeviceAttach USBDeviceAttach `(v  1 e 1 0 ]
+{
+"1387
+} 0
+"149 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer\Micro_Mixer.X\system.c
+[v _SYSTEM_Tasks SYSTEM_Tasks `(v  1 e 1 0 ]
+{
+"151
+} 0
+"106
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+[v SYSTEM_Initialize@state state `E4602  1 a 1 wreg ]
+[v SYSTEM_Initialize@state state `E4602  1 a 1 wreg ]
+[v SYSTEM_Initialize@state state `E4602  1 a 1 2 ]
+"146
+} 0
+"111 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer/demo_src/app_device_custom_hid.h.c
+[v _MixerTasks MixerTasks `(v  1 e 1 0 ]
+{
+"134
+[v MixerTasks@i i `i  1 a 2 13 ]
+"173
+} 0
+"175
+[v _readSliders readSliders `(v  1 e 1 0 ]
+{
+"178
+[v readSliders@i i `i  1 a 2 7 ]
+"176
+[v readSliders@sliders sliders `[4]uc  1 a 4 3 ]
+"175
+[v readSliders@output output `*.39uc  1 p 2 0 ]
+[v readSliders@F5305 F5305 `[4]uc  1 s 4 F5305 ]
+"185
+} 0
+"999 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer/usb/src/usb_device.c
+[v _USBTransferOnePacket USBTransferOnePacket `(*.39v  1 e 2 0 ]
+{
+[v USBTransferOnePacket@ep ep `uc  1 a 1 wreg ]
+[s S32 . 1 `uc 1 BC8 1 0 :1:0 
+`uc 1 BC9 1 0 :1:1 
+`uc 1 BSTALL 1 0 :1:2 
+`uc 1 DTSEN 1 0 :1:3 
+`uc 1 INCDIS 1 0 :1:4 
+`uc 1 KEN 1 0 :1:5 
+`uc 1 DTS 1 0 :1:6 
+`uc 1 UOWN 1 0 :1:7 
+]
+"1001
+[s S41 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID0 1 0 :1:2 
+`uc 1 PID1 1 0 :1:3 
+`uc 1 PID2 1 0 :1:4 
+`uc 1 PID3 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+]
+[s S48 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID 1 0 :4:2 
+`uc 1 . 1 0 :2:6 
+]
+[u S52 _BD_STAT 1 `uc 1 Val 1 0 `S32 1 . 1 0 `S41 1 . 1 0 `S48 1 . 1 0 ]
+[s S57 . 4 `S52 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S62 . 4 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`us 1 ADR 2 2 ]
+[u S66 __BDT 4 `S57 1 . 4 0 `S62 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v USBTransferOnePacket@handle handle `*.39VES66  1 a 2 9 ]
+"999
+[v USBTransferOnePacket@ep ep `uc  1 a 1 wreg ]
+[v USBTransferOnePacket@dir dir `uc  1 p 1 0 ]
+[v USBTransferOnePacket@data data `*.39uc  1 p 2 1 ]
+[v USBTransferOnePacket@len len `uc  1 p 1 3 ]
+"1004
+[v USBTransferOnePacket@ep ep `uc  1 a 1 8 ]
+"1052
+} 0
+"160 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer\Micro_Mixer.X\system.c
+[v _SYS_InterruptHigh SYS_InterruptHigh `IIH(v  1 e 1 0 ]
+{
+"165
+} 0
+"481 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer/usb/src/usb_device.c
+[v _USBDeviceTasks USBDeviceTasks `(v  1 e 1 0 ]
+{
+"483
+[v USBDeviceTasks@i i `uc  1 a 1 30 ]
+"831
+} 0
+"281
+[v i2_USBDeviceInit USBDeviceInit `(v  1 e 1 0 ]
+{
+"283
+[v i2USBDeviceInit@i i `uc  1 a 1 12 ]
+"375
+} 0
+"2311
+[v _USBWakeFromSuspend USBWakeFromSuspend `(v  1 s 1 USBWakeFromSuspend ]
+{
+"2357
+} 0
+"2253
+[v _USBSuspend USBSuspend `(v  1 s 1 USBSuspend ]
+{
+"2294
+} 0
+"2210
+[v _USBStallHandler USBStallHandler `(v  1 s 1 USBStallHandler ]
+{
+"2235
+} 0
+"2999
+[v _USBIncrement1msInternalTimers USBIncrement1msInternalTimers `(v  1 e 1 0 ]
+{
+"3017
+} 0
+"2380
+[v _USBCtrlEPService USBCtrlEPService `(v  1 s 1 USBCtrlEPService ]
+{
+"2431
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\memcpy.c
+[v _memcpy memcpy `(*.39v  1 e 2 0 ]
+{
+"8
+[v memcpy@s s `*.39Cuc  1 a 2 8 ]
+"7
+[v memcpy@d d `*.39uc  1 a 2 6 ]
+"9
+[v memcpy@tmp tmp `uc  1 a 1 10 ]
+"4
+[v memcpy@d1 d1 `*.39v  1 p 2 0 ]
+[v memcpy@s1 s1 `*.39Cv  1 p 2 2 ]
+[v memcpy@n n `ui  1 p 2 4 ]
+"18
+} 0
+"2473 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer/usb/src/usb_device.c
+[v _USBCtrlTrfSetupHandler USBCtrlTrfSetupHandler `(v  1 s 1 USBCtrlTrfSetupHandler ]
+{
+"2523
+} 0
+"1621
+[v _USBCtrlEPServiceComplete USBCtrlEPServiceComplete `(v  1 s 1 USBCtrlEPServiceComplete ]
+{
+"1753
+} 0
+"1493
+[v _USBCtrlEPAllowDataStage USBCtrlEPAllowDataStage `(v  1 e 1 0 ]
+{
+"1523
+} 0
+"2694
+[v _USBCheckStdRequest USBCheckStdRequest `(v  1 s 1 USBCheckStdRequest ]
+{
+"2741
+} 0
+"1973
+[v _USBStdSetCfgHandler USBStdSetCfgHandler `(v  1 s 1 USBStdSetCfgHandler ]
+{
+"1975
+[v USBStdSetCfgHandler@i i `uc  1 a 1 20 ]
+"2029
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\memset.c
+[v i2_memset memset `(*.39v  1 e 2 0 ]
+{
+"6
+[v i2memset@s s `*.39uc  1 a 2 10 ]
+"7
+[v i2memset@k k `ui  1 a 2 8 ]
+"4
+[v i2memset@dest dest `*.39v  1 p 2 0 ]
+[v i2memset@c c `i  1 p 2 2 ]
+[v i2memset@n n `ui  1 p 2 4 ]
+"90
+} 0
+"2134 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer/usb/src/usb_device.c
+[v _USBStdGetStatusHandler USBStdGetStatusHandler `(v  1 s 1 USBStdGetStatusHandler ]
+{
+[s S32 . 1 `uc 1 BC8 1 0 :1:0 
+`uc 1 BC9 1 0 :1:1 
+`uc 1 BSTALL 1 0 :1:2 
+`uc 1 DTSEN 1 0 :1:3 
+`uc 1 INCDIS 1 0 :1:4 
+`uc 1 KEN 1 0 :1:5 
+`uc 1 DTS 1 0 :1:6 
+`uc 1 UOWN 1 0 :1:7 
+]
+"2167
+[s S41 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID0 1 0 :1:2 
+`uc 1 PID1 1 0 :1:3 
+`uc 1 PID2 1 0 :1:4 
+`uc 1 PID3 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+]
+[s S48 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID 1 0 :4:2 
+`uc 1 . 1 0 :2:6 
+]
+[u S52 _BD_STAT 1 `uc 1 Val 1 0 `S32 1 . 1 0 `S41 1 . 1 0 `S48 1 . 1 0 ]
+[s S57 . 4 `S52 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S62 . 4 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`us 1 ADR 2 2 ]
+[u S66 __BDT 4 `S57 1 . 4 0 `S62 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v USBStdGetStatusHandler@p p `*.39S66  1 a 2 2 ]
+"2192
+} 0
+"2048
+[v _USBStdGetDscHandler USBStdGetDscHandler `(v  1 s 1 USBStdGetDscHandler ]
+{
+"2117
+} 0
+"2762
+[v _USBStdFeatureReqHandler USBStdFeatureReqHandler `(v  1 s 1 USBStdFeatureReqHandler ]
+{
+[s S32 . 1 `uc 1 BC8 1 0 :1:0 
+`uc 1 BC9 1 0 :1:1 
+`uc 1 BSTALL 1 0 :1:2 
+`uc 1 DTSEN 1 0 :1:3 
+`uc 1 INCDIS 1 0 :1:4 
+`uc 1 KEN 1 0 :1:5 
+`uc 1 DTS 1 0 :1:6 
+`uc 1 UOWN 1 0 :1:7 
+]
+"2764
+[s S41 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID0 1 0 :1:2 
+`uc 1 PID1 1 0 :1:3 
+`uc 1 PID2 1 0 :1:4 
+`uc 1 PID3 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+]
+[s S48 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID 1 0 :4:2 
+`uc 1 . 1 0 :2:6 
+]
+[u S52 _BD_STAT 1 `uc 1 Val 1 0 `S32 1 . 1 0 `S41 1 . 1 0 `S48 1 . 1 0 ]
+[s S57 . 4 `S52 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S62 . 4 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`us 1 ADR 2 2 ]
+[u S66 __BDT 4 `S57 1 . 4 0 `S62 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v USBStdFeatureReqHandler@p p `*.39S66  1 a 2 25 ]
+"2769
+[v USBStdFeatureReqHandler@pUEP pUEP `*.39uc  1 a 2 22 ]
+[s S118 . 1 `uc 1 ping_pong_state 1 0 :1:0 
+`uc 1 transfer_terminated 1 0 :1:1 
+]
+"2765
+[u S121 . 1 `S118 1 bits 1 0 `uc 1 Val 1 0 ]
+[v USBStdFeatureReqHandler@current_ep_data current_ep_data `S121  1 a 1 24 ]
+"2954
+} 0
+"51 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer/demo_src/usb_events.c
+[v _USER_USB_CALLBACK_EVENT_HANDLER USER_USB_CALLBACK_EVENT_HANDLER `(a  1 e 1 0 ]
+{
+[v USER_USB_CALLBACK_EVENT_HANDLER@event event `E4812  1 p 2 12 ]
+[v USER_USB_CALLBACK_EVENT_HANDLER@pdata pdata `*.39v  1 p 2 14 ]
+[v USER_USB_CALLBACK_EVENT_HANDLER@size size `us  1 p 2 16 ]
+"113
+} 0
+"106 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer\Micro_Mixer.X\system.c
+[v i2_SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+[v i2SYSTEM_Initialize@state state `E4602  1 a 1 wreg ]
+[v i2SYSTEM_Initialize@state state `E4602  1 a 1 wreg ]
+[v i2SYSTEM_Initialize@state state `E4602  1 a 1 2 ]
+"146
+} 0
+"161 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer/usb/src/usb_device_hid.c
+[v _USBCheckHIDRequest USBCheckHIDRequest `(v  1 e 1 0 ]
+{
+"249
+} 0
+"84 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer/demo_src/app_device_custom_hid.h.c
+[v _MixerInitialize MixerInitialize `(v  1 e 1 0 ]
+{
+"95
+} 0
+"999 C:\Users\jakel\Documents\GitHub\micro-mixer-hardware\firmware\Micro_Mixer_1.0\Micro_Mixer/usb/src/usb_device.c
+[v i2_USBTransferOnePacket USBTransferOnePacket `(*.39v  1 e 2 0 ]
+{
+[v i2USBTransferOnePacket@ep ep `uc  1 a 1 wreg ]
+[s S32 . 1 `uc 1 BC8 1 0 :1:0 
+`uc 1 BC9 1 0 :1:1 
+`uc 1 BSTALL 1 0 :1:2 
+`uc 1 DTSEN 1 0 :1:3 
+`uc 1 INCDIS 1 0 :1:4 
+`uc 1 KEN 1 0 :1:5 
+`uc 1 DTS 1 0 :1:6 
+`uc 1 UOWN 1 0 :1:7 
+]
+"1001
+[s S41 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID0 1 0 :1:2 
+`uc 1 PID1 1 0 :1:3 
+`uc 1 PID2 1 0 :1:4 
+`uc 1 PID3 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+]
+[s S48 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID 1 0 :4:2 
+`uc 1 . 1 0 :2:6 
+]
+[u S52 _BD_STAT 1 `uc 1 Val 1 0 `S32 1 . 1 0 `S41 1 . 1 0 `S48 1 . 1 0 ]
+[s S57 . 4 `S52 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S62 . 4 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`us 1 ADR 2 2 ]
+[u S66 __BDT 4 `S57 1 . 4 0 `S62 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v i2USBTransferOnePacket@handle handle `*.39VES66  1 a 2 9 ]
+"999
+[v i2USBTransferOnePacket@ep ep `uc  1 a 1 wreg ]
+[v i2USBTransferOnePacket@dir dir `uc  1 p 1 0 ]
+[v i2USBTransferOnePacket@data data `*.39uc  1 p 2 1 ]
+[v i2USBTransferOnePacket@len len `uc  1 p 1 3 ]
+"1004
+[v i2USBTransferOnePacket@ep ep `uc  1 a 1 8 ]
+"1052
+} 0
+"882
+[v _USBEnableEndpoint USBEnableEndpoint `(v  1 e 1 0 ]
+{
+[v USBEnableEndpoint@ep ep `uc  1 a 1 wreg ]
+"884
+[v USBEnableEndpoint@p p `*.39uc  1 a 2 9 ]
+"882
+[v USBEnableEndpoint@ep ep `uc  1 a 1 wreg ]
+[v USBEnableEndpoint@options options `uc  1 p 1 8 ]
+"888
+[v USBEnableEndpoint@ep ep `uc  1 a 1 11 ]
+"906
+} 0
+"1548
+[v _USBConfigureEndpoint USBConfigureEndpoint `(v  1 s 1 USBConfigureEndpoint ]
+{
+[v USBConfigureEndpoint@EPNum EPNum `uc  1 a 1 wreg ]
+[s S32 . 1 `uc 1 BC8 1 0 :1:0 
+`uc 1 BC9 1 0 :1:1 
+`uc 1 BSTALL 1 0 :1:2 
+`uc 1 DTSEN 1 0 :1:3 
+`uc 1 INCDIS 1 0 :1:4 
+`uc 1 KEN 1 0 :1:5 
+`uc 1 DTS 1 0 :1:6 
+`uc 1 UOWN 1 0 :1:7 
+]
+"1550
+[s S41 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID0 1 0 :1:2 
+`uc 1 PID1 1 0 :1:3 
+`uc 1 PID2 1 0 :1:4 
+`uc 1 PID3 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+]
+[s S48 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID 1 0 :4:2 
+`uc 1 . 1 0 :2:6 
+]
+[u S52 _BD_STAT 1 `uc 1 Val 1 0 `S32 1 . 1 0 `S41 1 . 1 0 `S48 1 . 1 0 ]
+[s S57 . 4 `S52 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S62 . 4 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`us 1 ADR 2 2 ]
+[u S66 __BDT 4 `S57 1 . 4 0 `S62 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v USBConfigureEndpoint@handle handle `*.39VES66  1 a 2 6 ]
+"1548
+[v USBConfigureEndpoint@EPNum EPNum `uc  1 a 1 wreg ]
+[v USBConfigureEndpoint@direction direction `uc  1 p 1 0 ]
+"1554
+[v USBConfigureEndpoint@EPNum EPNum `uc  1 a 1 5 ]
+"1590
+} 0
+"2546
+[v _USBCtrlTrfOutHandler USBCtrlTrfOutHandler `(v  1 s 1 USBCtrlTrfOutHandler ]
+{
+"2575
+} 0
+"1857
+[v _USBCtrlTrfRxService USBCtrlTrfRxService `(v  1 s 1 USBCtrlTrfRxService ]
+{
+"1859
+[v USBCtrlTrfRxService@byteToRead byteToRead `uc  1 a 1 1 ]
+"1860
+[v USBCtrlTrfRxService@i i `uc  1 a 1 0 ]
+"1952
+} 0
+"1421
+[v _USBCtrlEPAllowStatusStage USBCtrlEPAllowStatusStage `(v  1 e 1 0 ]
+{
+"1464
+} 0
+"2600
+[v _USBCtrlTrfInHandler USBCtrlTrfInHandler `(v  1 s 1 USBCtrlTrfInHandler ]
+{
+"2602
+[v USBCtrlTrfInHandler@lastDTS lastDTS `uc  1 a 1 1 ]
+"2675
+} 0
+"1776
+[v _USBCtrlTrfTxService USBCtrlTrfTxService `(v  1 s 1 USBCtrlTrfTxService ]
+{
+"1778
+[v USBCtrlTrfTxService@byteToSend byteToSend `uc  1 a 1 0 ]
+"1830
+} 0

@@ -1,0 +1,1018 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"355 ../usb/inc/usb_device.h
+[; ;../usb/inc/usb_device.h: 355: void USBEnableEndpoint(uint8_t ep, uint8_t options);
+[v _USBEnableEndpoint `(v ~T0 @X0 0 ef2`uc`uc ]
+"448
+[; ;../usb/inc/usb_device.h: 448: void* USBTransferOnePacket(uint8_t ep,uint8_t dir,uint8_t* data,uint8_t len);
+[v _USBTransferOnePacket `(*v ~T0 @X0 0 ef4`uc`uc`*uc`uc ]
+"118 ../demo_src/app_device_custom_hid.h.c
+[; ;../demo_src/app_device_custom_hid.h.c: 118:     if( USBDeviceState < CONFIGURED_STATE )
+[c E297 0 1 2 4 8 16 32 .. ]
+[n E297 . DETACHED_STATE ATTACHED_STATE POWERED_STATE DEFAULT_STATE ADR_PENDING_STATE ADDRESS_STATE CONFIGURED_STATE  ]
+"2050 ../usb/inc/usb_device.h
+[; ;../usb/inc/usb_device.h: 2050: extern volatile USB_DEVICE_STATE USBDeviceState;
+[v _USBDeviceState `VE297 ~T0 @X0 0 e ]
+"367 C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 367:     struct {
+[s S64 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S64 . . SUSPND RESUME USBEN PKTDIS SE0 PPBRST ]
+"366
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 366: typedef union {
+[u S63 `S64 1 ]
+[n S63 . . ]
+"377
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 377: extern volatile UCONbits_t UCONbits __attribute__((address(0xF60)));
+[v _UCONbits `VS63 ~T0 @X0 0 e@3936 ]
+"66 ../demo_src/app_device_custom_hid.h
+[; ;../demo_src/app_device_custom_hid.h: 66: void readSliders(uint8_t* output);
+[v _readSliders `(v ~T0 @X0 0 ef1`*uc ]
+"67
+[; ;../demo_src/app_device_custom_hid.h: 67: void scanRows(void);
+[v _scanRows `(v ~T0 @X0 0 ef ]
+"68
+[; ;../demo_src/app_device_custom_hid.h: 68: void toggleMutes(void);
+[v _toggleMutes `(v ~T0 @X0 0 ef ]
+"164 ../demo_src/app_device_custom_hid.h.c
+[; ;../demo_src/app_device_custom_hid.h.c: 164:         }
+[c E5295 128 129 130 .. ]
+[n E5295 . COMMAND_RELAY_ALL_INFO COMMAND_UPDATE_MUTE_STATUS COMMAND_CONNECT  ]
+"8972 C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8972:     struct {
+[s S449 :1 `uc 1 :1 `uc 1 ]
+[n S449 . . GO_NOT_DONE ]
+"8976
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8976:     struct {
+[s S450 :1 `uc 1 :1 `uc 1 :5 `uc 1 ]
+[n S450 . ADON GO_nDONE CHS ]
+"8981
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8981:     struct {
+[s S451 :1 `uc 1 :1 `uc 1 ]
+[n S451 . . DONE ]
+"8985
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8985:     struct {
+[s S452 :1 `uc 1 :1 `uc 1 ]
+[n S452 . . GO ]
+"8989
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8989:     struct {
+[s S453 :1 `uc 1 :1 `uc 1 ]
+[n S453 . . NOT_DONE ]
+"8993
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8993:     struct {
+[s S454 :1 `uc 1 :1 `uc 1 ]
+[n S454 . . nDONE ]
+"8997
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8997:     struct {
+[s S455 :1 `uc 1 :1 `uc 1 ]
+[n S455 . . GODONE ]
+"9001
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 9001:     struct {
+[s S456 :1 `uc 1 :1 `uc 1 ]
+[n S456 . . GO_DONE ]
+"8971
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8971: typedef union {
+[u S448 `S449 1 `S450 1 `S451 1 `S452 1 `S453 1 `S454 1 `S455 1 `S456 1 ]
+[n S448 . . . . . . . . . ]
+"9006
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 9006: extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0xFC2)));
+[v _ADCON0bits `VS448 ~T0 @X0 0 e@4034 ]
+"9068
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 9068: extern volatile unsigned char ADRESH __attribute__((address(0xFC4)));
+[v _ADRESH `Vuc ~T0 @X0 0 e@4036 ]
+"3057
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 3057: extern volatile unsigned char PORTC __attribute__((address(0xF82)));
+[v _PORTC `Vuc ~T0 @X0 0 e@3970 ]
+"2953
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2953:     struct {
+[s S173 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S173 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"2963
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2963:     struct {
+[s S174 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S174 . INT0 INT1 INT2 . PGM PGC PGD ]
+"2972
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2972:     struct {
+[s S175 :3 `uc 1 :1 `uc 1 ]
+[n S175 . . CCP2_PA2 ]
+"2952
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2952: typedef union {
+[u S172 `S173 1 `S174 1 `S175 1 ]
+[n S172 . . . . ]
+"2977
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2977: extern volatile PORTBbits_t PORTBbits __attribute__((address(0xF81)));
+[v _PORTBbits `VS172 ~T0 @X0 0 e@3969 ]
+"54 C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 54: __asm("SRCON1 equ 0F57h");
+[; <" SRCON1 equ 0F57h ;# ">
+"116
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 116: __asm("SRCON0 equ 0F58h");
+[; <" SRCON0 equ 0F58h ;# ">
+"187
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 187: __asm("CCPTMRS equ 0F59h");
+[; <" CCPTMRS equ 0F59h ;# ">
+"214
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 214: __asm("VREGCON equ 0F5Ah");
+[; <" VREGCON equ 0F5Ah ;# ">
+"234
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 234: __asm("ANSELA equ 0F5Bh");
+[; <" ANSELA equ 0F5Bh ;# ">
+"279
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 279: __asm("ANSELB equ 0F5Ch");
+[; <" ANSELB equ 0F5Ch ;# ">
+"329
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 329: __asm("ANSELC equ 0F5Dh");
+[; <" ANSELC equ 0F5Dh ;# ">
+"363
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 363: __asm("UCON equ 0F60h");
+[; <" UCON equ 0F60h ;# ">
+"414
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 414: __asm("USTAT equ 0F61h");
+[; <" USTAT equ 0F61h ;# ">
+"474
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 474: __asm("UCFG equ 0F62h");
+[; <" UCFG equ 0F62h ;# ">
+"553
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 553: __asm("UADDR equ 0F63h");
+[; <" UADDR equ 0F63h ;# ">
+"617
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 617: __asm("UIE equ 0F64h");
+[; <" UIE equ 0F64h ;# ">
+"673
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 673: __asm("UIR equ 0F65h");
+[; <" UIR equ 0F65h ;# ">
+"729
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 729: __asm("UEIE equ 0F66h");
+[; <" UEIE equ 0F66h ;# ">
+"780
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 780: __asm("UEIR equ 0F67h");
+[; <" UEIR equ 0F67h ;# ">
+"831
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 831: __asm("UFRM equ 0F68h");
+[; <" UFRM equ 0F68h ;# ">
+"838
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 838: __asm("UFRML equ 0F68h");
+[; <" UFRML equ 0F68h ;# ">
+"916
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 916: __asm("UFRMH equ 0F69h");
+[; <" UFRMH equ 0F69h ;# ">
+"956
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 956: __asm("UEP0 equ 0F6Ah");
+[; <" UEP0 equ 0F6Ah ;# ">
+"1064
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 1064: __asm("UEP1 equ 0F6Bh");
+[; <" UEP1 equ 0F6Bh ;# ">
+"1172
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 1172: __asm("UEP2 equ 0F6Ch");
+[; <" UEP2 equ 0F6Ch ;# ">
+"1280
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 1280: __asm("UEP3 equ 0F6Dh");
+[; <" UEP3 equ 0F6Dh ;# ">
+"1388
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 1388: __asm("UEP4 equ 0F6Eh");
+[; <" UEP4 equ 0F6Eh ;# ">
+"1496
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 1496: __asm("UEP5 equ 0F6Fh");
+[; <" UEP5 equ 0F6Fh ;# ">
+"1604
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 1604: __asm("UEP6 equ 0F70h");
+[; <" UEP6 equ 0F70h ;# ">
+"1712
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 1712: __asm("UEP7 equ 0F71h");
+[; <" UEP7 equ 0F71h ;# ">
+"1820
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 1820: __asm("UEP8 equ 0F72h");
+[; <" UEP8 equ 0F72h ;# ">
+"1896
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 1896: __asm("UEP9 equ 0F73h");
+[; <" UEP9 equ 0F73h ;# ">
+"1972
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 1972: __asm("UEP10 equ 0F74h");
+[; <" UEP10 equ 0F74h ;# ">
+"2048
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2048: __asm("UEP11 equ 0F75h");
+[; <" UEP11 equ 0F75h ;# ">
+"2124
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2124: __asm("UEP12 equ 0F76h");
+[; <" UEP12 equ 0F76h ;# ">
+"2200
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2200: __asm("UEP13 equ 0F77h");
+[; <" UEP13 equ 0F77h ;# ">
+"2276
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2276: __asm("UEP14 equ 0F78h");
+[; <" UEP14 equ 0F78h ;# ">
+"2352
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2352: __asm("UEP15 equ 0F79h");
+[; <" UEP15 equ 0F79h ;# ">
+"2428
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2428: __asm("SLRCON equ 0F7Ah");
+[; <" SLRCON equ 0F7Ah ;# ">
+"2460
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2460: __asm("VREFCON2 equ 0F7Bh");
+[; <" VREFCON2 equ 0F7Bh ;# ">
+"2512
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2512: __asm("VREFCON1 equ 0F7Ch");
+[; <" VREFCON1 equ 0F7Ch ;# ">
+"2573
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2573: __asm("VREFCON0 equ 0F7Dh");
+[; <" VREFCON0 equ 0F7Dh ;# ">
+"2633
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2633: __asm("PMD0 equ 0F7Eh");
+[; <" PMD0 equ 0F7Eh ;# ">
+"2715
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2715: __asm("PMD1 equ 0F7Fh");
+[; <" PMD1 equ 0F7Fh ;# ">
+"2797
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2797: __asm("PORTA equ 0F80h");
+[; <" PORTA equ 0F80h ;# ">
+"2949
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2949: __asm("PORTB equ 0F81h");
+[; <" PORTB equ 0F81h ;# ">
+"3059
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 3059: __asm("PORTC equ 0F82h");
+[; <" PORTC equ 0F82h ;# ">
+"3201
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 3201: __asm("PORTE equ 0F84h");
+[; <" PORTE equ 0F84h ;# ">
+"3240
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 3240: __asm("WPUB equ 0F85h");
+[; <" WPUB equ 0F85h ;# ">
+"3302
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 3302: __asm("IOCB equ 0F86h");
+[; <" IOCB equ 0F86h ;# ">
+"3341
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 3341: __asm("IOCC equ 0F87h");
+[; <" IOCC equ 0F87h ;# ">
+"3398
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 3398: __asm("CTMUICON equ 0F88h");
+[; <" CTMUICON equ 0F88h ;# ">
+"3474
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 3474: __asm("LATA equ 0F89h");
+[; <" LATA equ 0F89h ;# ">
+"3586
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 3586: __asm("LATB equ 0F8Ah");
+[; <" LATB equ 0F8Ah ;# ">
+"3698
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 3698: __asm("LATC equ 0F8Bh");
+[; <" LATC equ 0F8Bh ;# ">
+"3800
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 3800: __asm("CTMUCONL equ 0F8Eh");
+[; <" CTMUCONL equ 0F8Eh ;# ">
+"3805
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 3805: __asm("CTMUCON1 equ 0F8Eh");
+[; <" CTMUCON1 equ 0F8Eh ;# ">
+"3954
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 3954: __asm("CTMUCONH equ 0F8Fh");
+[; <" CTMUCONH equ 0F8Fh ;# ">
+"3959
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 3959: __asm("CTMUCON0 equ 0F8Fh");
+[; <" CTMUCON0 equ 0F8Fh ;# ">
+"4110
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 4110: __asm("CCPR2 equ 0F90h");
+[; <" CCPR2 equ 0F90h ;# ">
+"4117
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 4117: __asm("CCPR2L equ 0F90h");
+[; <" CCPR2L equ 0F90h ;# ">
+"4137
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 4137: __asm("CCPR2H equ 0F91h");
+[; <" CCPR2H equ 0F91h ;# ">
+"4157
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 4157: __asm("TRISA equ 0F92h");
+[; <" TRISA equ 0F92h ;# ">
+"4162
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 4162: __asm("DDRA equ 0F92h");
+[; <" DDRA equ 0F92h ;# ">
+"4379
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 4379: __asm("TRISB equ 0F93h");
+[; <" TRISB equ 0F93h ;# ">
+"4384
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 4384: __asm("DDRB equ 0F93h");
+[; <" DDRB equ 0F93h ;# ">
+"4601
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 4601: __asm("TRISC equ 0F94h");
+[; <" TRISC equ 0F94h ;# ">
+"4606
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 4606: __asm("DDRC equ 0F94h");
+[; <" DDRC equ 0F94h ;# ">
+"4779
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 4779: __asm("CCP2CON equ 0F97h");
+[; <" CCP2CON equ 0F97h ;# ">
+"4784
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 4784: __asm("ECCP2CON equ 0F97h");
+[; <" ECCP2CON equ 0F97h ;# ">
+"4935
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 4935: __asm("CM1CON0 equ 0F98h");
+[; <" CM1CON0 equ 0F98h ;# ">
+"5058
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 5058: __asm("CM2CON0 equ 0F99h");
+[; <" CM2CON0 equ 0F99h ;# ">
+"5181
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 5181: __asm("CM2CON1 equ 0F9Ah");
+[; <" CM2CON1 equ 0F9Ah ;# ">
+"5243
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 5243: __asm("OSCTUNE equ 0F9Bh");
+[; <" OSCTUNE equ 0F9Bh ;# ">
+"5313
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 5313: __asm("HLVDCON equ 0F9Ch");
+[; <" HLVDCON equ 0F9Ch ;# ">
+"5383
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 5383: __asm("PIE1 equ 0F9Dh");
+[; <" PIE1 equ 0F9Dh ;# ">
+"5482
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 5482: __asm("PIR1 equ 0F9Eh");
+[; <" PIR1 equ 0F9Eh ;# ">
+"5581
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 5581: __asm("IPR1 equ 0F9Fh");
+[; <" IPR1 equ 0F9Fh ;# ">
+"5680
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 5680: __asm("PIE2 equ 0FA0h");
+[; <" PIE2 equ 0FA0h ;# ">
+"5779
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 5779: __asm("PIR2 equ 0FA1h");
+[; <" PIR2 equ 0FA1h ;# ">
+"5878
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 5878: __asm("IPR2 equ 0FA2h");
+[; <" IPR2 equ 0FA2h ;# ">
+"5977
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 5977: __asm("PIE3 equ 0FA3h");
+[; <" PIE3 equ 0FA3h ;# ">
+"6050
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6050: __asm("PIR3 equ 0FA4h");
+[; <" PIR3 equ 0FA4h ;# ">
+"6097
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6097: __asm("IPR3 equ 0FA5h");
+[; <" IPR3 equ 0FA5h ;# ">
+"6144
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6144: __asm("EECON1 equ 0FA6h");
+[; <" EECON1 equ 0FA6h ;# ">
+"6210
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6210: __asm("EECON2 equ 0FA7h");
+[; <" EECON2 equ 0FA7h ;# ">
+"6230
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6230: __asm("EEDATA equ 0FA8h");
+[; <" EEDATA equ 0FA8h ;# ">
+"6237
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6237: __asm("EEADR equ 0FA9h");
+[; <" EEADR equ 0FA9h ;# ">
+"6244
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6244: __asm("RCSTA1 equ 0FABh");
+[; <" RCSTA1 equ 0FABh ;# ">
+"6249
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6249: __asm("RCSTA equ 0FABh");
+[; <" RCSTA equ 0FABh ;# ">
+"6450
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6450: __asm("TXSTA1 equ 0FACh");
+[; <" TXSTA1 equ 0FACh ;# ">
+"6455
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6455: __asm("TXSTA equ 0FACh");
+[; <" TXSTA equ 0FACh ;# ">
+"6744
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6744: __asm("TXREG1 equ 0FADh");
+[; <" TXREG1 equ 0FADh ;# ">
+"6749
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6749: __asm("TXREG equ 0FADh");
+[; <" TXREG equ 0FADh ;# ">
+"6782
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6782: __asm("RCREG1 equ 0FAEh");
+[; <" RCREG1 equ 0FAEh ;# ">
+"6787
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6787: __asm("RCREG equ 0FAEh");
+[; <" RCREG equ 0FAEh ;# ">
+"6820
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6820: __asm("SPBRG1 equ 0FAFh");
+[; <" SPBRG1 equ 0FAFh ;# ">
+"6825
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6825: __asm("SPBRG equ 0FAFh");
+[; <" SPBRG equ 0FAFh ;# ">
+"6958
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6958: __asm("SPBRGH1 equ 0FB0h");
+[; <" SPBRGH1 equ 0FB0h ;# ">
+"6963
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6963: __asm("SPBRGH equ 0FB0h");
+[; <" SPBRGH equ 0FB0h ;# ">
+"7096
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 7096: __asm("T3CON equ 0FB1h");
+[; <" T3CON equ 0FB1h ;# ">
+"7225
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 7225: __asm("TMR3 equ 0FB2h");
+[; <" TMR3 equ 0FB2h ;# ">
+"7232
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 7232: __asm("TMR3L equ 0FB2h");
+[; <" TMR3L equ 0FB2h ;# ">
+"7252
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 7252: __asm("TMR3H equ 0FB3h");
+[; <" TMR3H equ 0FB3h ;# ">
+"7272
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 7272: __asm("T3GCON equ 0FB4h");
+[; <" T3GCON equ 0FB4h ;# ">
+"7403
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 7403: __asm("ACTCON equ 0FB5h");
+[; <" ACTCON equ 0FB5h ;# ">
+"7408
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 7408: __asm("STCON equ 0FB5h");
+[; <" STCON equ 0FB5h ;# ">
+"7609
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 7609: __asm("ECCP1AS equ 0FB6h");
+[; <" ECCP1AS equ 0FB6h ;# ">
+"7743
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 7743: __asm("PWM1CON equ 0FB7h");
+[; <" PWM1CON equ 0FB7h ;# ">
+"7748
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 7748: __asm("ECCP1DEL equ 0FB7h");
+[; <" ECCP1DEL equ 0FB7h ;# ">
+"7893
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 7893: __asm("BAUDCON1 equ 0FB8h");
+[; <" BAUDCON1 equ 0FB8h ;# ">
+"7898
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 7898: __asm("BAUDCON equ 0FB8h");
+[; <" BAUDCON equ 0FB8h ;# ">
+"7902
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 7902: __asm("BAUDCTL equ 0FB8h");
+[; <" BAUDCTL equ 0FB8h ;# ">
+"8403
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8403: __asm("PSTR1CON equ 0FB9h");
+[; <" PSTR1CON equ 0FB9h ;# ">
+"8479
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8479: __asm("T2CON equ 0FBAh");
+[; <" T2CON equ 0FBAh ;# ">
+"8550
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8550: __asm("PR2 equ 0FBBh");
+[; <" PR2 equ 0FBBh ;# ">
+"8570
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8570: __asm("TMR2 equ 0FBCh");
+[; <" TMR2 equ 0FBCh ;# ">
+"8590
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8590: __asm("CCP1CON equ 0FBDh");
+[; <" CCP1CON equ 0FBDh ;# ">
+"8595
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8595: __asm("ECCP1CON equ 0FBDh");
+[; <" ECCP1CON equ 0FBDh ;# ">
+"8782
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8782: __asm("CCPR1 equ 0FBEh");
+[; <" CCPR1 equ 0FBEh ;# ">
+"8789
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8789: __asm("CCPR1L equ 0FBEh");
+[; <" CCPR1L equ 0FBEh ;# ">
+"8809
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8809: __asm("CCPR1H equ 0FBFh");
+[; <" CCPR1H equ 0FBFh ;# ">
+"8829
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8829: __asm("ADCON2 equ 0FC0h");
+[; <" ADCON2 equ 0FC0h ;# ">
+"8900
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8900: __asm("ADCON1 equ 0FC1h");
+[; <" ADCON1 equ 0FC1h ;# ">
+"8968
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8968: __asm("ADCON0 equ 0FC2h");
+[; <" ADCON0 equ 0FC2h ;# ">
+"9063
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 9063: __asm("ADRESL equ 0FC3h");
+[; <" ADRESL equ 0FC3h ;# ">
+"9070
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 9070: __asm("ADRESH equ 0FC4h");
+[; <" ADRESH equ 0FC4h ;# ">
+"9077
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 9077: __asm("SSP1CON2 equ 0FC5h");
+[; <" SSP1CON2 equ 0FC5h ;# ">
+"9082
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 9082: __asm("SSPCON2 equ 0FC5h");
+[; <" SSPCON2 equ 0FC5h ;# ">
+"9431
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 9431: __asm("SSP1CON1 equ 0FC6h");
+[; <" SSP1CON1 equ 0FC6h ;# ">
+"9436
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 9436: __asm("SSPCON equ 0FC6h");
+[; <" SSPCON equ 0FC6h ;# ">
+"9440
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 9440: __asm("SSPCON1 equ 0FC6h");
+[; <" SSPCON1 equ 0FC6h ;# ">
+"9785
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 9785: __asm("SSP1STAT equ 0FC7h");
+[; <" SSP1STAT equ 0FC7h ;# ">
+"9790
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 9790: __asm("SSPSTAT equ 0FC7h");
+[; <" SSPSTAT equ 0FC7h ;# ">
+"10383
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 10383: __asm("SSP1ADD equ 0FC8h");
+[; <" SSP1ADD equ 0FC8h ;# ">
+"10388
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 10388: __asm("SSPADD equ 0FC8h");
+[; <" SSPADD equ 0FC8h ;# ">
+"10721
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 10721: __asm("SSP1BUF equ 0FC9h");
+[; <" SSP1BUF equ 0FC9h ;# ">
+"10726
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 10726: __asm("SSPBUF equ 0FC9h");
+[; <" SSPBUF equ 0FC9h ;# ">
+"10759
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 10759: __asm("SSP1MSK equ 0FCAh");
+[; <" SSP1MSK equ 0FCAh ;# ">
+"10764
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 10764: __asm("SSPMSK equ 0FCAh");
+[; <" SSPMSK equ 0FCAh ;# ">
+"10897
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 10897: __asm("SSP1CON3 equ 0FCBh");
+[; <" SSP1CON3 equ 0FCBh ;# ">
+"10902
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 10902: __asm("SSPCON3 equ 0FCBh");
+[; <" SSPCON3 equ 0FCBh ;# ">
+"11019
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11019: __asm("T1GCON equ 0FCCh");
+[; <" T1GCON equ 0FCCh ;# ">
+"11150
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11150: __asm("T1CON equ 0FCDh");
+[; <" T1CON equ 0FCDh ;# ">
+"11279
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11279: __asm("TMR1 equ 0FCEh");
+[; <" TMR1 equ 0FCEh ;# ">
+"11286
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11286: __asm("TMR1L equ 0FCEh");
+[; <" TMR1L equ 0FCEh ;# ">
+"11306
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11306: __asm("TMR1H equ 0FCFh");
+[; <" TMR1H equ 0FCFh ;# ">
+"11326
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11326: __asm("RCON equ 0FD0h");
+[; <" RCON equ 0FD0h ;# ">
+"11459
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11459: __asm("WDTCON equ 0FD1h");
+[; <" WDTCON equ 0FD1h ;# ">
+"11487
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11487: __asm("OSCCON2 equ 0FD2h");
+[; <" OSCCON2 equ 0FD2h ;# ">
+"11549
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11549: __asm("OSCCON equ 0FD3h");
+[; <" OSCCON equ 0FD3h ;# ">
+"11632
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11632: __asm("T0CON equ 0FD5h");
+[; <" T0CON equ 0FD5h ;# ">
+"11702
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11702: __asm("TMR0 equ 0FD6h");
+[; <" TMR0 equ 0FD6h ;# ">
+"11709
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11709: __asm("TMR0L equ 0FD6h");
+[; <" TMR0L equ 0FD6h ;# ">
+"11729
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11729: __asm("TMR0H equ 0FD7h");
+[; <" TMR0H equ 0FD7h ;# ">
+"11749
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11749: __asm("STATUS equ 0FD8h");
+[; <" STATUS equ 0FD8h ;# ">
+"11820
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11820: __asm("FSR2 equ 0FD9h");
+[; <" FSR2 equ 0FD9h ;# ">
+"11827
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11827: __asm("FSR2L equ 0FD9h");
+[; <" FSR2L equ 0FD9h ;# ">
+"11847
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11847: __asm("FSR2H equ 0FDAh");
+[; <" FSR2H equ 0FDAh ;# ">
+"11854
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11854: __asm("PLUSW2 equ 0FDBh");
+[; <" PLUSW2 equ 0FDBh ;# ">
+"11874
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11874: __asm("PREINC2 equ 0FDCh");
+[; <" PREINC2 equ 0FDCh ;# ">
+"11894
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11894: __asm("POSTDEC2 equ 0FDDh");
+[; <" POSTDEC2 equ 0FDDh ;# ">
+"11914
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11914: __asm("POSTINC2 equ 0FDEh");
+[; <" POSTINC2 equ 0FDEh ;# ">
+"11934
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11934: __asm("INDF2 equ 0FDFh");
+[; <" INDF2 equ 0FDFh ;# ">
+"11954
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11954: __asm("BSR equ 0FE0h");
+[; <" BSR equ 0FE0h ;# ">
+"11961
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11961: __asm("FSR1 equ 0FE1h");
+[; <" FSR1 equ 0FE1h ;# ">
+"11968
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11968: __asm("FSR1L equ 0FE1h");
+[; <" FSR1L equ 0FE1h ;# ">
+"11988
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11988: __asm("FSR1H equ 0FE2h");
+[; <" FSR1H equ 0FE2h ;# ">
+"11995
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11995: __asm("PLUSW1 equ 0FE3h");
+[; <" PLUSW1 equ 0FE3h ;# ">
+"12015
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12015: __asm("PREINC1 equ 0FE4h");
+[; <" PREINC1 equ 0FE4h ;# ">
+"12035
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12035: __asm("POSTDEC1 equ 0FE5h");
+[; <" POSTDEC1 equ 0FE5h ;# ">
+"12055
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12055: __asm("POSTINC1 equ 0FE6h");
+[; <" POSTINC1 equ 0FE6h ;# ">
+"12075
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12075: __asm("INDF1 equ 0FE7h");
+[; <" INDF1 equ 0FE7h ;# ">
+"12095
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12095: __asm("WREG equ 0FE8h");
+[; <" WREG equ 0FE8h ;# ">
+"12115
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12115: __asm("FSR0 equ 0FE9h");
+[; <" FSR0 equ 0FE9h ;# ">
+"12122
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12122: __asm("FSR0L equ 0FE9h");
+[; <" FSR0L equ 0FE9h ;# ">
+"12142
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12142: __asm("FSR0H equ 0FEAh");
+[; <" FSR0H equ 0FEAh ;# ">
+"12149
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12149: __asm("PLUSW0 equ 0FEBh");
+[; <" PLUSW0 equ 0FEBh ;# ">
+"12169
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12169: __asm("PREINC0 equ 0FECh");
+[; <" PREINC0 equ 0FECh ;# ">
+"12189
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12189: __asm("POSTDEC0 equ 0FEDh");
+[; <" POSTDEC0 equ 0FEDh ;# ">
+"12209
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12209: __asm("POSTINC0 equ 0FEEh");
+[; <" POSTINC0 equ 0FEEh ;# ">
+"12229
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12229: __asm("INDF0 equ 0FEFh");
+[; <" INDF0 equ 0FEFh ;# ">
+"12249
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12249: __asm("INTCON3 equ 0FF0h");
+[; <" INTCON3 equ 0FF0h ;# ">
+"12341
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12341: __asm("INTCON2 equ 0FF1h");
+[; <" INTCON2 equ 0FF1h ;# ">
+"12418
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12418: __asm("INTCON equ 0FF2h");
+[; <" INTCON equ 0FF2h ;# ">
+"12535
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12535: __asm("PROD equ 0FF3h");
+[; <" PROD equ 0FF3h ;# ">
+"12542
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12542: __asm("PRODL equ 0FF3h");
+[; <" PRODL equ 0FF3h ;# ">
+"12562
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12562: __asm("PRODH equ 0FF4h");
+[; <" PRODH equ 0FF4h ;# ">
+"12582
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12582: __asm("TABLAT equ 0FF5h");
+[; <" TABLAT equ 0FF5h ;# ">
+"12604
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12604: __asm("TBLPTR equ 0FF6h");
+[; <" TBLPTR equ 0FF6h ;# ">
+"12611
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12611: __asm("TBLPTRL equ 0FF6h");
+[; <" TBLPTRL equ 0FF6h ;# ">
+"12631
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12631: __asm("TBLPTRH equ 0FF7h");
+[; <" TBLPTRH equ 0FF7h ;# ">
+"12651
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12651: __asm("TBLPTRU equ 0FF8h");
+[; <" TBLPTRU equ 0FF8h ;# ">
+"12660
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12660: __asm("PCLAT equ 0FF9h");
+[; <" PCLAT equ 0FF9h ;# ">
+"12667
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12667: __asm("PC equ 0FF9h");
+[; <" PC equ 0FF9h ;# ">
+"12674
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12674: __asm("PCL equ 0FF9h");
+[; <" PCL equ 0FF9h ;# ">
+"12694
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12694: __asm("PCLATH equ 0FFAh");
+[; <" PCLATH equ 0FFAh ;# ">
+"12714
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12714: __asm("PCLATU equ 0FFBh");
+[; <" PCLATU equ 0FFBh ;# ">
+"12721
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12721: __asm("STKPTR equ 0FFCh");
+[; <" STKPTR equ 0FFCh ;# ">
+"12795
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12795: __asm("TOS equ 0FFDh");
+[; <" TOS equ 0FFDh ;# ">
+"12802
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12802: __asm("TOSL equ 0FFDh");
+[; <" TOSL equ 0FFDh ;# ">
+"12822
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12822: __asm("TOSH equ 0FFEh");
+[; <" TOSH equ 0FFEh ;# ">
+"12842
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12842: __asm("TOSU equ 0FFFh");
+[; <" TOSU equ 0FFFh ;# ">
+"45 ../demo_src/app_device_custom_hid.h.c
+[; ;../demo_src/app_device_custom_hid.h.c: 45:         unsigned char ReceivedDataBuffer[64] __attribute__((address(0x500)));
+[v _ReceivedDataBuffer `uc ~T0 @X0 -> 64 `i e@1280 ]
+"46
+[; ;../demo_src/app_device_custom_hid.h.c: 46:         unsigned char ToSendDataBuffer[64] __attribute__((address(0x540)));
+[v _ToSendDataBuffer `uc ~T0 @X0 -> 64 `i e@1344 ]
+"55
+[; ;../demo_src/app_device_custom_hid.h.c: 55: volatile void* USBOutHandle;
+[v _USBOutHandle `*Vv ~T0 @X0 1 e ]
+"56
+[; ;../demo_src/app_device_custom_hid.h.c: 56: volatile void* USBInHandle;
+[v _USBInHandle `*Vv ~T0 @X0 1 e ]
+"58
+[; ;../demo_src/app_device_custom_hid.h.c: 58: char keysPressed = 0b0000000;
+[v _keysPressed `uc ~T0 @X0 1 e ]
+[i _keysPressed
+-> -> 0 `i `uc
+]
+"59
+[; ;../demo_src/app_device_custom_hid.h.c: 59: char keyStates = 0b00000000;
+[v _keyStates `uc ~T0 @X0 1 e ]
+[i _keyStates
+-> -> 0 `i `uc
+]
+"60
+[; ;../demo_src/app_device_custom_hid.h.c: 60: char lastMuteAction = 0b00000000;
+[v _lastMuteAction `uc ~T0 @X0 1 e ]
+[i _lastMuteAction
+-> -> 0 `i `uc
+]
+"61
+[; ;../demo_src/app_device_custom_hid.h.c: 61: char muteStates = 0b0000;
+[v _muteStates `uc ~T0 @X0 1 e ]
+[i _muteStates
+-> -> 0 `i `uc
+]
+"85
+[; ;../demo_src/app_device_custom_hid.h.c: 85: void MixerInitialize()
+[v _MixerInitialize `(v ~T0 @X0 1 ef ]
+"86
+[; ;../demo_src/app_device_custom_hid.h.c: 86: {
+{
+[e :U _MixerInitialize ]
+[f ]
+"89
+[; ;../demo_src/app_device_custom_hid.h.c: 89:     USBInHandle = 0;
+[e = _USBInHandle -> -> 0 `i `*Vv ]
+"92
+[; ;../demo_src/app_device_custom_hid.h.c: 92:     USBEnableEndpoint(1, 0x02|0x04|0x10|0x08);
+[e ( _USBEnableEndpoint (2 , -> -> 1 `i `uc -> | | | -> 2 `i -> 4 `i -> 16 `i -> 8 `i `uc ]
+"95
+[; ;../demo_src/app_device_custom_hid.h.c: 95:     USBOutHandle = (volatile void*)USBTransferOnePacket(1,0,(uint8_t*)&ReceivedDataBuffer[0],64);
+[e = _USBOutHandle -> ( _USBTransferOnePacket (4 , , , -> -> 1 `i `uc -> -> 0 `i `uc &U *U + &U _ReceivedDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ReceivedDataBuffer `ui `ux -> -> 64 `i `uc `*Vv ]
+"96
+[; ;../demo_src/app_device_custom_hid.h.c: 96: }
+[e :UE 664 ]
+}
+"112
+[; ;../demo_src/app_device_custom_hid.h.c: 112: void MixerTasks()
+[v _MixerTasks `(v ~T0 @X0 1 ef ]
+"113
+[; ;../demo_src/app_device_custom_hid.h.c: 113: {
+{
+[e :U _MixerTasks ]
+[f ]
+"118
+[; ;../demo_src/app_device_custom_hid.h.c: 118:     if( USBDeviceState < CONFIGURED_STATE )
+[e $ ! < -> _USBDeviceState `ui -> . `E297 6 `ui 666  ]
+"119
+[; ;../demo_src/app_device_custom_hid.h.c: 119:     {
+{
+"120
+[; ;../demo_src/app_device_custom_hid.h.c: 120:         return;
+[e $UE 665  ]
+"121
+[; ;../demo_src/app_device_custom_hid.h.c: 121:     }
+}
+[e :U 666 ]
+"127
+[; ;../demo_src/app_device_custom_hid.h.c: 127:     if( UCONbits.SUSPND == 1 )
+[e $ ! == -> . . _UCONbits 0 1 `i -> 1 `i 667  ]
+"128
+[; ;../demo_src/app_device_custom_hid.h.c: 128:     {
+{
+"129
+[; ;../demo_src/app_device_custom_hid.h.c: 129:         return;
+[e $UE 665  ]
+"130
+[; ;../demo_src/app_device_custom_hid.h.c: 130:     }
+}
+[e :U 667 ]
+"133
+[; ;../demo_src/app_device_custom_hid.h.c: 133:     if(((USBOutHandle != 0x0000) && ((*(volatile uint8_t*)USBOutHandle & 0x80) != 0x00)) == 0)
+[e $ ! == -> && != _USBOutHandle -> -> 0 `i `*Vv != & -> *U -> _USBOutHandle `*Vuc `i -> 128 `i -> 0 `i `i -> 0 `i 668  ]
+"134
+[; ;../demo_src/app_device_custom_hid.h.c: 134:     {
+{
+"135
+[; ;../demo_src/app_device_custom_hid.h.c: 135:         for (int i = 0; i < sizeof(ToSendDataBuffer); i++){
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < -> _i `ui -> # _ToSendDataBuffer `ui 669  ]
+[e $U 670  ]
+[e :U 669 ]
+{
+"136
+[; ;../demo_src/app_device_custom_hid.h.c: 136:             ToSendDataBuffer[i] = 0x00;
+[e = *U + &U _ToSendDataBuffer * -> -> _i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 0 `i `uc ]
+"137
+[; ;../demo_src/app_device_custom_hid.h.c: 137:         }
+}
+[e ++ _i -> 1 `i ]
+[e $ < -> _i `ui -> # _ToSendDataBuffer `ui 669  ]
+[e :U 670 ]
+}
+"141
+[; ;../demo_src/app_device_custom_hid.h.c: 141:         switch(ReceivedDataBuffer[0])
+[e $U 673  ]
+"142
+[; ;../demo_src/app_device_custom_hid.h.c: 142:         {
+{
+"143
+[; ;../demo_src/app_device_custom_hid.h.c: 143:             case COMMAND_UPDATE_MUTE_STATUS:
+[e :U 674 ]
+"145
+[; ;../demo_src/app_device_custom_hid.h.c: 145:                 break;
+[e $U 672  ]
+"146
+[; ;../demo_src/app_device_custom_hid.h.c: 146:             case COMMAND_RELAY_ALL_INFO:
+[e :U 675 ]
+"148
+[; ;../demo_src/app_device_custom_hid.h.c: 148:                 if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00)))
+[e $ ! ! && != _USBInHandle -> -> 0 `i `*Vv != & -> *U -> _USBInHandle `*Vuc `i -> 128 `i -> 0 `i 676  ]
+"149
+[; ;../demo_src/app_device_custom_hid.h.c: 149:                 {
+{
+"150
+[; ;../demo_src/app_device_custom_hid.h.c: 150:                     ToSendDataBuffer[0] = 0x80;
+[e = *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 128 `i `uc ]
+"152
+[; ;../demo_src/app_device_custom_hid.h.c: 152:                     readSliders(&ToSendDataBuffer[1]);
+[e ( _readSliders (1 &U *U + &U _ToSendDataBuffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux ]
+"153
+[; ;../demo_src/app_device_custom_hid.h.c: 153:                     scanRows();
+[e ( _scanRows ..  ]
+"154
+[; ;../demo_src/app_device_custom_hid.h.c: 154:                     toggleMutes();
+[e ( _toggleMutes ..  ]
+"156
+[; ;../demo_src/app_device_custom_hid.h.c: 156:                     for (int i = 0; i < 4; i++){
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 4 `i 677  ]
+[e $U 678  ]
+[e :U 677 ]
+{
+"157
+[; ;../demo_src/app_device_custom_hid.h.c: 157:                         ToSendDataBuffer[i+5] = ((muteStates & (1 << i)) >> i) * 0xFF;
+[e = *U + &U _ToSendDataBuffer * -> -> + _i -> 5 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> * >> & -> _muteStates `i << -> 1 `i _i _i -> 255 `i `uc ]
+"158
+[; ;../demo_src/app_device_custom_hid.h.c: 158:                     }
+}
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 4 `i 677  ]
+[e :U 678 ]
+}
+"161
+[; ;../demo_src/app_device_custom_hid.h.c: 161:                     USBInHandle = USBTransferOnePacket(1,1,(uint8_t*)&ToSendDataBuffer[0],sizeof(ToSendDataBuffer));
+[e = _USBInHandle -> ( _USBTransferOnePacket (4 , , , -> -> 1 `i `uc -> -> 1 `i `uc &U *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> # _ToSendDataBuffer `ui `uc `*Vv ]
+"162
+[; ;../demo_src/app_device_custom_hid.h.c: 162:                 }
+}
+[e :U 676 ]
+"163
+[; ;../demo_src/app_device_custom_hid.h.c: 163:                 break;
+[e $U 672  ]
+"164
+[; ;../demo_src/app_device_custom_hid.h.c: 164:         }
+}
+[e $U 672  ]
+[e :U 673 ]
+[e [\ -> *U + &U _ReceivedDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ReceivedDataBuffer `ui `ux `i , $ . `E5295 1 674
+ , $ . `E5295 0 675
+ 672 ]
+[e :U 672 ]
+"168
+[; ;../demo_src/app_device_custom_hid.h.c: 168:         USBOutHandle = USBTransferOnePacket(1,0,(uint8_t*)&ReceivedDataBuffer[0],64);
+[e = _USBOutHandle -> ( _USBTransferOnePacket (4 , , , -> -> 1 `i `uc -> -> 0 `i `uc &U *U + &U _ReceivedDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ReceivedDataBuffer `ui `ux -> -> 64 `i `uc `*Vv ]
+"169
+[; ;../demo_src/app_device_custom_hid.h.c: 169:     }
+}
+[e :U 668 ]
+"170
+[; ;../demo_src/app_device_custom_hid.h.c: 170: }
+[e :UE 665 ]
+}
+"172
+[; ;../demo_src/app_device_custom_hid.h.c: 172: void readSliders(uint8_t* output){
+[v _readSliders `(v ~T0 @X0 1 ef1`*uc ]
+{
+[e :U _readSliders ]
+[v _output `*uc ~T0 @X0 1 r1 ]
+[f ]
+[v F5306 `uc ~T0 @X0 -> 4 `i s ]
+[i F5306
+:U ..
+"173
+[; ;../demo_src/app_device_custom_hid.h.c: 173:     uint8_t sliders[] = {0, 1, 18, 19};
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 18 `i `uc
+-> -> 19 `i `uc
+..
+]
+[v _sliders `uc ~T0 @X0 -> 4 `i a ]
+[e = _sliders F5306 ]
+"175
+[; ;../demo_src/app_device_custom_hid.h.c: 175:     for (int i = 0 ; i < sizeof(sliders); i++){
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < -> _i `ui -> # _sliders `ui 681  ]
+[e $U 682  ]
+[e :U 681 ]
+{
+"176
+[; ;../demo_src/app_device_custom_hid.h.c: 176:         ADCON0bits.CHS = sliders[i];
+[e = . . _ADCON0bits 1 2 *U + &U _sliders * -> -> _i `ui `ux -> -> # *U &U _sliders `ui `ux ]
+"177
+[; ;../demo_src/app_device_custom_hid.h.c: 177:         ADCON0bits.GO = 1;
+[e = . . _ADCON0bits 3 1 -> -> 1 `i `uc ]
+"178
+[; ;../demo_src/app_device_custom_hid.h.c: 178:         while (ADCON0bits.GO);
+[e $U 684  ]
+[e :U 685 ]
+[e :U 684 ]
+[e $ != -> . . _ADCON0bits 3 1 `i -> 0 `i 685  ]
+[e :U 686 ]
+"179
+[; ;../demo_src/app_device_custom_hid.h.c: 179:         output[i] = ADRESH;
+[e = *U + _output * -> _i `x -> -> # *U _output `i `x _ADRESH ]
+"181
+[; ;../demo_src/app_device_custom_hid.h.c: 181:     }
+}
+[e ++ _i -> 1 `i ]
+[e $ < -> _i `ui -> # _sliders `ui 681  ]
+[e :U 682 ]
+}
+"182
+[; ;../demo_src/app_device_custom_hid.h.c: 182: }
+[e :UE 680 ]
+}
+"184
+[; ;../demo_src/app_device_custom_hid.h.c: 184: void scanRows(void){
+[v _scanRows `(v ~T0 @X0 1 ef ]
+{
+[e :U _scanRows ]
+[f ]
+"185
+[; ;../demo_src/app_device_custom_hid.h.c: 185:     PORTC = 1 << 1;
+[e = _PORTC -> << -> 1 `i -> 1 `i `uc ]
+"186
+[; ;../demo_src/app_device_custom_hid.h.c: 186:     keysPressed |= (PORTBbits.RB5 << 0) | (PORTBbits.RB4 << 1) | (PORTBbits.RB3 << 2) | (PORTBbits.RB2 << 3);
+[e =| _keysPressed -> | | | << -> . . _PORTBbits 0 5 `i -> 0 `i << -> . . _PORTBbits 0 4 `i -> 1 `i << -> . . _PORTBbits 0 3 `i -> 2 `i << -> . . _PORTBbits 0 2 `i -> 3 `i `uc ]
+"187
+[; ;../demo_src/app_device_custom_hid.h.c: 187:     PORTC = 1 << 2;
+[e = _PORTC -> << -> 1 `i -> 2 `i `uc ]
+"188
+[; ;../demo_src/app_device_custom_hid.h.c: 188:     keysPressed |= (PORTBbits.RB5 << 5) | (PORTBbits.RB4 << 6) | (PORTBbits.RB3 << 7);
+[e =| _keysPressed -> | | << -> . . _PORTBbits 0 5 `i -> 5 `i << -> . . _PORTBbits 0 4 `i -> 6 `i << -> . . _PORTBbits 0 3 `i -> 7 `i `uc ]
+"189
+[; ;../demo_src/app_device_custom_hid.h.c: 189:     PORTC = 0;
+[e = _PORTC -> -> 0 `i `uc ]
+"190
+[; ;../demo_src/app_device_custom_hid.h.c: 190: }
+[e :UE 687 ]
+}
+"192
+[; ;../demo_src/app_device_custom_hid.h.c: 192: void toggleMutes(){
+[v _toggleMutes `(v ~T0 @X0 1 ef ]
+{
+[e :U _toggleMutes ]
+[f ]
+"193
+[; ;../demo_src/app_device_custom_hid.h.c: 193:     for (int i = 0; i < 4; i++){
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 4 `i 689  ]
+[e $U 690  ]
+[e :U 689 ]
+{
+"194
+[; ;../demo_src/app_device_custom_hid.h.c: 194:         if ( (keysPressed & (1 << i)) != (lastMuteAction & (1 << i)) ){
+[e $ ! != & -> _keysPressed `i << -> 1 `i _i & -> _lastMuteAction `i << -> 1 `i _i 692  ]
+{
+"195
+[; ;../demo_src/app_device_custom_hid.h.c: 195:             muteStates ^= keysPressed & (1 << i);
+[e =^ _muteStates -> & -> _keysPressed `i << -> 1 `i _i `uc ]
+"198
+[; ;../demo_src/app_device_custom_hid.h.c: 198:         }
+}
+[e :U 692 ]
+"199
+[; ;../demo_src/app_device_custom_hid.h.c: 199:     }
+}
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 4 `i 689  ]
+[e :U 690 ]
+}
+"200
+[; ;../demo_src/app_device_custom_hid.h.c: 200:     lastMuteAction = keysPressed & 0b00001111;
+[e = _lastMuteAction -> & -> _keysPressed `i -> 15 `i `uc ]
+"201
+[; ;../demo_src/app_device_custom_hid.h.c: 201: }
+[e :UE 688 ]
+}

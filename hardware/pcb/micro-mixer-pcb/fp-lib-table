@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name "MX_Only")(type "KiCad")(uri "C:/Users/jakel/Documents/GitHub/micro-mixer-hardware/MX_Alps_Hybrid-master/MX_Only.pretty")(options "")(descr ""))
+  (lib (name "Slider")(type "KiCad")(uri "C:/Users/jakel/Documents/GitHub/micro-mixer-hardware/Slider")(options "")(descr ""))
+)

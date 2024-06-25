@@ -1,0 +1,4080 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"141 ../usb/src/usb_device.c
+[c E5031 0 1 2 4 8 16 32 .. ]
+[n E5031 . DETACHED_STATE ATTACHED_STATE POWERED_STATE DEFAULT_STATE ADR_PENDING_STATE ADDRESS_STATE CONFIGURED_STATE  ]
+"271 ../usb/inc/usb_hal_pic18.h
+[; ;../usb/inc/usb_hal_pic18.h: 271:     struct{
+[s S652 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S652 . BC8 BC9 BSTALL DTSEN INCDIS KEN DTS UOWN ]
+"282
+[; ;../usb/inc/usb_hal_pic18.h: 282:     struct{
+[s S653 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S653 . . PID0 PID1 PID2 PID3 . ]
+"292
+[; ;../usb/inc/usb_hal_pic18.h: 292:     struct{
+[s S654 :2 `uc 1 :4 `uc 1 :2 `uc 1 ]
+[n S654 . . PID . ]
+"269
+[; ;../usb/inc/usb_hal_pic18.h: 269: {
+[u S651 `uc 1 `S652 1 `S653 1 `S654 1 ]
+[n S651 _BD_STAT Val . . . ]
+"303
+[; ;../usb/inc/usb_hal_pic18.h: 303:     {
+[s S656 `S651 1 `uc 1 `uc 1 `uc 1 ]
+[n S656 . STAT CNT ADRL ADRH ]
+"310
+[; ;../usb/inc/usb_hal_pic18.h: 310:     {
+[s S657 :8 `uc 1 :8 `uc 1 `us 1 ]
+[n S657 . . . ADR ]
+"301
+[; ;../usb/inc/usb_hal_pic18.h: 301: {
+[u S655 `S656 1 `S657 1 `ul 1 `uc -> 4 `i ]
+[n S655 __BDT . . Val v ]
+"1997 ../usb/inc\usb_device.h
+[u S644 `*uc 1 `*Cuc 1 `*us 1 `*Cus 1 ]
+[n S644 . bRam bRom wRam wRom ]
+"2008
+[s S646 :1 `uc 1 :5 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S646 . ctrl_trf_mem reserved includeZero busy ]
+"2006
+[u S645 `S646 1 `uc 1 ]
+[n S645 . bits Val ]
+"1985
+[s S642 `uc 1 `uc 1 ]
+[n S642 . LB HB ]
+"1981
+[u S641 `us 1 `uc -> 2 `i `S642 1 ]
+[n S641 . Val v byte ]
+"1995
+[s S643 `S644 1 `S645 1 `S641 1 ]
+[n S643 . pSrc info wCount ]
+"2028
+[u S648 `*uc 1 `*us 1 ]
+[n S648 . bRam wRam ]
+"2037
+[s S650 :7 `uc 1 :1 `uc 1 ]
+[n S650 . reserved busy ]
+"2035
+[u S649 `S650 1 `uc 1 ]
+[n S649 . bits Val ]
+[v F5160 `(v ~T0 @X0 0 tf ]
+"2026
+[s S647 `S648 1 `S649 1 `S641 1 `*F5160 1 ]
+[n S647 . pDst info wCount pFunc ]
+"323 ../usb/inc/usb_hal_pic18.h
+[; ;../usb/inc/usb_hal_pic18.h: 323:     {
+[s S659 :1 `uc 1 :1 `uc 1 :1 `uc 1 :4 `uc 1 ]
+[n S659 . filler1 ping_pong direction endpoint_number ]
+"321
+[; ;../usb/inc/usb_hal_pic18.h: 321: {
+[u S658 `S659 1 `uc 1 ]
+[n S658 __USTAT . Val ]
+"38 ../usb/src/usb_device_local.h
+[; ;../usb/src/usb_device_local.h: 38:     {
+[s S663 :1 `uc 1 :1 `uc 1 ]
+[n S663 . ping_pong_state transfer_terminated ]
+"36
+[; ;../usb/src/usb_device_local.h: 36: {
+[u S662 `S663 1 `uc 1 ]
+[n S662 . bits Val ]
+"272 ../usb/inc/usb_ch9.h
+[s S618 `uc 1 `uc 1 `us 1 `us 1 `us 1 ]
+[n S618 . bmRequestType bRequest wValue wIndex wLength ]
+"288
+[s S621 `uc 1 `uc 1 ]
+[n S621 . LB HB ]
+"284
+[u S620 `us 1 `uc -> 2 `i `S621 1 ]
+[n S620 . Val v byte ]
+"299
+[s S623 `uc 1 `uc 1 ]
+[n S623 . LB HB ]
+"295
+[u S622 `us 1 `uc -> 2 `i `S623 1 ]
+[n S622 . Val v byte ]
+"310
+[s S625 `uc 1 `uc 1 ]
+[n S625 . LB HB ]
+"306
+[u S624 `us 1 `uc -> 2 `i `S625 1 ]
+[n S624 . Val v byte ]
+"280
+[s S619 :8 `uc 1 :8 `uc 1 `S620 1 `S622 1 `S624 1 ]
+[n S619 . . . W_Value W_Index W_Length ]
+"317
+[s S626 :5 `uc 1 :2 `uc 1 :1 `uc 1 :8 `uc 1 `uc 1 :8 `uc 1 :8 `uc 1 :8 `uc 1 :8 `uc 1 :8 `uc 1 ]
+[n S626 . Recipient RequestType DataDir . bFeature . . . . . ]
+"335
+[s S629 :5 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S629 . recipient type direction ]
+"332
+[u S628 `uc 1 `S629 1 ]
+[n S628 . bmRequestType . ]
+"330
+[s S627 `S628 1 ]
+[n S627 . requestInfo ]
+"343
+[s S630 :8 `uc 1 :8 `uc 1 `uc 1 `uc 1 `us 1 :8 `uc 1 :8 `uc 1 ]
+[n S630 . . . bDscIndex bDescriptorType wLangID . . ]
+"353
+[s S631 :8 `uc 1 :8 `uc 1 `uc 1 `uc 1 :8 `uc 1 :8 `uc 1 :8 `uc 1 :8 `uc 1 ]
+[n S631 . . . bDevADR bDevADRH . . . . ]
+"364
+[s S632 :8 `uc 1 :8 `uc 1 `uc 1 `uc 1 :8 `uc 1 :8 `uc 1 :8 `uc 1 :8 `uc 1 ]
+[n S632 . . . bConfigurationValue bCfgRSD . . . . ]
+"375
+[s S633 :8 `uc 1 :8 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 :8 `uc 1 :8 `uc 1 ]
+[n S633 . . . bAltID bAltID_H bIntfID bIntfID_H . . ]
+"386
+[s S634 :8 `uc 1 :8 `uc 1 :8 `uc 1 :8 `uc 1 `uc 1 `uc 1 :8 `uc 1 :8 `uc 1 ]
+[n S634 . . . . . bEPID bEPID_H . . ]
+"397
+[s S635 :8 `uc 1 :8 `uc 1 :8 `uc 1 :8 `uc 1 :4 `uc 1 :3 `uc 1 :1 `uc 1 :8 `uc 1 :8 `uc 1 :8 `uc 1 ]
+[n S635 . . . . . EPNum . EPDir . . . ]
+"269
+[u S617 `S618 1 `S619 1 `S626 1 `S627 1 `S630 1 `S631 1 `S632 1 `S633 1 `S634 1 `S635 1 ]
+[n S617 . . . . . . . . . . . ]
+"5981 C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 5981:     struct {
+[s S247 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S247 . TMR1GIE TMR3GIE USBIE CTMUIE ]
+"5987
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 5987:     struct {
+[s S248 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S248 . RXB0IE RXB1IE TXB0IE TXB1IE ]
+"5993
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 5993:     struct {
+[s S249 :1 `uc 1 :1 `uc 1 ]
+[n S249 . . RXBNIE ]
+"5980
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 5980: typedef union {
+[u S246 `S247 1 `S248 1 `S249 1 ]
+[n S246 . . . . ]
+"5998
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 5998: extern volatile PIE3bits_t PIE3bits __attribute__((address(0xFA3)));
+[v _PIE3bits `VS246 ~T0 @X0 0 e@4003 ]
+"778
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 778: extern volatile unsigned char UEIR __attribute__((address(0xF67)));
+[v _UEIR `Vuc ~T0 @X0 0 e@3943 ]
+"671
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 671: extern volatile unsigned char UIR __attribute__((address(0xF65)));
+[v _UIR `Vuc ~T0 @X0 0 e@3941 ]
+"954
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 954: extern volatile unsigned char UEP0 __attribute__((address(0xF6A)));
+[v _UEP0 `Vuc ~T0 @X0 0 e@3946 ]
+"29 C:\Program Files\Microchip\xc8\v2.36\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.36\pic\include\c99\string.h: 29: void *memset (void *, int, size_t);
+[v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
+"1062 C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 1062: extern volatile unsigned char UEP1 __attribute__((address(0xF6B)));
+[v _UEP1 `Vuc ~T0 @X0 0 e@3947 ]
+"472
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 472: extern volatile unsigned char UCFG __attribute__((address(0xF62)));
+[v _UCFG `Vuc ~T0 @X0 0 e@3938 ]
+"727
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 727: extern volatile unsigned char UEIE __attribute__((address(0xF66)));
+[v _UEIE `Vuc ~T0 @X0 0 e@3942 ]
+"615
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 615: extern volatile unsigned char UIE __attribute__((address(0xF64)));
+[v _UIE `Vuc ~T0 @X0 0 e@3940 ]
+"367
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 367:     struct {
+[s S22 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S22 . . SUSPND RESUME USBEN PKTDIS SE0 PPBRST ]
+"366
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 366: typedef union {
+[u S21 `S22 1 ]
+[n S21 . . ]
+"377
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 377: extern volatile UCONbits_t UCONbits __attribute__((address(0xF60)));
+[v _UCONbits `VS21 ~T0 @X0 0 e@3936 ]
+"551
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 551: extern volatile unsigned char UADDR __attribute__((address(0xF63)));
+[v _UADDR `Vuc ~T0 @X0 0 e@3939 ]
+"677
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 677:     struct {
+[s S36 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S36 . URSTIF UERRIF ACTVIF TRNIF IDLEIF STALLIF SOFIF ]
+"676
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 676: typedef union {
+[u S35 `S36 1 ]
+[n S35 . . ]
+"687
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 687: extern volatile UIRbits_t UIRbits __attribute__((address(0xF65)));
+[v _UIRbits `VS35 ~T0 @X0 0 e@3941 ]
+"621
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 621:     struct {
+[s S34 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S34 . URSTIE UERRIE ACTVIE TRNIE IDLEIE STALLIE SOFIE ]
+"620
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 620: typedef union {
+[u S33 `S34 1 ]
+[n S33 . . ]
+"631
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 631: extern volatile UIEbits_t UIEbits __attribute__((address(0xF64)));
+[v _UIEbits `VS33 ~T0 @X0 0 e@3940 ]
+"248 ../usb/src/usb_device.c
+[; ;../usb/src/usb_device.c: 248: static void USBWakeFromSuspend(void);
+[v _USBWakeFromSuspend `(v ~T0 @X0 0 sf ]
+"6054 C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6054:     struct {
+[s S251 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S251 . TMR1GIF TMR3GIF USBIF CTMUIF ]
+"6060
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6060:     struct {
+[s S252 :1 `uc 1 :1 `uc 1 ]
+[n S252 . . RXBNIF ]
+"6053
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6053: typedef union {
+[u S250 `S251 1 `S252 1 ]
+[n S250 . . . ]
+"6065
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6065: extern volatile PIR3bits_t PIR3bits __attribute__((address(0xFA4)));
+[v _PIR3bits `VS250 ~T0 @X0 0 e@4004 ]
+"249 ../usb/src/usb_device.c
+[; ;../usb/src/usb_device.c: 249: static void USBSuspend(void);
+[v _USBSuspend `(v ~T0 @X0 0 sf ]
+"717
+[; ;../usb/src/usb_device.c: 717:             USER_USB_CALLBACK_EVENT_HANDLER((USB_EVENT)EVENT_SOF,0,1);
+[c E4972 0 1 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 400 500 600 700 800 900 1000 10000 32767 .. ]
+[n E4972 . EVENT_NONE EVENT_DEVICE_STACK_BASE EVENT_HOST_STACK_BASE EVENT_HUB_ATTACH EVENT_STALL EVENT_VBUS_SES_REQUEST EVENT_VBUS_OVERCURRENT EVENT_VBUS_REQUEST_POWER EVENT_VBUS_RELEASE_POWER EVENT_VBUS_POWER_AVAILABLE EVENT_UNSUPPORTED_DEVICE EVENT_CANNOT_ENUMERATE EVENT_CLIENT_INIT_ERROR EVENT_OUT_OF_MEMORY EVENT_UNSPECIFIED_ERROR EVENT_DETACH EVENT_TRANSFER EVENT_SOF EVENT_RESUME EVENT_SUSPEND EVENT_RESET EVENT_DATA_ISOC_READ EVENT_DATA_ISOC_WRITE EVENT_OVERRIDE_CLIENT_DRIVER_SELECTION EVENT_1MS EVENT_ALT_INTERFACE EVENT_HOLD_BEFORE_CONFIGURATION EVENT_GENERIC_BASE EVENT_MSD_BASE EVENT_HID_BASE EVENT_PRINTER_BASE EVENT_CDC_BASE EVENT_CHARGER_BASE EVENT_AUDIO_BASE EVENT_USER_BASE EVENT_BUS_ERROR  ]
+"233
+[; ;../usb/src/usb_device.c: 233: extern _Bool USER_USB_CALLBACK_EVENT_HANDLER(USB_EVENT event, void *pdata, uint16_t size);
+[v _USER_USB_CALLBACK_EVENT_HANDLER `(a ~T0 @X0 0 ef3`E4972`*v`us ]
+"1808 ../usb/inc\usb_device.h
+[v _USBIncrement1msInternalTimers `(v ~T0 @X0 0 ef ]
+"678
+[v _USBCtrlEPAllowStatusStage `(v ~T0 @X0 0 ef ]
+"250 ../usb/src/usb_device.c
+[; ;../usb/src/usb_device.c: 250: static void USBStallHandler(void);
+[v _USBStallHandler `(v ~T0 @X0 0 sf ]
+"412 C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 412: extern volatile unsigned char USTAT __attribute__((address(0xF61)));
+[v _USTAT `Vuc ~T0 @X0 0 e@3937 ]
+"235 ../usb/src/usb_device.c
+[; ;../usb/src/usb_device.c: 235: static void USBCtrlEPService(void);
+[v _USBCtrlEPService `(v ~T0 @X0 0 sf ]
+"247
+[; ;../usb/src/usb_device.c: 247: static void USBConfigureEndpoint(uint8_t EPNum, uint8_t direction);
+[v _USBConfigureEndpoint `(v ~T0 @X0 0 sf2`uc`uc ]
+"361 C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 361: extern volatile unsigned char UCON __attribute__((address(0xF60)));
+[v _UCON `Vuc ~T0 @X0 0 e@3936 ]
+"11330
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11330:     struct {
+[s S513 :1 `uc 1 ]
+[n S513 . NOT_BOR ]
+"11333
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11333:     struct {
+[s S514 :1 `uc 1 :1 `uc 1 ]
+[n S514 . . NOT_POR ]
+"11337
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11337:     struct {
+[s S515 :2 `uc 1 :1 `uc 1 ]
+[n S515 . . NOT_PD ]
+"11341
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11341:     struct {
+[s S516 :3 `uc 1 :1 `uc 1 ]
+[n S516 . . NOT_TO ]
+"11345
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11345:     struct {
+[s S517 :4 `uc 1 :1 `uc 1 ]
+[n S517 . . NOT_RI ]
+"11349
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11349:     struct {
+[s S518 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S518 . nBOR nPOR nPD nTO nRI . SBOREN IPEN ]
+"11359
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11359:     struct {
+[s S519 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S519 . BOR POR PD TO RI ]
+"11329
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11329: typedef union {
+[u S512 `S513 1 `S514 1 `S515 1 `S516 1 `S517 1 `S518 1 `S519 1 ]
+[n S512 . . . . . . . . ]
+"11367
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11367: extern volatile RCONbits_t RCONbits __attribute__((address(0xFD0)));
+[v _RCONbits `VS512 ~T0 @X0 0 e@4048 ]
+"6101
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6101:     struct {
+[s S254 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S254 . TMR1GIP TMR3GIP USBIP CTMUIP ]
+"6107
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6107:     struct {
+[s S255 :1 `uc 1 :1 `uc 1 ]
+[n S255 . . RXBNIP ]
+"6100
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6100: typedef union {
+[u S253 `S254 1 `S255 1 ]
+[n S253 . . . ]
+"6112
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6112: extern volatile IPR3bits_t IPR3bits __attribute__((address(0xFA5)));
+[v _IPR3bits `VS253 ~T0 @X0 0 e@4005 ]
+"12422
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12422:     struct {
+[s S584 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S584 . IOCIF INT0IF TMR0IF IOCIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
+"12432
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12432:     struct {
+[s S585 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S585 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
+"12442
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12442:     struct {
+[s S586 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S586 . . GIEL GIEH ]
+"12421
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12421: typedef union {
+[u S583 `S584 1 `S585 1 `S586 1 ]
+[n S583 . . . . ]
+"12448
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12448: extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
+[v _INTCONbits `VS583 ~T0 @X0 0 e@4082 ]
+"241 ../usb/src/usb_device.c
+[; ;../usb/src/usb_device.c: 241: static void USBCtrlTrfTxService(void);
+[v _USBCtrlTrfTxService `(v ~T0 @X0 0 sf ]
+[v F5384 `(v ~T0 @X0 0 tf ]
+"2022
+[; ;../usb/src/usb_device.c: 2022:         USER_USB_CALLBACK_EVENT_HANDLER((USB_EVENT)EVENT_CONFIGURED,(void*)&USBActiveConfiguration,1);
+[c E5040 1 2 3 4 5 .. ]
+[n E5040 . EVENT_CONFIGURED EVENT_SET_DESCRIPTOR EVENT_EP0_REQUEST EVENT_ATTACH EVENT_TRANSFER_TERMINATED  ]
+"72 ../usb/inc/usb_ch9.h
+[s S609 `uc 1 `uc 1 `us 1 `uc 1 `uc 1 `uc 1 `uc 1 `us 1 `us 1 `us 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S609 _USB_DEVICE_DESCRIPTOR bLength bDescriptorType bcdUSB bDeviceClass bDeviceSubClass bDeviceProtocol bMaxPacketSize0 idVendor idProduct bcdDevice iManufacturer iProduct iSerialNumber bNumConfigurations ]
+"215 ../usb/src/usb_device.c
+[; ;../usb/src/usb_device.c: 215:     extern const USB_DEVICE_DESCRIPTOR device_dsc;
+[v _device_dsc `CS609 ~T0 @X0 0 e ]
+[v F5313 `*Cuc ~T0 @X0 1 t ]
+"222
+[; ;../usb/src/usb_device.c: 222:     extern const uint8_t *const USB_CD_Ptr[];
+[v _USB_CD_Ptr `C*Cuc ~T0 @X0 -> 0 `x e ]
+[v F5316 `*Cuc ~T0 @X0 1 t ]
+"225
+[; ;../usb/src/usb_device.c: 225: extern const uint8_t *const USB_SD_Ptr[];
+[v _USB_SD_Ptr `C*Cuc ~T0 @X0 -> 0 `x e ]
+"960 C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 960:     struct {
+[s S49 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S49 . EPSTALL EPINEN EPOUTEN EPCONDIS EPHSHK ]
+"967
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 967:     struct {
+[s S50 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S50 . EP0STALL EP0INEN EP0OUTEN EP0CONDIS EP0HSHK ]
+"974
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 974:     struct {
+[s S51 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S51 . EPSTALL0 EPINEN0 EPOUTEN0 EPCONDIS0 EPHSHK0 ]
+"959
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 959: typedef union {
+[u S48 `S49 1 `S50 1 `S51 1 ]
+[n S48 . . . . ]
+"982
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 982: extern volatile UEP0bits_t UEP0bits __attribute__((address(0xF6A)));
+[v _UEP0bits `VS48 ~T0 @X0 0 e@3946 ]
+"27 C:\Program Files\Microchip\xc8\v2.36\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.36\pic\include\c99\string.h: 27: void *memcpy (void *restrict, const void *restrict, size_t);
+[v _memcpy `(*v ~T0 @X0 0 ef3`*v`*Cv`ui ]
+"236 ../usb/src/usb_device.c
+[; ;../usb/src/usb_device.c: 236: static void USBCtrlTrfSetupHandler(void);
+[v _USBCtrlTrfSetupHandler `(v ~T0 @X0 0 sf ]
+"246
+[; ;../usb/src/usb_device.c: 246: static void USBCtrlTrfOutHandler(void);
+[v _USBCtrlTrfOutHandler `(v ~T0 @X0 0 sf ]
+"237
+[; ;../usb/src/usb_device.c: 237: static void USBCtrlTrfInHandler(void);
+[v _USBCtrlTrfInHandler `(v ~T0 @X0 0 sf ]
+"238
+[; ;../usb/src/usb_device.c: 238: static void USBCheckStdRequest(void);
+[v _USBCheckStdRequest `(v ~T0 @X0 0 sf ]
+[v F5419 `(v ~T0 @X0 0 tf ]
+"245
+[; ;../usb/src/usb_device.c: 245: static void USBStdFeatureReqHandler(void);
+[v _USBStdFeatureReqHandler `(v ~T0 @X0 0 sf ]
+"54 C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 54: __asm("SRCON1 equ 0F57h");
+[; <" SRCON1 equ 0F57h ;# ">
+"116
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 116: __asm("SRCON0 equ 0F58h");
+[; <" SRCON0 equ 0F58h ;# ">
+"187
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 187: __asm("CCPTMRS equ 0F59h");
+[; <" CCPTMRS equ 0F59h ;# ">
+"214
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 214: __asm("VREGCON equ 0F5Ah");
+[; <" VREGCON equ 0F5Ah ;# ">
+"234
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 234: __asm("ANSELA equ 0F5Bh");
+[; <" ANSELA equ 0F5Bh ;# ">
+"279
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 279: __asm("ANSELB equ 0F5Ch");
+[; <" ANSELB equ 0F5Ch ;# ">
+"329
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 329: __asm("ANSELC equ 0F5Dh");
+[; <" ANSELC equ 0F5Dh ;# ">
+"363
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 363: __asm("UCON equ 0F60h");
+[; <" UCON equ 0F60h ;# ">
+"414
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 414: __asm("USTAT equ 0F61h");
+[; <" USTAT equ 0F61h ;# ">
+"474
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 474: __asm("UCFG equ 0F62h");
+[; <" UCFG equ 0F62h ;# ">
+"553
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 553: __asm("UADDR equ 0F63h");
+[; <" UADDR equ 0F63h ;# ">
+"617
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 617: __asm("UIE equ 0F64h");
+[; <" UIE equ 0F64h ;# ">
+"673
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 673: __asm("UIR equ 0F65h");
+[; <" UIR equ 0F65h ;# ">
+"729
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 729: __asm("UEIE equ 0F66h");
+[; <" UEIE equ 0F66h ;# ">
+"780
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 780: __asm("UEIR equ 0F67h");
+[; <" UEIR equ 0F67h ;# ">
+"831
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 831: __asm("UFRM equ 0F68h");
+[; <" UFRM equ 0F68h ;# ">
+"838
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 838: __asm("UFRML equ 0F68h");
+[; <" UFRML equ 0F68h ;# ">
+"916
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 916: __asm("UFRMH equ 0F69h");
+[; <" UFRMH equ 0F69h ;# ">
+"956
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 956: __asm("UEP0 equ 0F6Ah");
+[; <" UEP0 equ 0F6Ah ;# ">
+"1064
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 1064: __asm("UEP1 equ 0F6Bh");
+[; <" UEP1 equ 0F6Bh ;# ">
+"1172
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 1172: __asm("UEP2 equ 0F6Ch");
+[; <" UEP2 equ 0F6Ch ;# ">
+"1280
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 1280: __asm("UEP3 equ 0F6Dh");
+[; <" UEP3 equ 0F6Dh ;# ">
+"1388
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 1388: __asm("UEP4 equ 0F6Eh");
+[; <" UEP4 equ 0F6Eh ;# ">
+"1496
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 1496: __asm("UEP5 equ 0F6Fh");
+[; <" UEP5 equ 0F6Fh ;# ">
+"1604
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 1604: __asm("UEP6 equ 0F70h");
+[; <" UEP6 equ 0F70h ;# ">
+"1712
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 1712: __asm("UEP7 equ 0F71h");
+[; <" UEP7 equ 0F71h ;# ">
+"1820
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 1820: __asm("UEP8 equ 0F72h");
+[; <" UEP8 equ 0F72h ;# ">
+"1896
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 1896: __asm("UEP9 equ 0F73h");
+[; <" UEP9 equ 0F73h ;# ">
+"1972
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 1972: __asm("UEP10 equ 0F74h");
+[; <" UEP10 equ 0F74h ;# ">
+"2048
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2048: __asm("UEP11 equ 0F75h");
+[; <" UEP11 equ 0F75h ;# ">
+"2124
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2124: __asm("UEP12 equ 0F76h");
+[; <" UEP12 equ 0F76h ;# ">
+"2200
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2200: __asm("UEP13 equ 0F77h");
+[; <" UEP13 equ 0F77h ;# ">
+"2276
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2276: __asm("UEP14 equ 0F78h");
+[; <" UEP14 equ 0F78h ;# ">
+"2352
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2352: __asm("UEP15 equ 0F79h");
+[; <" UEP15 equ 0F79h ;# ">
+"2428
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2428: __asm("SLRCON equ 0F7Ah");
+[; <" SLRCON equ 0F7Ah ;# ">
+"2460
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2460: __asm("VREFCON2 equ 0F7Bh");
+[; <" VREFCON2 equ 0F7Bh ;# ">
+"2512
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2512: __asm("VREFCON1 equ 0F7Ch");
+[; <" VREFCON1 equ 0F7Ch ;# ">
+"2573
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2573: __asm("VREFCON0 equ 0F7Dh");
+[; <" VREFCON0 equ 0F7Dh ;# ">
+"2633
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2633: __asm("PMD0 equ 0F7Eh");
+[; <" PMD0 equ 0F7Eh ;# ">
+"2715
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2715: __asm("PMD1 equ 0F7Fh");
+[; <" PMD1 equ 0F7Fh ;# ">
+"2797
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2797: __asm("PORTA equ 0F80h");
+[; <" PORTA equ 0F80h ;# ">
+"2949
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 2949: __asm("PORTB equ 0F81h");
+[; <" PORTB equ 0F81h ;# ">
+"3059
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 3059: __asm("PORTC equ 0F82h");
+[; <" PORTC equ 0F82h ;# ">
+"3201
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 3201: __asm("PORTE equ 0F84h");
+[; <" PORTE equ 0F84h ;# ">
+"3240
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 3240: __asm("WPUB equ 0F85h");
+[; <" WPUB equ 0F85h ;# ">
+"3302
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 3302: __asm("IOCB equ 0F86h");
+[; <" IOCB equ 0F86h ;# ">
+"3341
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 3341: __asm("IOCC equ 0F87h");
+[; <" IOCC equ 0F87h ;# ">
+"3398
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 3398: __asm("CTMUICON equ 0F88h");
+[; <" CTMUICON equ 0F88h ;# ">
+"3474
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 3474: __asm("LATA equ 0F89h");
+[; <" LATA equ 0F89h ;# ">
+"3586
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 3586: __asm("LATB equ 0F8Ah");
+[; <" LATB equ 0F8Ah ;# ">
+"3698
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 3698: __asm("LATC equ 0F8Bh");
+[; <" LATC equ 0F8Bh ;# ">
+"3800
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 3800: __asm("CTMUCONL equ 0F8Eh");
+[; <" CTMUCONL equ 0F8Eh ;# ">
+"3805
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 3805: __asm("CTMUCON1 equ 0F8Eh");
+[; <" CTMUCON1 equ 0F8Eh ;# ">
+"3954
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 3954: __asm("CTMUCONH equ 0F8Fh");
+[; <" CTMUCONH equ 0F8Fh ;# ">
+"3959
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 3959: __asm("CTMUCON0 equ 0F8Fh");
+[; <" CTMUCON0 equ 0F8Fh ;# ">
+"4110
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 4110: __asm("CCPR2 equ 0F90h");
+[; <" CCPR2 equ 0F90h ;# ">
+"4117
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 4117: __asm("CCPR2L equ 0F90h");
+[; <" CCPR2L equ 0F90h ;# ">
+"4137
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 4137: __asm("CCPR2H equ 0F91h");
+[; <" CCPR2H equ 0F91h ;# ">
+"4157
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 4157: __asm("TRISA equ 0F92h");
+[; <" TRISA equ 0F92h ;# ">
+"4162
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 4162: __asm("DDRA equ 0F92h");
+[; <" DDRA equ 0F92h ;# ">
+"4379
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 4379: __asm("TRISB equ 0F93h");
+[; <" TRISB equ 0F93h ;# ">
+"4384
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 4384: __asm("DDRB equ 0F93h");
+[; <" DDRB equ 0F93h ;# ">
+"4601
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 4601: __asm("TRISC equ 0F94h");
+[; <" TRISC equ 0F94h ;# ">
+"4606
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 4606: __asm("DDRC equ 0F94h");
+[; <" DDRC equ 0F94h ;# ">
+"4779
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 4779: __asm("CCP2CON equ 0F97h");
+[; <" CCP2CON equ 0F97h ;# ">
+"4784
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 4784: __asm("ECCP2CON equ 0F97h");
+[; <" ECCP2CON equ 0F97h ;# ">
+"4935
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 4935: __asm("CM1CON0 equ 0F98h");
+[; <" CM1CON0 equ 0F98h ;# ">
+"5058
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 5058: __asm("CM2CON0 equ 0F99h");
+[; <" CM2CON0 equ 0F99h ;# ">
+"5181
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 5181: __asm("CM2CON1 equ 0F9Ah");
+[; <" CM2CON1 equ 0F9Ah ;# ">
+"5243
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 5243: __asm("OSCTUNE equ 0F9Bh");
+[; <" OSCTUNE equ 0F9Bh ;# ">
+"5313
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 5313: __asm("HLVDCON equ 0F9Ch");
+[; <" HLVDCON equ 0F9Ch ;# ">
+"5383
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 5383: __asm("PIE1 equ 0F9Dh");
+[; <" PIE1 equ 0F9Dh ;# ">
+"5482
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 5482: __asm("PIR1 equ 0F9Eh");
+[; <" PIR1 equ 0F9Eh ;# ">
+"5581
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 5581: __asm("IPR1 equ 0F9Fh");
+[; <" IPR1 equ 0F9Fh ;# ">
+"5680
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 5680: __asm("PIE2 equ 0FA0h");
+[; <" PIE2 equ 0FA0h ;# ">
+"5779
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 5779: __asm("PIR2 equ 0FA1h");
+[; <" PIR2 equ 0FA1h ;# ">
+"5878
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 5878: __asm("IPR2 equ 0FA2h");
+[; <" IPR2 equ 0FA2h ;# ">
+"5977
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 5977: __asm("PIE3 equ 0FA3h");
+[; <" PIE3 equ 0FA3h ;# ">
+"6050
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6050: __asm("PIR3 equ 0FA4h");
+[; <" PIR3 equ 0FA4h ;# ">
+"6097
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6097: __asm("IPR3 equ 0FA5h");
+[; <" IPR3 equ 0FA5h ;# ">
+"6144
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6144: __asm("EECON1 equ 0FA6h");
+[; <" EECON1 equ 0FA6h ;# ">
+"6210
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6210: __asm("EECON2 equ 0FA7h");
+[; <" EECON2 equ 0FA7h ;# ">
+"6230
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6230: __asm("EEDATA equ 0FA8h");
+[; <" EEDATA equ 0FA8h ;# ">
+"6237
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6237: __asm("EEADR equ 0FA9h");
+[; <" EEADR equ 0FA9h ;# ">
+"6244
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6244: __asm("RCSTA1 equ 0FABh");
+[; <" RCSTA1 equ 0FABh ;# ">
+"6249
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6249: __asm("RCSTA equ 0FABh");
+[; <" RCSTA equ 0FABh ;# ">
+"6450
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6450: __asm("TXSTA1 equ 0FACh");
+[; <" TXSTA1 equ 0FACh ;# ">
+"6455
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6455: __asm("TXSTA equ 0FACh");
+[; <" TXSTA equ 0FACh ;# ">
+"6744
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6744: __asm("TXREG1 equ 0FADh");
+[; <" TXREG1 equ 0FADh ;# ">
+"6749
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6749: __asm("TXREG equ 0FADh");
+[; <" TXREG equ 0FADh ;# ">
+"6782
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6782: __asm("RCREG1 equ 0FAEh");
+[; <" RCREG1 equ 0FAEh ;# ">
+"6787
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6787: __asm("RCREG equ 0FAEh");
+[; <" RCREG equ 0FAEh ;# ">
+"6820
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6820: __asm("SPBRG1 equ 0FAFh");
+[; <" SPBRG1 equ 0FAFh ;# ">
+"6825
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6825: __asm("SPBRG equ 0FAFh");
+[; <" SPBRG equ 0FAFh ;# ">
+"6958
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6958: __asm("SPBRGH1 equ 0FB0h");
+[; <" SPBRGH1 equ 0FB0h ;# ">
+"6963
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 6963: __asm("SPBRGH equ 0FB0h");
+[; <" SPBRGH equ 0FB0h ;# ">
+"7096
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 7096: __asm("T3CON equ 0FB1h");
+[; <" T3CON equ 0FB1h ;# ">
+"7225
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 7225: __asm("TMR3 equ 0FB2h");
+[; <" TMR3 equ 0FB2h ;# ">
+"7232
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 7232: __asm("TMR3L equ 0FB2h");
+[; <" TMR3L equ 0FB2h ;# ">
+"7252
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 7252: __asm("TMR3H equ 0FB3h");
+[; <" TMR3H equ 0FB3h ;# ">
+"7272
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 7272: __asm("T3GCON equ 0FB4h");
+[; <" T3GCON equ 0FB4h ;# ">
+"7403
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 7403: __asm("ACTCON equ 0FB5h");
+[; <" ACTCON equ 0FB5h ;# ">
+"7408
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 7408: __asm("STCON equ 0FB5h");
+[; <" STCON equ 0FB5h ;# ">
+"7609
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 7609: __asm("ECCP1AS equ 0FB6h");
+[; <" ECCP1AS equ 0FB6h ;# ">
+"7743
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 7743: __asm("PWM1CON equ 0FB7h");
+[; <" PWM1CON equ 0FB7h ;# ">
+"7748
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 7748: __asm("ECCP1DEL equ 0FB7h");
+[; <" ECCP1DEL equ 0FB7h ;# ">
+"7893
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 7893: __asm("BAUDCON1 equ 0FB8h");
+[; <" BAUDCON1 equ 0FB8h ;# ">
+"7898
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 7898: __asm("BAUDCON equ 0FB8h");
+[; <" BAUDCON equ 0FB8h ;# ">
+"7902
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 7902: __asm("BAUDCTL equ 0FB8h");
+[; <" BAUDCTL equ 0FB8h ;# ">
+"8403
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8403: __asm("PSTR1CON equ 0FB9h");
+[; <" PSTR1CON equ 0FB9h ;# ">
+"8479
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8479: __asm("T2CON equ 0FBAh");
+[; <" T2CON equ 0FBAh ;# ">
+"8550
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8550: __asm("PR2 equ 0FBBh");
+[; <" PR2 equ 0FBBh ;# ">
+"8570
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8570: __asm("TMR2 equ 0FBCh");
+[; <" TMR2 equ 0FBCh ;# ">
+"8590
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8590: __asm("CCP1CON equ 0FBDh");
+[; <" CCP1CON equ 0FBDh ;# ">
+"8595
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8595: __asm("ECCP1CON equ 0FBDh");
+[; <" ECCP1CON equ 0FBDh ;# ">
+"8782
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8782: __asm("CCPR1 equ 0FBEh");
+[; <" CCPR1 equ 0FBEh ;# ">
+"8789
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8789: __asm("CCPR1L equ 0FBEh");
+[; <" CCPR1L equ 0FBEh ;# ">
+"8809
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8809: __asm("CCPR1H equ 0FBFh");
+[; <" CCPR1H equ 0FBFh ;# ">
+"8829
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8829: __asm("ADCON2 equ 0FC0h");
+[; <" ADCON2 equ 0FC0h ;# ">
+"8900
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8900: __asm("ADCON1 equ 0FC1h");
+[; <" ADCON1 equ 0FC1h ;# ">
+"8968
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 8968: __asm("ADCON0 equ 0FC2h");
+[; <" ADCON0 equ 0FC2h ;# ">
+"9063
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 9063: __asm("ADRESL equ 0FC3h");
+[; <" ADRESL equ 0FC3h ;# ">
+"9070
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 9070: __asm("ADRESH equ 0FC4h");
+[; <" ADRESH equ 0FC4h ;# ">
+"9077
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 9077: __asm("SSP1CON2 equ 0FC5h");
+[; <" SSP1CON2 equ 0FC5h ;# ">
+"9082
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 9082: __asm("SSPCON2 equ 0FC5h");
+[; <" SSPCON2 equ 0FC5h ;# ">
+"9431
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 9431: __asm("SSP1CON1 equ 0FC6h");
+[; <" SSP1CON1 equ 0FC6h ;# ">
+"9436
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 9436: __asm("SSPCON equ 0FC6h");
+[; <" SSPCON equ 0FC6h ;# ">
+"9440
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 9440: __asm("SSPCON1 equ 0FC6h");
+[; <" SSPCON1 equ 0FC6h ;# ">
+"9785
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 9785: __asm("SSP1STAT equ 0FC7h");
+[; <" SSP1STAT equ 0FC7h ;# ">
+"9790
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 9790: __asm("SSPSTAT equ 0FC7h");
+[; <" SSPSTAT equ 0FC7h ;# ">
+"10383
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 10383: __asm("SSP1ADD equ 0FC8h");
+[; <" SSP1ADD equ 0FC8h ;# ">
+"10388
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 10388: __asm("SSPADD equ 0FC8h");
+[; <" SSPADD equ 0FC8h ;# ">
+"10721
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 10721: __asm("SSP1BUF equ 0FC9h");
+[; <" SSP1BUF equ 0FC9h ;# ">
+"10726
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 10726: __asm("SSPBUF equ 0FC9h");
+[; <" SSPBUF equ 0FC9h ;# ">
+"10759
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 10759: __asm("SSP1MSK equ 0FCAh");
+[; <" SSP1MSK equ 0FCAh ;# ">
+"10764
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 10764: __asm("SSPMSK equ 0FCAh");
+[; <" SSPMSK equ 0FCAh ;# ">
+"10897
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 10897: __asm("SSP1CON3 equ 0FCBh");
+[; <" SSP1CON3 equ 0FCBh ;# ">
+"10902
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 10902: __asm("SSPCON3 equ 0FCBh");
+[; <" SSPCON3 equ 0FCBh ;# ">
+"11019
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11019: __asm("T1GCON equ 0FCCh");
+[; <" T1GCON equ 0FCCh ;# ">
+"11150
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11150: __asm("T1CON equ 0FCDh");
+[; <" T1CON equ 0FCDh ;# ">
+"11279
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11279: __asm("TMR1 equ 0FCEh");
+[; <" TMR1 equ 0FCEh ;# ">
+"11286
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11286: __asm("TMR1L equ 0FCEh");
+[; <" TMR1L equ 0FCEh ;# ">
+"11306
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11306: __asm("TMR1H equ 0FCFh");
+[; <" TMR1H equ 0FCFh ;# ">
+"11326
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11326: __asm("RCON equ 0FD0h");
+[; <" RCON equ 0FD0h ;# ">
+"11459
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11459: __asm("WDTCON equ 0FD1h");
+[; <" WDTCON equ 0FD1h ;# ">
+"11487
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11487: __asm("OSCCON2 equ 0FD2h");
+[; <" OSCCON2 equ 0FD2h ;# ">
+"11549
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11549: __asm("OSCCON equ 0FD3h");
+[; <" OSCCON equ 0FD3h ;# ">
+"11632
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11632: __asm("T0CON equ 0FD5h");
+[; <" T0CON equ 0FD5h ;# ">
+"11702
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11702: __asm("TMR0 equ 0FD6h");
+[; <" TMR0 equ 0FD6h ;# ">
+"11709
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11709: __asm("TMR0L equ 0FD6h");
+[; <" TMR0L equ 0FD6h ;# ">
+"11729
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11729: __asm("TMR0H equ 0FD7h");
+[; <" TMR0H equ 0FD7h ;# ">
+"11749
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11749: __asm("STATUS equ 0FD8h");
+[; <" STATUS equ 0FD8h ;# ">
+"11820
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11820: __asm("FSR2 equ 0FD9h");
+[; <" FSR2 equ 0FD9h ;# ">
+"11827
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11827: __asm("FSR2L equ 0FD9h");
+[; <" FSR2L equ 0FD9h ;# ">
+"11847
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11847: __asm("FSR2H equ 0FDAh");
+[; <" FSR2H equ 0FDAh ;# ">
+"11854
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11854: __asm("PLUSW2 equ 0FDBh");
+[; <" PLUSW2 equ 0FDBh ;# ">
+"11874
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11874: __asm("PREINC2 equ 0FDCh");
+[; <" PREINC2 equ 0FDCh ;# ">
+"11894
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11894: __asm("POSTDEC2 equ 0FDDh");
+[; <" POSTDEC2 equ 0FDDh ;# ">
+"11914
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11914: __asm("POSTINC2 equ 0FDEh");
+[; <" POSTINC2 equ 0FDEh ;# ">
+"11934
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11934: __asm("INDF2 equ 0FDFh");
+[; <" INDF2 equ 0FDFh ;# ">
+"11954
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11954: __asm("BSR equ 0FE0h");
+[; <" BSR equ 0FE0h ;# ">
+"11961
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11961: __asm("FSR1 equ 0FE1h");
+[; <" FSR1 equ 0FE1h ;# ">
+"11968
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11968: __asm("FSR1L equ 0FE1h");
+[; <" FSR1L equ 0FE1h ;# ">
+"11988
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11988: __asm("FSR1H equ 0FE2h");
+[; <" FSR1H equ 0FE2h ;# ">
+"11995
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 11995: __asm("PLUSW1 equ 0FE3h");
+[; <" PLUSW1 equ 0FE3h ;# ">
+"12015
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12015: __asm("PREINC1 equ 0FE4h");
+[; <" PREINC1 equ 0FE4h ;# ">
+"12035
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12035: __asm("POSTDEC1 equ 0FE5h");
+[; <" POSTDEC1 equ 0FE5h ;# ">
+"12055
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12055: __asm("POSTINC1 equ 0FE6h");
+[; <" POSTINC1 equ 0FE6h ;# ">
+"12075
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12075: __asm("INDF1 equ 0FE7h");
+[; <" INDF1 equ 0FE7h ;# ">
+"12095
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12095: __asm("WREG equ 0FE8h");
+[; <" WREG equ 0FE8h ;# ">
+"12115
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12115: __asm("FSR0 equ 0FE9h");
+[; <" FSR0 equ 0FE9h ;# ">
+"12122
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12122: __asm("FSR0L equ 0FE9h");
+[; <" FSR0L equ 0FE9h ;# ">
+"12142
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12142: __asm("FSR0H equ 0FEAh");
+[; <" FSR0H equ 0FEAh ;# ">
+"12149
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12149: __asm("PLUSW0 equ 0FEBh");
+[; <" PLUSW0 equ 0FEBh ;# ">
+"12169
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12169: __asm("PREINC0 equ 0FECh");
+[; <" PREINC0 equ 0FECh ;# ">
+"12189
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12189: __asm("POSTDEC0 equ 0FEDh");
+[; <" POSTDEC0 equ 0FEDh ;# ">
+"12209
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12209: __asm("POSTINC0 equ 0FEEh");
+[; <" POSTINC0 equ 0FEEh ;# ">
+"12229
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12229: __asm("INDF0 equ 0FEFh");
+[; <" INDF0 equ 0FEFh ;# ">
+"12249
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12249: __asm("INTCON3 equ 0FF0h");
+[; <" INTCON3 equ 0FF0h ;# ">
+"12341
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12341: __asm("INTCON2 equ 0FF1h");
+[; <" INTCON2 equ 0FF1h ;# ">
+"12418
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12418: __asm("INTCON equ 0FF2h");
+[; <" INTCON equ 0FF2h ;# ">
+"12535
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12535: __asm("PROD equ 0FF3h");
+[; <" PROD equ 0FF3h ;# ">
+"12542
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12542: __asm("PRODL equ 0FF3h");
+[; <" PRODL equ 0FF3h ;# ">
+"12562
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12562: __asm("PRODH equ 0FF4h");
+[; <" PRODH equ 0FF4h ;# ">
+"12582
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12582: __asm("TABLAT equ 0FF5h");
+[; <" TABLAT equ 0FF5h ;# ">
+"12604
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12604: __asm("TBLPTR equ 0FF6h");
+[; <" TBLPTR equ 0FF6h ;# ">
+"12611
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12611: __asm("TBLPTRL equ 0FF6h");
+[; <" TBLPTRL equ 0FF6h ;# ">
+"12631
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12631: __asm("TBLPTRH equ 0FF7h");
+[; <" TBLPTRH equ 0FF7h ;# ">
+"12651
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12651: __asm("TBLPTRU equ 0FF8h");
+[; <" TBLPTRU equ 0FF8h ;# ">
+"12660
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12660: __asm("PCLAT equ 0FF9h");
+[; <" PCLAT equ 0FF9h ;# ">
+"12667
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12667: __asm("PC equ 0FF9h");
+[; <" PC equ 0FF9h ;# ">
+"12674
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12674: __asm("PCL equ 0FF9h");
+[; <" PCL equ 0FF9h ;# ">
+"12694
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12694: __asm("PCLATH equ 0FFAh");
+[; <" PCLATH equ 0FFAh ;# ">
+"12714
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12714: __asm("PCLATU equ 0FFBh");
+[; <" PCLATU equ 0FFBh ;# ">
+"12721
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12721: __asm("STKPTR equ 0FFCh");
+[; <" STKPTR equ 0FFCh ;# ">
+"12795
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12795: __asm("TOS equ 0FFDh");
+[; <" TOS equ 0FFDh ;# ">
+"12802
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12802: __asm("TOSL equ 0FFDh");
+[; <" TOSL equ 0FFDh ;# ">
+"12822
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12822: __asm("TOSH equ 0FFEh");
+[; <" TOSH equ 0FFEh ;# ">
+"12842
+[; ;C:/Users/jakel/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f24k50.h: 12842: __asm("TOSU equ 0FFFh");
+[; <" TOSU equ 0FFFh ;# ">
+"109 ../usb/src/usb_device.c
+[p n 1090 ]
+"111
+[p n 1471 ]
+"141
+[v _USBDeviceState `VE5031 ~T0 @X0 1 e ]
+"142
+[v _USBActiveConfiguration `Vuc ~T0 @X0 1 e ]
+"143
+[v _USBAlternateInterface `Vuc ~T0 @X0 -> -> 1 `i `ux e ]
+"144
+[v _pBDTEntryEP0OutCurrent `*VS655 ~T0 @X0 1 e ]
+"145
+[v _pBDTEntryEP0OutNext `*VS655 ~T0 @X0 1 e ]
+"146
+[v _pBDTEntryOut `*VS655 ~T0 @X0 -> 2 `i e ]
+"147
+[v _pBDTEntryIn `*VS655 ~T0 @X0 -> 2 `i e ]
+"148
+[v _shortPacketStatus `Vuc ~T0 @X0 1 e ]
+"149
+[v _controlTransferState `Vuc ~T0 @X0 1 e ]
+"150
+[v _inPipes `VS643 ~T0 @X0 -> -> 1 `i `ux e ]
+"151
+[v _outPipes `VS647 ~T0 @X0 -> -> 1 `i `ux e ]
+"152
+[v _pDst `*Vuc ~T0 @X0 1 e ]
+"153
+[v _RemoteWakeup `Va ~T0 @X0 1 e ]
+"154
+[v _USBBusIsSuspended `Va ~T0 @X0 1 e ]
+"155
+[v _USTATcopy `VS658 ~T0 @X0 1 e ]
+"156
+[v _endpoint_number `Vuc ~T0 @X0 1 e ]
+"157
+[v _BothEP0OutUOWNsSet `Va ~T0 @X0 1 e ]
+"158
+[v _ep_data_in `VS662 ~T0 @X0 -> 2 `i e ]
+"159
+[v _ep_data_out `VS662 ~T0 @X0 -> 2 `i e ]
+"160
+[v _USBStatusStageTimeoutCounter `Vuc ~T0 @X0 1 e ]
+"161
+[v _USBDeferStatusStagePacket `Va ~T0 @X0 1 e ]
+"162
+[v _USBStatusStageEnabledFlag1 `Va ~T0 @X0 1 e ]
+"163
+[v _USBStatusStageEnabledFlag2 `Va ~T0 @X0 1 e ]
+"164
+[v _USBDeferINDataStagePackets `Va ~T0 @X0 1 e ]
+"165
+[v _USBDeferOUTDataStagePackets `Va ~T0 @X0 1 e ]
+"166
+[v _USB1msTickCount `Vul ~T0 @X0 1 e ]
+"167
+[v _USBTicksSinceSuspendEnd `Vuc ~T0 @X0 1 e ]
+"174
+[v _BDT `VS655 ~T0 @X0 -> 8 `i e@1024 ]
+"179
+[v _SetupPkt `VS617 ~T0 @X0 1 e@1056 ]
+"180
+[v _CtrlTrfData `Vuc ~T0 @X0 -> 8 `i e@1064 ]
+"281
+[; ;../usb/src/usb_device.c: 281: void USBDeviceInit(void)
+[v _USBDeviceInit `(v ~T0 @X0 1 ef ]
+"282
+[; ;../usb/src/usb_device.c: 282: {
+{
+[e :U _USBDeviceInit ]
+[f ]
+"283
+[; ;../usb/src/usb_device.c: 283:     uint8_t i;
+[v _i `uc ~T0 @X0 1 a ]
+"285
+[; ;../usb/src/usb_device.c: 285:     {PIE3bits.USBIE = 0;};
+{
+[e = . . _PIE3bits 0 2 -> -> 0 `i `uc ]
+}
+"292
+[; ;../usb/src/usb_device.c: 292:     {UEIR = 0;};
+{
+[e = _UEIR -> -> 0 `i `uc ]
+}
+"295
+[; ;../usb/src/usb_device.c: 295:     {UIR = 0;};
+{
+[e = _UIR -> -> 0 `i `uc ]
+}
+"298
+[; ;../usb/src/usb_device.c: 298:     UEP0 = 0;
+[e = _UEP0 -> -> 0 `i `uc ]
+"300
+[; ;../usb/src/usb_device.c: 300:     memset((void*)&UEP1,0x00,(1));;
+[e ( _memset (3 , , -> &U _UEP1 `*v -> 0 `i -> -> 1 `i `ui ]
+"302
+[; ;../usb/src/usb_device.c: 302:     { UCFG = 0x10 | 0x00 | 0x04 | 0x02; UEIE = 0x9F; UIE = 0x39 | 0x40 | 0x02; };
+{
+[e = _UCFG -> | | | -> 16 `i -> 0 `i -> 4 `i -> 2 `i `uc ]
+[e = _UEIE -> -> 159 `i `uc ]
+[e = _UIE -> | | -> 57 `i -> 64 `i -> 2 `i `uc ]
+}
+"311
+[; ;../usb/src/usb_device.c: 311:     for(i = 0; i < (sizeof(BDT)/sizeof(BDT_ENTRY)); i++)
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `ui / -> # _BDT `ui -> # `S655 `ui 667  ]
+[e $U 668  ]
+[e :U 667 ]
+"312
+[; ;../usb/src/usb_device.c: 312:     {
+{
+"313
+[; ;../usb/src/usb_device.c: 313:         BDT[i].Val = 0x00;
+[e = . *U + &U _BDT * -> _i `ux -> -> # *U &U _BDT `ui `ux 2 -> -> -> 0 `i `l `ul ]
+"314
+[; ;../usb/src/usb_device.c: 314:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `ui / -> # _BDT `ui -> # `S655 `ui 667  ]
+[e :U 668 ]
+}
+"317
+[; ;../usb/src/usb_device.c: 317:     UCONbits.PPBRST = 1;
+[e = . . _UCONbits 0 6 -> -> 1 `i `uc ]
+"320
+[; ;../usb/src/usb_device.c: 320:     UADDR = 0x00;
+[e = _UADDR -> -> 0 `i `uc ]
+"323
+[; ;../usb/src/usb_device.c: 323:     UCONbits.PKTDIS = 0;
+[e = . . _UCONbits 0 4 -> -> 0 `i `uc ]
+"326
+[; ;../usb/src/usb_device.c: 326:     UCONbits.PPBRST = 0;
+[e = . . _UCONbits 0 6 -> -> 0 `i `uc ]
+"329
+[; ;../usb/src/usb_device.c: 329:     do
+[e :U 672 ]
+"330
+[; ;../usb/src/usb_device.c: 330:     {
+{
+"331
+[; ;../usb/src/usb_device.c: 331:         (UIR &= 0xF7);
+[e =& _UIR -> -> 247 `i `Vuc ]
+"333
+[; ;../usb/src/usb_device.c: 333:         inPipes[0].info.Val = 0;
+[e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 1 -> -> 0 `i `uc ]
+"334
+[; ;../usb/src/usb_device.c: 334:         outPipes[0].info.Val = 0;
+[e = . . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 1 1 -> -> 0 `i `uc ]
+"335
+[; ;../usb/src/usb_device.c: 335:         outPipes[0].wCount.Val = 0;
+[e = . . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 2 0 -> -> 0 `i `us ]
+"336
+[; ;../usb/src/usb_device.c: 336:     }while(UIRbits.TRNIF == 1);
+}
+[e $ == -> . . _UIRbits 0 3 `i -> 1 `i 672  ]
+[e :U 671 ]
+"340
+[; ;../usb/src/usb_device.c: 340:     USBStatusStageEnabledFlag1 = 1;
+[e = _USBStatusStageEnabledFlag1 -> -> 1 `i `a ]
+"341
+[; ;../usb/src/usb_device.c: 341:     USBStatusStageEnabledFlag2 = 1;
+[e = _USBStatusStageEnabledFlag2 -> -> 1 `i `a ]
+"343
+[; ;../usb/src/usb_device.c: 343:     USBDeferINDataStagePackets = 0;
+[e = _USBDeferINDataStagePackets -> -> 0 `i `a ]
+"344
+[; ;../usb/src/usb_device.c: 344:     USBDeferOUTDataStagePackets = 0;
+[e = _USBDeferOUTDataStagePackets -> -> 0 `i `a ]
+"345
+[; ;../usb/src/usb_device.c: 345:     USBBusIsSuspended = 0;
+[e = _USBBusIsSuspended -> -> 0 `i `a ]
+"349
+[; ;../usb/src/usb_device.c: 349:     for(i = 0; i < (uint8_t)(1 +1u); i++)
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> -> + -> -> 1 `i `ui -> 1 `ui `uc `i 673  ]
+[e $U 674  ]
+[e :U 673 ]
+"350
+[; ;../usb/src/usb_device.c: 350:     {
+{
+"351
+[; ;../usb/src/usb_device.c: 351:         pBDTEntryIn[i] = 0u;
+[e = *U + &U _pBDTEntryIn * -> _i `ux -> -> # *U &U _pBDTEntryIn `ui `ux -> -> 0 `ui `*VS655 ]
+"352
+[; ;../usb/src/usb_device.c: 352:         pBDTEntryOut[i] = 0u;
+[e = *U + &U _pBDTEntryOut * -> _i `ux -> -> # *U &U _pBDTEntryOut `ui `ux -> -> 0 `ui `*VS655 ]
+"353
+[; ;../usb/src/usb_device.c: 353:         ep_data_in[i].Val = 0u;
+[e = . *U + &U _ep_data_in * -> _i `ux -> -> # *U &U _ep_data_in `ui `ux 1 -> -> 0 `ui `uc ]
+"354
+[; ;../usb/src/usb_device.c: 354:         ep_data_out[i].Val = 0u;
+[e = . *U + &U _ep_data_out * -> _i `ux -> -> # *U &U _ep_data_out `ui `ux 1 -> -> 0 `ui `uc ]
+"355
+[; ;../usb/src/usb_device.c: 355:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> -> + -> -> 1 `i `ui -> 1 `ui `uc `i 673  ]
+[e :U 674 ]
+}
+"358
+[; ;../usb/src/usb_device.c: 358:     pBDTEntryIn[0] = (volatile BDT_ENTRY*)&BDT[2];
+[e = *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux &U *U + &U _BDT * -> -> -> 2 `i `ui `ux -> -> # *U &U _BDT `ui `ux ]
+"360
+[; ;../usb/src/usb_device.c: 360:     UEP0 = 0x06|0x10;
+[e = _UEP0 -> | -> 6 `i -> 16 `i `uc ]
+"362
+[; ;../usb/src/usb_device.c: 362:     BDT[0].ADR = ((uint16_t)(&SetupPkt));
+[e = . . *U + &U _BDT * -> -> -> 0 `i `ui `ux -> -> # *U &U _BDT `ui `ux 1 2 -> &U _SetupPkt `us ]
+"363
+[; ;../usb/src/usb_device.c: 363:     BDT[0].CNT = 8;
+[e = . . *U + &U _BDT * -> -> -> 0 `i `ui `ux -> -> # *U &U _BDT `ui `ux 0 1 -> -> 8 `i `uc ]
+"364
+[; ;../usb/src/usb_device.c: 364:     BDT[0].STAT.Val = 0x00|0x04;
+[e = . . . *U + &U _BDT * -> -> -> 0 `i `ui `ux -> -> # *U &U _BDT `ui `ux 0 0 0 -> | -> 0 `i -> 4 `i `uc ]
+"365
+[; ;../usb/src/usb_device.c: 365:     BDT[0].STAT.Val |= 0x80;
+[e =| . . . *U + &U _BDT * -> -> -> 0 `i `ui `ux -> -> # *U &U _BDT `ui `ux 0 0 0 -> -> 128 `i `Vuc ]
+"368
+[; ;../usb/src/usb_device.c: 368:     USBActiveConfiguration = 0;
+[e = _USBActiveConfiguration -> -> 0 `i `uc ]
+"370
+[; ;../usb/src/usb_device.c: 370:     USB1msTickCount = 0;
+[e = _USB1msTickCount -> -> -> 0 `i `l `ul ]
+"371
+[; ;../usb/src/usb_device.c: 371:     USBTicksSinceSuspendEnd = 0;
+[e = _USBTicksSinceSuspendEnd -> -> 0 `i `uc ]
+"374
+[; ;../usb/src/usb_device.c: 374:     USBDeviceState = DETACHED_STATE;
+[e = _USBDeviceState . `E5031 0 ]
+"375
+[; ;../usb/src/usb_device.c: 375: }
+[e :UE 666 ]
+}
+"481
+[; ;../usb/src/usb_device.c: 481: void USBDeviceTasks(void)
+[v _USBDeviceTasks `(v ~T0 @X0 1 ef ]
+"482
+[; ;../usb/src/usb_device.c: 482: {
+{
+[e :U _USBDeviceTasks ]
+[f ]
+"483
+[; ;../usb/src/usb_device.c: 483:     uint8_t i;
+[v _i `uc ~T0 @X0 1 a ]
+"594
+[; ;../usb/src/usb_device.c: 594:     if(USBDeviceState == ATTACHED_STATE)
+[e $ ! == -> _USBDeviceState `ui -> . `E5031 1 `ui 677  ]
+"595
+[; ;../usb/src/usb_device.c: 595:     {
+{
+"605
+[; ;../usb/src/usb_device.c: 605:         if(!UCONbits.SE0)
+[e $ ! ! != -> . . _UCONbits 0 5 `i -> 0 `i 678  ]
+"606
+[; ;../usb/src/usb_device.c: 606:         {
+{
+"612
+[; ;../usb/src/usb_device.c: 612:                 {UIR = 0;};
+{
+[e = _UIR -> -> 0 `i `uc ]
+}
+"618
+[; ;../usb/src/usb_device.c: 618:             UIEbits.URSTIE = 1;
+[e = . . _UIEbits 0 0 -> -> 1 `i `uc ]
+"619
+[; ;../usb/src/usb_device.c: 619:             UIEbits.IDLEIE = 1;
+[e = . . _UIEbits 0 4 -> -> 1 `i `uc ]
+"620
+[; ;../usb/src/usb_device.c: 620:             USBDeviceState = POWERED_STATE;
+[e = _USBDeviceState . `E5031 2 ]
+"621
+[; ;../usb/src/usb_device.c: 621:         }
+}
+[e :U 678 ]
+"622
+[; ;../usb/src/usb_device.c: 622:     }
+}
+[e :U 677 ]
+"638
+[; ;../usb/src/usb_device.c: 638:     if(UIRbits.ACTVIF && UIEbits.ACTVIE)
+[e $ ! && != -> . . _UIRbits 0 2 `i -> 0 `i != -> . . _UIEbits 0 2 `i -> 0 `i 679  ]
+"639
+[; ;../usb/src/usb_device.c: 639:     {
+{
+"640
+[; ;../usb/src/usb_device.c: 640:         (UIR &= 0xFB);
+[e =& _UIR -> -> 251 `i `Vuc ]
+"644
+[; ;../usb/src/usb_device.c: 644:             USBWakeFromSuspend();
+[e ( _USBWakeFromSuspend ..  ]
+"646
+[; ;../usb/src/usb_device.c: 646:     }
+}
+[e :U 679 ]
+"651
+[; ;../usb/src/usb_device.c: 651:     if(UCONbits.SUSPND==1)
+[e $ ! == -> . . _UCONbits 0 1 `i -> 1 `i 680  ]
+"652
+[; ;../usb/src/usb_device.c: 652:     {
+{
+"653
+[; ;../usb/src/usb_device.c: 653:         PIR3bits.USBIF = 0;;
+[e = . . _PIR3bits 0 2 -> -> 0 `i `uc ]
+"654
+[; ;../usb/src/usb_device.c: 654:         return;
+[e $UE 676  ]
+"655
+[; ;../usb/src/usb_device.c: 655:     }
+}
+[e :U 680 ]
+"667
+[; ;../usb/src/usb_device.c: 667:     if(UIRbits.URSTIF && UIEbits.URSTIE)
+[e $ ! && != -> . . _UIRbits 0 0 `i -> 0 `i != -> . . _UIEbits 0 0 `i -> 0 `i 681  ]
+"668
+[; ;../usb/src/usb_device.c: 668:     {
+{
+"669
+[; ;../usb/src/usb_device.c: 669:         USBDeviceInit();
+[e ( _USBDeviceInit ..  ]
+"673
+[; ;../usb/src/usb_device.c: 673:         {PIE3bits.USBIE = 1;};
+{
+[e = . . _PIE3bits 0 2 -> -> 1 `i `uc ]
+}
+"675
+[; ;../usb/src/usb_device.c: 675:         USBDeviceState = DEFAULT_STATE;
+[e = _USBDeviceState . `E5031 3 ]
+"685
+[; ;../usb/src/usb_device.c: 685:         (UIR &= 0xFE);
+[e =& _UIR -> -> 254 `i `Vuc ]
+"686
+[; ;../usb/src/usb_device.c: 686:     }
+}
+[e :U 681 ]
+"691
+[; ;../usb/src/usb_device.c: 691:     if(UIRbits.IDLEIF && UIEbits.IDLEIE)
+[e $ ! && != -> . . _UIRbits 0 4 `i -> 0 `i != -> . . _UIEbits 0 4 `i -> 0 `i 682  ]
+"692
+[; ;../usb/src/usb_device.c: 692:     {
+{
+"698
+[; ;../usb/src/usb_device.c: 698:             USBSuspend();
+[e ( _USBSuspend ..  ]
+"700
+[; ;../usb/src/usb_device.c: 700:     }
+}
+[e :U 682 ]
+"712
+[; ;../usb/src/usb_device.c: 712:     if(UIRbits.SOFIF)
+[e $ ! != -> . . _UIRbits 0 6 `i -> 0 `i 683  ]
+"713
+[; ;../usb/src/usb_device.c: 713:     {
+{
+"715
+[; ;../usb/src/usb_device.c: 715:         if(UIEbits.SOFIE)
+[e $ ! != -> . . _UIEbits 0 6 `i -> 0 `i 684  ]
+"716
+[; ;../usb/src/usb_device.c: 716:         {
+{
+"717
+[; ;../usb/src/usb_device.c: 717:             USER_USB_CALLBACK_EVENT_HANDLER((USB_EVENT)EVENT_SOF,0,1);
+[e ( _USER_USB_CALLBACK_EVENT_HANDLER (3 , , -> . `E4972 17 `E4972 -> -> 0 `i `*v -> -> 1 `i `us ]
+"718
+[; ;../usb/src/usb_device.c: 718:         }
+}
+[e :U 684 ]
+"719
+[; ;../usb/src/usb_device.c: 719:         (UIR &= 0xBF);
+[e =& _UIR -> -> 191 `i `Vuc ]
+"722
+[; ;../usb/src/usb_device.c: 722:             USBIncrement1msInternalTimers();
+[e ( _USBIncrement1msInternalTimers ..  ]
+"739
+[; ;../usb/src/usb_device.c: 739:             if(USBStatusStageTimeoutCounter != 0u)
+[e $ ! != -> _USBStatusStageTimeoutCounter `ui -> 0 `ui 685  ]
+"740
+[; ;../usb/src/usb_device.c: 740:             {
+{
+"741
+[; ;../usb/src/usb_device.c: 741:                 USBStatusStageTimeoutCounter--;
+[e -- _USBStatusStageTimeoutCounter -> -> 1 `i `Vuc ]
+"742
+[; ;../usb/src/usb_device.c: 742:             }
+}
+[e :U 685 ]
+"748
+[; ;../usb/src/usb_device.c: 748:             if(USBStatusStageTimeoutCounter == 0)
+[e $ ! == -> _USBStatusStageTimeoutCounter `i -> 0 `i 686  ]
+"749
+[; ;../usb/src/usb_device.c: 749:             {
+{
+"750
+[; ;../usb/src/usb_device.c: 750:                 USBCtrlEPAllowStatusStage();
+[e ( _USBCtrlEPAllowStatusStage ..  ]
+"751
+[; ;../usb/src/usb_device.c: 751:             }
+}
+[e :U 686 ]
+"753
+[; ;../usb/src/usb_device.c: 753:     }
+}
+[e :U 683 ]
+"755
+[; ;../usb/src/usb_device.c: 755:     if(UIRbits.STALLIF && UIEbits.STALLIE)
+[e $ ! && != -> . . _UIRbits 0 5 `i -> 0 `i != -> . . _UIEbits 0 5 `i -> 0 `i 687  ]
+"756
+[; ;../usb/src/usb_device.c: 756:     {
+{
+"757
+[; ;../usb/src/usb_device.c: 757:         USBStallHandler();
+[e ( _USBStallHandler ..  ]
+"758
+[; ;../usb/src/usb_device.c: 758:     }
+}
+[e :U 687 ]
+"760
+[; ;../usb/src/usb_device.c: 760:     if(UIRbits.UERRIF && UIEbits.UERRIE)
+[e $ ! && != -> . . _UIRbits 0 1 `i -> 0 `i != -> . . _UIEbits 0 1 `i -> 0 `i 688  ]
+"761
+[; ;../usb/src/usb_device.c: 761:     {
+{
+"762
+[; ;../usb/src/usb_device.c: 762:         USER_USB_CALLBACK_EVENT_HANDLER((USB_EVENT)EVENT_BUS_ERROR,0,1);
+[e ( _USER_USB_CALLBACK_EVENT_HANDLER (3 , , -> . `E4972 35 `E4972 -> -> 0 `i `*v -> -> 1 `i `us ]
+"763
+[; ;../usb/src/usb_device.c: 763:         {UEIR = 0;};
+{
+[e = _UEIR -> -> 0 `i `uc ]
+}
+"771
+[; ;../usb/src/usb_device.c: 771:     }
+}
+[e :U 688 ]
+"778
+[; ;../usb/src/usb_device.c: 778:     if(USBDeviceState < DEFAULT_STATE)
+[e $ ! < -> _USBDeviceState `ui -> . `E5031 3 `ui 689  ]
+"779
+[; ;../usb/src/usb_device.c: 779:     {
+{
+"780
+[; ;../usb/src/usb_device.c: 780:         PIR3bits.USBIF = 0;;
+[e = . . _PIR3bits 0 2 -> -> 0 `i `uc ]
+"781
+[; ;../usb/src/usb_device.c: 781:         return;
+[e $UE 676  ]
+"782
+[; ;../usb/src/usb_device.c: 782:     }
+}
+[e :U 689 ]
+"787
+[; ;../usb/src/usb_device.c: 787:     if(UIEbits.TRNIE)
+[e $ ! != -> . . _UIEbits 0 3 `i -> 0 `i 690  ]
+"788
+[; ;../usb/src/usb_device.c: 788:     {
+{
+"789
+[; ;../usb/src/usb_device.c: 789:         for(i = 0; i < 4u; i++)
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `ui -> 4 `ui 691  ]
+[e $U 692  ]
+[e :U 691 ]
+"790
+[; ;../usb/src/usb_device.c: 790:         {
+{
+"791
+[; ;../usb/src/usb_device.c: 791:             if(UIRbits.TRNIF)
+[e $ ! != -> . . _UIRbits 0 3 `i -> 0 `i 694  ]
+"792
+[; ;../usb/src/usb_device.c: 792:             {
+{
+"794
+[; ;../usb/src/usb_device.c: 794:                 USTATcopy.Val = USTAT;
+[e = . _USTATcopy 1 _USTAT ]
+"795
+[; ;../usb/src/usb_device.c: 795:                 endpoint_number = USTATcopy.endpoint_number;
+[e = _endpoint_number . . _USTATcopy 0 3 ]
+"797
+[; ;../usb/src/usb_device.c: 797:                 (UIR &= 0xF7);
+[e =& _UIR -> -> 247 `i `Vuc ]
+"802
+[; ;../usb/src/usb_device.c: 802:                 if(USTATcopy.direction == 0)
+[e $ ! == -> . . _USTATcopy 0 2 `i -> 0 `i 695  ]
+"803
+[; ;../usb/src/usb_device.c: 803:                 {
+{
+"804
+[; ;../usb/src/usb_device.c: 804:                     ep_data_out[endpoint_number].bits.ping_pong_state ^= 1;
+[e =^ . . *U + &U _ep_data_out * -> _endpoint_number `ux -> -> # *U &U _ep_data_out `ui `ux 0 0 -> -> 1 `i `Vuc ]
+"805
+[; ;../usb/src/usb_device.c: 805:                 }
+}
+[e $U 696  ]
+"806
+[; ;../usb/src/usb_device.c: 806:                 else
+[e :U 695 ]
+"807
+[; ;../usb/src/usb_device.c: 807:                 {
+{
+"808
+[; ;../usb/src/usb_device.c: 808:                     ep_data_in[endpoint_number].bits.ping_pong_state ^= 1;
+[e =^ . . *U + &U _ep_data_in * -> _endpoint_number `ux -> -> # *U &U _ep_data_in `ui `ux 0 0 -> -> 1 `i `Vuc ]
+"809
+[; ;../usb/src/usb_device.c: 809:                 }
+}
+[e :U 696 ]
+"814
+[; ;../usb/src/usb_device.c: 814:                 if(endpoint_number == 0)
+[e $ ! == -> _endpoint_number `i -> 0 `i 697  ]
+"815
+[; ;../usb/src/usb_device.c: 815:                 {
+{
+"816
+[; ;../usb/src/usb_device.c: 816:                     USBCtrlEPService();
+[e ( _USBCtrlEPService ..  ]
+"817
+[; ;../usb/src/usb_device.c: 817:                 }
+}
+[e $U 698  ]
+"818
+[; ;../usb/src/usb_device.c: 818:                 else
+[e :U 697 ]
+"819
+[; ;../usb/src/usb_device.c: 819:                 {
+{
+"820
+[; ;../usb/src/usb_device.c: 820:                     USER_USB_CALLBACK_EVENT_HANDLER((USB_EVENT)EVENT_TRANSFER,(uint8_t*)&USTATcopy.Val,0);
+[e ( _USER_USB_CALLBACK_EVENT_HANDLER (3 , , -> . `E4972 16 `E4972 -> -> &U . _USTATcopy 1 `*uc `*v -> -> 0 `i `us ]
+"821
+[; ;../usb/src/usb_device.c: 821:                 }
+}
+[e :U 698 ]
+"822
+[; ;../usb/src/usb_device.c: 822:             }
+}
+[e $U 699  ]
+"823
+[; ;../usb/src/usb_device.c: 823:             else
+[e :U 694 ]
+"824
+[; ;../usb/src/usb_device.c: 824:             {
+{
+"825
+[; ;../usb/src/usb_device.c: 825:                 break;
+[e $U 692  ]
+"826
+[; ;../usb/src/usb_device.c: 826:             }
+}
+[e :U 699 ]
+"827
+[; ;../usb/src/usb_device.c: 827:         }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `ui -> 4 `ui 691  ]
+[e :U 692 ]
+}
+"828
+[; ;../usb/src/usb_device.c: 828:     }
+}
+[e :U 690 ]
+"830
+[; ;../usb/src/usb_device.c: 830:     PIR3bits.USBIF = 0;;
+[e = . . _PIR3bits 0 2 -> -> 0 `i `uc ]
+"831
+[; ;../usb/src/usb_device.c: 831: }
+[e :UE 676 ]
+}
+"882
+[; ;../usb/src/usb_device.c: 882: void USBEnableEndpoint(uint8_t ep, uint8_t options)
+[v _USBEnableEndpoint `(v ~T0 @X0 1 ef2`uc`uc ]
+"883
+[; ;../usb/src/usb_device.c: 883: {
+{
+[e :U _USBEnableEndpoint ]
+"882
+[; ;../usb/src/usb_device.c: 882: void USBEnableEndpoint(uint8_t ep, uint8_t options)
+[v _ep `uc ~T0 @X0 1 r1 ]
+[v _options `uc ~T0 @X0 1 r2 ]
+"883
+[; ;../usb/src/usb_device.c: 883: {
+[f ]
+"884
+[; ;../usb/src/usb_device.c: 884:     unsigned char* p;
+[v _p `*uc ~T0 @X0 1 a ]
+"888
+[; ;../usb/src/usb_device.c: 888:     if(options & 0x04)
+[e $ ! != & -> _options `i -> 4 `i -> 0 `i 701  ]
+"889
+[; ;../usb/src/usb_device.c: 889:     {
+{
+"890
+[; ;../usb/src/usb_device.c: 890:         USBConfigureEndpoint(ep, 0);
+[e ( _USBConfigureEndpoint (2 , _ep -> -> 0 `i `uc ]
+"891
+[; ;../usb/src/usb_device.c: 891:     }
+}
+[e :U 701 ]
+"892
+[; ;../usb/src/usb_device.c: 892:     if(options & 0x02)
+[e $ ! != & -> _options `i -> 2 `i -> 0 `i 702  ]
+"893
+[; ;../usb/src/usb_device.c: 893:     {
+{
+"894
+[; ;../usb/src/usb_device.c: 894:         USBConfigureEndpoint(ep, 1);
+[e ( _USBConfigureEndpoint (2 , _ep -> -> 1 `i `uc ]
+"895
+[; ;../usb/src/usb_device.c: 895:     }
+}
+[e :U 702 ]
+"903
+[; ;../usb/src/usb_device.c: 903:         p = (unsigned char*)(&UEP0+ep);
+[e = _p -> + &U _UEP0 * -> -> _ep `i `x -> -> # *U &U _UEP0 `i `x `*uc ]
+"905
+[; ;../usb/src/usb_device.c: 905:     *p = options;
+[e = *U _p _options ]
+"906
+[; ;../usb/src/usb_device.c: 906: }
+[e :UE 700 ]
+}
+"999
+[; ;../usb/src/usb_device.c: 999: void* USBTransferOnePacket(uint8_t ep,uint8_t dir,uint8_t* data,uint8_t len)
+[v _USBTransferOnePacket `(*v ~T0 @X0 1 ef4`uc`uc`*uc`uc ]
+"1000
+[; ;../usb/src/usb_device.c: 1000: {
+{
+[e :U _USBTransferOnePacket ]
+"999
+[; ;../usb/src/usb_device.c: 999: void* USBTransferOnePacket(uint8_t ep,uint8_t dir,uint8_t* data,uint8_t len)
+[v _ep `uc ~T0 @X0 1 r1 ]
+[v _dir `uc ~T0 @X0 1 r2 ]
+[v _data `*uc ~T0 @X0 1 r3 ]
+[v _len `uc ~T0 @X0 1 r4 ]
+"1000
+[; ;../usb/src/usb_device.c: 1000: {
+[f ]
+"1001
+[; ;../usb/src/usb_device.c: 1001:     volatile BDT_ENTRY* handle;
+[v _handle `*VS655 ~T0 @X0 1 a ]
+"1004
+[; ;../usb/src/usb_device.c: 1004:     if(dir != 0)
+[e $ ! != -> _dir `i -> 0 `i 704  ]
+"1005
+[; ;../usb/src/usb_device.c: 1005:     {
+{
+"1007
+[; ;../usb/src/usb_device.c: 1007:         handle = pBDTEntryIn[ep];
+[e = _handle *U + &U _pBDTEntryIn * -> _ep `ux -> -> # *U &U _pBDTEntryIn `ui `ux ]
+"1008
+[; ;../usb/src/usb_device.c: 1008:     }
+}
+[e $U 705  ]
+"1009
+[; ;../usb/src/usb_device.c: 1009:     else
+[e :U 704 ]
+"1010
+[; ;../usb/src/usb_device.c: 1010:     {
+{
+"1012
+[; ;../usb/src/usb_device.c: 1012:         handle = pBDTEntryOut[ep];
+[e = _handle *U + &U _pBDTEntryOut * -> _ep `ux -> -> # *U &U _pBDTEntryOut `ui `ux ]
+"1013
+[; ;../usb/src/usb_device.c: 1013:     }
+}
+[e :U 705 ]
+"1017
+[; ;../usb/src/usb_device.c: 1017:     if(handle == 0)
+[e $ ! == _handle -> -> 0 `i `*VS655 706  ]
+"1018
+[; ;../usb/src/usb_device.c: 1018:     {
+{
+"1019
+[; ;../usb/src/usb_device.c: 1019:         return 0;
+[e ) -> -> 0 `i `*v ]
+[e $UE 703  ]
+"1020
+[; ;../usb/src/usb_device.c: 1020:     }
+}
+[e :U 706 ]
+"1033
+[; ;../usb/src/usb_device.c: 1033:     handle->ADRH = (((uint16_t)(data)) >> 8) & 0xFF;
+[e = . . *U _handle 0 3 -> & >> -> -> _data `us `ui -> 8 `i -> -> 255 `i `ui `uc ]
+"1034
+[; ;../usb/src/usb_device.c: 1034:     handle->ADRL = ((uint16_t)(data)) & 0xFF;
+[e = . . *U _handle 0 2 -> & -> -> _data `us `ui -> -> 255 `i `ui `uc ]
+"1035
+[; ;../usb/src/usb_device.c: 1035:     handle->CNT = len;
+[e = . . *U _handle 0 1 _len ]
+"1036
+[; ;../usb/src/usb_device.c: 1036:     handle->STAT.Val &= 0x40;
+[e =& . . . *U _handle 0 0 0 -> -> 64 `i `Vuc ]
+"1037
+[; ;../usb/src/usb_device.c: 1037:     handle->STAT.Val |= (0x08 & 0x08);
+[e =| . . . *U _handle 0 0 0 -> & -> 8 `i -> 8 `i `Vuc ]
+"1038
+[; ;../usb/src/usb_device.c: 1038:     handle->STAT.Val |= 0x80;
+[e =| . . . *U _handle 0 0 0 -> -> 128 `i `Vuc ]
+"1041
+[; ;../usb/src/usb_device.c: 1041:     if(dir != 0)
+[e $ ! != -> _dir `i -> 0 `i 707  ]
+"1042
+[; ;../usb/src/usb_device.c: 1042:     {
+{
+"1044
+[; ;../usb/src/usb_device.c: 1044:         pBDTEntryIn[ep] = (BDT_ENTRY*)(((uint16_t)pBDTEntryIn[ep]) ^ 0x0004);
+[e = *U + &U _pBDTEntryIn * -> _ep `ux -> -> # *U &U _pBDTEntryIn `ui `ux -> -> ^ -> -> *U + &U _pBDTEntryIn * -> _ep `ux -> -> # *U &U _pBDTEntryIn `ui `ux `us `ui -> -> 4 `i `ui `*S655 `*VS655 ]
+"1045
+[; ;../usb/src/usb_device.c: 1045:     }
+}
+[e $U 708  ]
+"1046
+[; ;../usb/src/usb_device.c: 1046:     else
+[e :U 707 ]
+"1047
+[; ;../usb/src/usb_device.c: 1047:     {
+{
+"1049
+[; ;../usb/src/usb_device.c: 1049:         pBDTEntryOut[ep] = (BDT_ENTRY*)(((uint16_t)pBDTEntryOut[ep]) ^ 0x0004);
+[e = *U + &U _pBDTEntryOut * -> _ep `ux -> -> # *U &U _pBDTEntryOut `ui `ux -> -> ^ -> -> *U + &U _pBDTEntryOut * -> _ep `ux -> -> # *U &U _pBDTEntryOut `ui `ux `us `ui -> -> 4 `i `ui `*S655 `*VS655 ]
+"1050
+[; ;../usb/src/usb_device.c: 1050:     }
+}
+[e :U 708 ]
+"1051
+[; ;../usb/src/usb_device.c: 1051:     return (void*)handle;
+[e ) -> _handle `*v ]
+[e $UE 703  ]
+"1052
+[; ;../usb/src/usb_device.c: 1052: }
+[e :UE 703 ]
+}
+"1078
+[; ;../usb/src/usb_device.c: 1078: void USBStallEndpoint(uint8_t ep, uint8_t dir)
+[v _USBStallEndpoint `(v ~T0 @X0 1 ef2`uc`uc ]
+"1079
+[; ;../usb/src/usb_device.c: 1079: {
+{
+[e :U _USBStallEndpoint ]
+"1078
+[; ;../usb/src/usb_device.c: 1078: void USBStallEndpoint(uint8_t ep, uint8_t dir)
+[v _ep `uc ~T0 @X0 1 r1 ]
+[v _dir `uc ~T0 @X0 1 r2 ]
+"1079
+[; ;../usb/src/usb_device.c: 1079: {
+[f ]
+"1080
+[; ;../usb/src/usb_device.c: 1080:     BDT_ENTRY *p;
+[v _p `*S655 ~T0 @X0 1 a ]
+"1082
+[; ;../usb/src/usb_device.c: 1082:     if(ep == 0)
+[e $ ! == -> _ep `i -> 0 `i 710  ]
+"1083
+[; ;../usb/src/usb_device.c: 1083:     {
+{
+"1087
+[; ;../usb/src/usb_device.c: 1087:         pBDTEntryEP0OutNext->CNT = 8;
+[e = . . *U _pBDTEntryEP0OutNext 0 1 -> -> 8 `i `uc ]
+"1088
+[; ;../usb/src/usb_device.c: 1088:         pBDTEntryEP0OutNext->ADR = ((uint16_t)(&SetupPkt));
+[e = . . *U _pBDTEntryEP0OutNext 1 2 -> &U _SetupPkt `us ]
+"1089
+[; ;../usb/src/usb_device.c: 1089:         pBDTEntryEP0OutNext->STAT.Val = 0x00|(0x08 & 0x08)|0x04;
+[e = . . . *U _pBDTEntryEP0OutNext 0 0 0 -> | | -> 0 `i & -> 8 `i -> 8 `i -> 4 `i `uc ]
+"1090
+[; ;../usb/src/usb_device.c: 1090:         pBDTEntryEP0OutNext->STAT.Val |= 0x80;
+[e =| . . . *U _pBDTEntryEP0OutNext 0 0 0 -> -> 128 `i `Vuc ]
+"1091
+[; ;../usb/src/usb_device.c: 1091:         pBDTEntryIn[0]->STAT.Val = 0x04;
+[e = . . . *U *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux 0 0 0 -> -> 4 `i `uc ]
+"1092
+[; ;../usb/src/usb_device.c: 1092:         pBDTEntryIn[0]->STAT.Val |= 0x80;
+[e =| . . . *U *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux 0 0 0 -> -> 128 `i `Vuc ]
+"1094
+[; ;../usb/src/usb_device.c: 1094:     }
+}
+[e $U 711  ]
+"1095
+[; ;../usb/src/usb_device.c: 1095:     else
+[e :U 710 ]
+"1096
+[; ;../usb/src/usb_device.c: 1096:     {
+{
+"1097
+[; ;../usb/src/usb_device.c: 1097:         p = (BDT_ENTRY*)(&BDT[(4*ep+2*dir+0)]);
+[e = _p -> &U *U + &U _BDT * -> -> + + * -> 4 `i -> _ep `i * -> 2 `i -> _dir `i -> 0 `i `ui `ux -> -> # *U &U _BDT `ui `ux `*S655 ]
+"1098
+[; ;../usb/src/usb_device.c: 1098:         p->STAT.Val |= 0x04;
+[e =| . . . *U _p 0 0 0 -> -> 4 `i `uc ]
+"1099
+[; ;../usb/src/usb_device.c: 1099:         p->STAT.Val |= 0x80;
+[e =| . . . *U _p 0 0 0 -> -> 128 `i `uc ]
+"1104
+[; ;../usb/src/usb_device.c: 1104:         p = (BDT_ENTRY*)(&BDT[(4*ep+2*dir+1)]);
+[e = _p -> &U *U + &U _BDT * -> -> + + * -> 4 `i -> _ep `i * -> 2 `i -> _dir `i -> 1 `i `ui `ux -> -> # *U &U _BDT `ui `ux `*S655 ]
+"1105
+[; ;../usb/src/usb_device.c: 1105:         p->STAT.Val |= 0x04;
+[e =| . . . *U _p 0 0 0 -> -> 4 `i `uc ]
+"1106
+[; ;../usb/src/usb_device.c: 1106:         p->STAT.Val |= 0x80;
+[e =| . . . *U _p 0 0 0 -> -> 128 `i `uc ]
+"1108
+[; ;../usb/src/usb_device.c: 1108:     }
+}
+[e :U 711 ]
+"1109
+[; ;../usb/src/usb_device.c: 1109: }
+[e :UE 709 ]
+}
+"1134
+[; ;../usb/src/usb_device.c: 1134: void USBCancelIO(uint8_t endpoint)
+[v _USBCancelIO `(v ~T0 @X0 1 ef1`uc ]
+"1135
+[; ;../usb/src/usb_device.c: 1135: {
+{
+[e :U _USBCancelIO ]
+"1134
+[; ;../usb/src/usb_device.c: 1134: void USBCancelIO(uint8_t endpoint)
+[v _endpoint `uc ~T0 @X0 1 r1 ]
+"1135
+[; ;../usb/src/usb_device.c: 1135: {
+[f ]
+"1136
+[; ;../usb/src/usb_device.c: 1136:     if(UCONbits.PKTDIS == 1)
+[e $ ! == -> . . _UCONbits 0 4 `i -> 1 `i 713  ]
+"1137
+[; ;../usb/src/usb_device.c: 1137:     {
+{
+"1140
+[; ;../usb/src/usb_device.c: 1140:      pBDTEntryIn[endpoint]->Val &= 0x40;
+[e =& . *U *U + &U _pBDTEntryIn * -> _endpoint `ux -> -> # *U &U _pBDTEntryIn `ui `ux 2 -> -> 64 `i `Vul ]
+"1141
+[; ;../usb/src/usb_device.c: 1141:      pBDTEntryIn[endpoint]->Val ^= 0x40;
+[e =^ . *U *U + &U _pBDTEntryIn * -> _endpoint `ux -> -> # *U &U _pBDTEntryIn `ui `ux 2 -> -> 64 `i `Vul ]
+"1148
+[; ;../usb/src/usb_device.c: 1148:         pBDTEntryIn[endpoint] = (BDT_ENTRY*)(((uint16_t)pBDTEntryIn[endpoint]) ^ 0x0004);
+[e = *U + &U _pBDTEntryIn * -> _endpoint `ux -> -> # *U &U _pBDTEntryIn `ui `ux -> -> ^ -> -> *U + &U _pBDTEntryIn * -> _endpoint `ux -> -> # *U &U _pBDTEntryIn `ui `ux `us `ui -> -> 4 `i `ui `*S655 `*VS655 ]
+"1150
+[; ;../usb/src/usb_device.c: 1150:      pBDTEntryIn[endpoint]->STAT.Val &= 0x40;
+[e =& . . . *U *U + &U _pBDTEntryIn * -> _endpoint `ux -> -> # *U &U _pBDTEntryIn `ui `ux 0 0 0 -> -> 64 `i `Vuc ]
+"1151
+[; ;../usb/src/usb_device.c: 1151:      pBDTEntryIn[endpoint]->STAT.Val ^= 0x40;
+[e =^ . . . *U *U + &U _pBDTEntryIn * -> _endpoint `ux -> -> # *U &U _pBDTEntryIn `ui `ux 0 0 0 -> -> 64 `i `Vuc ]
+"1153
+[; ;../usb/src/usb_device.c: 1153:     }
+}
+[e :U 713 ]
+"1154
+[; ;../usb/src/usb_device.c: 1154: }
+[e :UE 712 ]
+}
+"1252
+[; ;../usb/src/usb_device.c: 1252: void USBDeviceDetach(void)
+[v _USBDeviceDetach `(v ~T0 @X0 1 ef ]
+"1253
+[; ;../usb/src/usb_device.c: 1253: {
+{
+[e :U _USBDeviceDetach ]
+[f ]
+"1260
+[; ;../usb/src/usb_device.c: 1260:     {
+{
+"1262
+[; ;../usb/src/usb_device.c: 1262:          UCON = 0;
+[e = _UCON -> -> 0 `i `uc ]
+"1265
+[; ;../usb/src/usb_device.c: 1265:          UIE = 0;
+[e = _UIE -> -> 0 `i `uc ]
+"1268
+[; ;../usb/src/usb_device.c: 1268:          USBDeviceState = DETACHED_STATE;
+[e = _USBDeviceState . `E5031 0 ]
+"1296
+[; ;../usb/src/usb_device.c: 1296:           return;
+[e $UE 714  ]
+"1297
+[; ;../usb/src/usb_device.c: 1297:     }
+}
+"1317
+[; ;../usb/src/usb_device.c: 1317: }
+[e :UE 714 ]
+}
+"1357
+[; ;../usb/src/usb_device.c: 1357: void USBDeviceAttach(void)
+[v _USBDeviceAttach `(v ~T0 @X0 1 ef ]
+"1358
+[; ;../usb/src/usb_device.c: 1358: {
+{
+[e :U _USBDeviceAttach ]
+[f ]
+"1360
+[; ;../usb/src/usb_device.c: 1360:     if(USBDeviceState == DETACHED_STATE)
+[e $ ! == -> _USBDeviceState `ui -> . `E5031 0 `ui 716  ]
+"1361
+[; ;../usb/src/usb_device.c: 1361:     {
+{
+"1362
+[; ;../usb/src/usb_device.c: 1362:         if(1 == 1)
+[e $ ! == -> 1 `i -> 1 `i 717  ]
+"1363
+[; ;../usb/src/usb_device.c: 1363:         {
+{
+"1365
+[; ;../usb/src/usb_device.c: 1365:             UCON = 0;
+[e = _UCON -> -> 0 `i `uc ]
+"1368
+[; ;../usb/src/usb_device.c: 1368:             UIE = 0;
+[e = _UIE -> -> 0 `i `uc ]
+"1372
+[; ;../usb/src/usb_device.c: 1372:             { UCFG = 0x10 | 0x00 | 0x04 | 0x02; UEIE = 0x9F; UIE = 0x39 | 0x40 | 0x02; };
+{
+[e = _UCFG -> | | | -> 16 `i -> 0 `i -> 4 `i -> 2 `i `uc ]
+[e = _UEIE -> -> 159 `i `uc ]
+[e = _UIE -> | | -> 57 `i -> 64 `i -> 2 `i `uc ]
+}
+"1374
+[; ;../usb/src/usb_device.c: 1374:             {RCONbits.IPEN = 1;IPR3bits.USBIP = 1;PIE3bits.USBIE = 1;INTCONbits.GIEH = 1;};
+{
+[e = . . _RCONbits 5 7 -> -> 1 `i `uc ]
+[e = . . _IPR3bits 0 2 -> -> 1 `i `uc ]
+[e = . . _PIE3bits 0 2 -> -> 1 `i `uc ]
+[e = . . _INTCONbits 2 2 -> -> 1 `i `uc ]
+}
+"1377
+[; ;../usb/src/usb_device.c: 1377:             while(!UCONbits.USBEN){UCONbits.USBEN = 1;}
+[e $U 718  ]
+[e :U 719 ]
+{
+[e = . . _UCONbits 0 3 -> -> 1 `i `uc ]
+}
+[e :U 718 ]
+[e $ ! != -> . . _UCONbits 0 3 `i -> 0 `i 719  ]
+[e :U 720 ]
+"1380
+[; ;../usb/src/usb_device.c: 1380:             USBDeviceState = ATTACHED_STATE;
+[e = _USBDeviceState . `E5031 1 ]
+"1385
+[; ;../usb/src/usb_device.c: 1385:         }
+}
+[e :U 717 ]
+"1386
+[; ;../usb/src/usb_device.c: 1386:     }
+}
+[e :U 716 ]
+"1387
+[; ;../usb/src/usb_device.c: 1387: }
+[e :UE 715 ]
+}
+"1421
+[; ;../usb/src/usb_device.c: 1421: void USBCtrlEPAllowStatusStage(void)
+[v _USBCtrlEPAllowStatusStage `(v ~T0 @X0 1 ef ]
+"1422
+[; ;../usb/src/usb_device.c: 1422: {
+{
+[e :U _USBCtrlEPAllowStatusStage ]
+[f ]
+"1428
+[; ;../usb/src/usb_device.c: 1428:     if(USBStatusStageEnabledFlag1 == 0)
+[e $ ! == -> _USBStatusStageEnabledFlag1 `i -> 0 `i 722  ]
+"1429
+[; ;../usb/src/usb_device.c: 1429:     {
+{
+"1430
+[; ;../usb/src/usb_device.c: 1430:         USBStatusStageEnabledFlag1 = 1;
+[e = _USBStatusStageEnabledFlag1 -> -> 1 `i `a ]
+"1431
+[; ;../usb/src/usb_device.c: 1431:         if(USBStatusStageEnabledFlag2 == 0)
+[e $ ! == -> _USBStatusStageEnabledFlag2 `i -> 0 `i 723  ]
+"1432
+[; ;../usb/src/usb_device.c: 1432:         {
+{
+"1433
+[; ;../usb/src/usb_device.c: 1433:             USBStatusStageEnabledFlag2 = 1;
+[e = _USBStatusStageEnabledFlag2 -> -> 1 `i `a ]
+"1437
+[; ;../usb/src/usb_device.c: 1437:             if(controlTransferState == 2)
+[e $ ! == -> _controlTransferState `i -> 2 `i 724  ]
+"1438
+[; ;../usb/src/usb_device.c: 1438:             {
+{
+"1439
+[; ;../usb/src/usb_device.c: 1439:                 pBDTEntryIn[0]->CNT = 0;
+[e = . . *U *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux 0 1 -> -> 0 `i `uc ]
+"1440
+[; ;../usb/src/usb_device.c: 1440:                 pBDTEntryIn[0]->STAT.Val = 0x40|(0x08 & 0x08);
+[e = . . . *U *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux 0 0 0 -> | -> 64 `i & -> 8 `i -> 8 `i `uc ]
+"1441
+[; ;../usb/src/usb_device.c: 1441:                 pBDTEntryIn[0]->STAT.Val |= 0x80;
+[e =| . . . *U *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux 0 0 0 -> -> 128 `i `Vuc ]
+"1442
+[; ;../usb/src/usb_device.c: 1442:             }
+}
+[e $U 725  ]
+"1443
+[; ;../usb/src/usb_device.c: 1443:             else if(controlTransferState == 1)
+[e :U 724 ]
+[e $ ! == -> _controlTransferState `i -> 1 `i 726  ]
+"1444
+[; ;../usb/src/usb_device.c: 1444:             {
+{
+"1445
+[; ;../usb/src/usb_device.c: 1445:                 BothEP0OutUOWNsSet = 0;
+[e = _BothEP0OutUOWNsSet -> -> 0 `i `a ]
+"1450
+[; ;../usb/src/usb_device.c: 1450:                     pBDTEntryEP0OutCurrent->CNT = 8;
+[e = . . *U _pBDTEntryEP0OutCurrent 0 1 -> -> 8 `i `uc ]
+"1451
+[; ;../usb/src/usb_device.c: 1451:                     pBDTEntryEP0OutCurrent->ADR = ((uint16_t)(&SetupPkt));
+[e = . . *U _pBDTEntryEP0OutCurrent 1 2 -> &U _SetupPkt `us ]
+"1452
+[; ;../usb/src/usb_device.c: 1452:                     pBDTEntryEP0OutCurrent->STAT.Val = 0x04;
+[e = . . . *U _pBDTEntryEP0OutCurrent 0 0 0 -> -> 4 `i `uc ]
+"1453
+[; ;../usb/src/usb_device.c: 1453:                     pBDTEntryEP0OutCurrent->STAT.Val |= 0x80;
+[e =| . . . *U _pBDTEntryEP0OutCurrent 0 0 0 -> -> 128 `i `Vuc ]
+"1454
+[; ;../usb/src/usb_device.c: 1454:                     BothEP0OutUOWNsSet = 1;
+[e = _BothEP0OutUOWNsSet -> -> 1 `i `a ]
+"1458
+[; ;../usb/src/usb_device.c: 1458:                 pBDTEntryEP0OutNext->CNT = 8;
+[e = . . *U _pBDTEntryEP0OutNext 0 1 -> -> 8 `i `uc ]
+"1459
+[; ;../usb/src/usb_device.c: 1459:                 pBDTEntryEP0OutNext->ADR = ((uint16_t)(&SetupPkt));
+[e = . . *U _pBDTEntryEP0OutNext 1 2 -> &U _SetupPkt `us ]
+"1460
+[; ;../usb/src/usb_device.c: 1460:                 pBDTEntryEP0OutNext->STAT.Val = 0x80;
+[e = . . . *U _pBDTEntryEP0OutNext 0 0 0 -> -> 128 `i `uc ]
+"1461
+[; ;../usb/src/usb_device.c: 1461:             }
+}
+[e :U 726 ]
+[e :U 725 ]
+"1462
+[; ;../usb/src/usb_device.c: 1462:         }
+}
+[e :U 723 ]
+"1463
+[; ;../usb/src/usb_device.c: 1463:     }
+}
+[e :U 722 ]
+"1464
+[; ;../usb/src/usb_device.c: 1464: }
+[e :UE 721 ]
+}
+"1493
+[; ;../usb/src/usb_device.c: 1493: void USBCtrlEPAllowDataStage(void)
+[v _USBCtrlEPAllowDataStage `(v ~T0 @X0 1 ef ]
+"1494
+[; ;../usb/src/usb_device.c: 1494: {
+{
+[e :U _USBCtrlEPAllowDataStage ]
+[f ]
+"1495
+[; ;../usb/src/usb_device.c: 1495:     USBDeferINDataStagePackets = 0;
+[e = _USBDeferINDataStagePackets -> -> 0 `i `a ]
+"1496
+[; ;../usb/src/usb_device.c: 1496:     USBDeferOUTDataStagePackets = 0;
+[e = _USBDeferOUTDataStagePackets -> -> 0 `i `a ]
+"1498
+[; ;../usb/src/usb_device.c: 1498:     if(controlTransferState == 2)
+[e $ ! == -> _controlTransferState `i -> 2 `i 728  ]
+"1499
+[; ;../usb/src/usb_device.c: 1499:     {
+{
+"1501
+[; ;../usb/src/usb_device.c: 1501:         pBDTEntryEP0OutNext->CNT = 8;
+[e = . . *U _pBDTEntryEP0OutNext 0 1 -> -> 8 `i `uc ]
+"1502
+[; ;../usb/src/usb_device.c: 1502:         pBDTEntryEP0OutNext->ADR = ((uint16_t)(&CtrlTrfData));
+[e = . . *U _pBDTEntryEP0OutNext 1 2 -> &U _CtrlTrfData `us ]
+"1503
+[; ;../usb/src/usb_device.c: 1503:         pBDTEntryEP0OutNext->STAT.Val = 0x40|(0x08 & 0x08);
+[e = . . . *U _pBDTEntryEP0OutNext 0 0 0 -> | -> 64 `i & -> 8 `i -> 8 `i `uc ]
+"1504
+[; ;../usb/src/usb_device.c: 1504:         pBDTEntryEP0OutNext->STAT.Val |= 0x80;
+[e =| . . . *U _pBDTEntryEP0OutNext 0 0 0 -> -> 128 `i `Vuc ]
+"1505
+[; ;../usb/src/usb_device.c: 1505:     }
+}
+[e $U 729  ]
+"1506
+[; ;../usb/src/usb_device.c: 1506:     else
+[e :U 728 ]
+"1507
+[; ;../usb/src/usb_device.c: 1507:     {
+{
+"1510
+[; ;../usb/src/usb_device.c: 1510:   if(SetupPkt.wLength < inPipes[0].wCount.Val)
+[e $ ! < -> . . _SetupPkt 0 4 `ui -> . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 0 `ui 730  ]
+"1511
+[; ;../usb/src/usb_device.c: 1511:   {
+{
+"1512
+[; ;../usb/src/usb_device.c: 1512:    inPipes[0].wCount.Val = SetupPkt.wLength;
+[e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 0 . . _SetupPkt 0 4 ]
+"1513
+[; ;../usb/src/usb_device.c: 1513:   }
+}
+[e :U 730 ]
+"1514
+[; ;../usb/src/usb_device.c: 1514:   USBCtrlTrfTxService();
+[e ( _USBCtrlTrfTxService ..  ]
+"1519
+[; ;../usb/src/usb_device.c: 1519:   pBDTEntryIn[0]->ADR = ((uint16_t)(&CtrlTrfData));
+[e = . . *U *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux 1 2 -> &U _CtrlTrfData `us ]
+"1520
+[; ;../usb/src/usb_device.c: 1520:   pBDTEntryIn[0]->STAT.Val = 0x40|(0x08 & 0x08);
+[e = . . . *U *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux 0 0 0 -> | -> 64 `i & -> 8 `i -> 8 `i `uc ]
+"1521
+[; ;../usb/src/usb_device.c: 1521:         pBDTEntryIn[0]->STAT.Val |= 0x80;
+[e =| . . . *U *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux 0 0 0 -> -> 128 `i `Vuc ]
+"1522
+[; ;../usb/src/usb_device.c: 1522:     }
+}
+[e :U 729 ]
+"1523
+[; ;../usb/src/usb_device.c: 1523: }
+[e :UE 727 ]
+}
+"1548
+[; ;../usb/src/usb_device.c: 1548: static void USBConfigureEndpoint(uint8_t EPNum, uint8_t direction)
+[v _USBConfigureEndpoint `(v ~T0 @X0 1 sf2`uc`uc ]
+"1549
+[; ;../usb/src/usb_device.c: 1549: {
+{
+[e :U _USBConfigureEndpoint ]
+"1548
+[; ;../usb/src/usb_device.c: 1548: static void USBConfigureEndpoint(uint8_t EPNum, uint8_t direction)
+[v _EPNum `uc ~T0 @X0 1 r1 ]
+[v _direction `uc ~T0 @X0 1 r2 ]
+"1549
+[; ;../usb/src/usb_device.c: 1549: {
+[f ]
+"1550
+[; ;../usb/src/usb_device.c: 1550:     volatile BDT_ENTRY* handle;
+[v _handle `*VS655 ~T0 @X0 1 a ]
+"1554
+[; ;../usb/src/usb_device.c: 1554:     handle = (volatile BDT_ENTRY*)&BDT[0];
+[e = _handle &U *U + &U _BDT * -> -> -> 0 `i `ui `ux -> -> # *U &U _BDT `ui `ux ]
+"1555
+[; ;../usb/src/usb_device.c: 1555:     handle += (4*EPNum+2*direction+0u);
+[e =+ _handle * -> + -> + * -> 4 `i -> _EPNum `i * -> 2 `i -> _direction `i `ui -> 0 `ui `ux -> -> # *U _handle `ui `ux ]
+"1557
+[; ;../usb/src/usb_device.c: 1557:     handle->STAT.UOWN = 0;
+[e = . . . . *U _handle 0 0 1 7 -> -> 0 `i `uc ]
+"1562
+[; ;../usb/src/usb_device.c: 1562:     if(direction == 0)
+[e $ ! == -> _direction `i -> 0 `i 732  ]
+"1563
+[; ;../usb/src/usb_device.c: 1563:     {
+{
+"1564
+[; ;../usb/src/usb_device.c: 1564:         pBDTEntryOut[EPNum] = handle;
+[e = *U + &U _pBDTEntryOut * -> _EPNum `ux -> -> # *U &U _pBDTEntryOut `ui `ux _handle ]
+"1565
+[; ;../usb/src/usb_device.c: 1565:     }
+}
+[e $U 733  ]
+"1566
+[; ;../usb/src/usb_device.c: 1566:     else
+[e :U 732 ]
+"1567
+[; ;../usb/src/usb_device.c: 1567:     {
+{
+"1568
+[; ;../usb/src/usb_device.c: 1568:         pBDTEntryIn[EPNum] = handle;
+[e = *U + &U _pBDTEntryIn * -> _EPNum `ux -> -> # *U &U _pBDTEntryIn `ui `ux _handle ]
+"1569
+[; ;../usb/src/usb_device.c: 1569:     }
+}
+[e :U 733 ]
+"1572
+[; ;../usb/src/usb_device.c: 1572:         handle->STAT.DTS = 0;
+[e = . . . . *U _handle 0 0 1 6 -> -> 0 `i `uc ]
+"1573
+[; ;../usb/src/usb_device.c: 1573:         (handle+1)->STAT.DTS = 1;
+[e = . . . . *U + _handle * -> -> 1 `i `x -> -> # *U _handle `i `x 0 0 1 6 -> -> 1 `i `uc ]
+"1590
+[; ;../usb/src/usb_device.c: 1590: }
+[e :UE 731 ]
+}
+"1621
+[; ;../usb/src/usb_device.c: 1621: static void USBCtrlEPServiceComplete(void)
+[v _USBCtrlEPServiceComplete `(v ~T0 @X0 1 sf ]
+"1622
+[; ;../usb/src/usb_device.c: 1622: {
+{
+[e :U _USBCtrlEPServiceComplete ]
+[f ]
+"1627
+[; ;../usb/src/usb_device.c: 1627:     UCONbits.PKTDIS = 0;
+[e = . . _UCONbits 0 4 -> -> 0 `i `uc ]
+"1633
+[; ;../usb/src/usb_device.c: 1633:     if(inPipes[0].info.bits.busy == 0)
+[e $ ! == -> . . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 0 3 `i -> 0 `i 735  ]
+"1634
+[; ;../usb/src/usb_device.c: 1634:     {
+{
+"1635
+[; ;../usb/src/usb_device.c: 1635:         if(outPipes[0].info.bits.busy == 1)
+[e $ ! == -> . . . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 1 0 1 `i -> 1 `i 736  ]
+"1636
+[; ;../usb/src/usb_device.c: 1636:         {
+{
+"1637
+[; ;../usb/src/usb_device.c: 1637:             controlTransferState = 2;
+[e = _controlTransferState -> -> 2 `i `uc ]
+"1648
+[; ;../usb/src/usb_device.c: 1648:             if(USBDeferOUTDataStagePackets == 0)
+[e $ ! == -> _USBDeferOUTDataStagePackets `i -> 0 `i 737  ]
+"1649
+[; ;../usb/src/usb_device.c: 1649:             {
+{
+"1650
+[; ;../usb/src/usb_device.c: 1650:                 USBCtrlEPAllowDataStage();
+[e ( _USBCtrlEPAllowDataStage ..  ]
+"1651
+[; ;../usb/src/usb_device.c: 1651:             }
+}
+[e :U 737 ]
+"1655
+[; ;../usb/src/usb_device.c: 1655:             USBStatusStageEnabledFlag2 = 0;
+[e = _USBStatusStageEnabledFlag2 -> -> 0 `i `a ]
+"1656
+[; ;../usb/src/usb_device.c: 1656:             USBStatusStageEnabledFlag1 = 0;
+[e = _USBStatusStageEnabledFlag1 -> -> 0 `i `a ]
+"1657
+[; ;../usb/src/usb_device.c: 1657:         }
+}
+[e $U 738  ]
+"1658
+[; ;../usb/src/usb_device.c: 1658:         else
+[e :U 736 ]
+"1659
+[; ;../usb/src/usb_device.c: 1659:         {
+{
+"1664
+[; ;../usb/src/usb_device.c: 1664:             pBDTEntryEP0OutNext->CNT = 8;
+[e = . . *U _pBDTEntryEP0OutNext 0 1 -> -> 8 `i `uc ]
+"1665
+[; ;../usb/src/usb_device.c: 1665:             pBDTEntryEP0OutNext->ADR = ((uint16_t)(&SetupPkt));
+[e = . . *U _pBDTEntryEP0OutNext 1 2 -> &U _SetupPkt `us ]
+"1666
+[; ;../usb/src/usb_device.c: 1666:             pBDTEntryEP0OutNext->STAT.Val = 0x00|(0x08 & 0x08)|0x04;
+[e = . . . *U _pBDTEntryEP0OutNext 0 0 0 -> | | -> 0 `i & -> 8 `i -> 8 `i -> 4 `i `uc ]
+"1667
+[; ;../usb/src/usb_device.c: 1667:             pBDTEntryEP0OutNext->STAT.Val |= 0x80;
+[e =| . . . *U _pBDTEntryEP0OutNext 0 0 0 -> -> 128 `i `Vuc ]
+"1668
+[; ;../usb/src/usb_device.c: 1668:             pBDTEntryIn[0]->STAT.Val = 0x04;
+[e = . . . *U *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux 0 0 0 -> -> 4 `i `uc ]
+"1669
+[; ;../usb/src/usb_device.c: 1669:             pBDTEntryIn[0]->STAT.Val |= 0x80;
+[e =| . . . *U *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux 0 0 0 -> -> 128 `i `Vuc ]
+"1670
+[; ;../usb/src/usb_device.c: 1670:         }
+}
+[e :U 738 ]
+"1671
+[; ;../usb/src/usb_device.c: 1671:     }
+}
+[e $U 739  ]
+"1672
+[; ;../usb/src/usb_device.c: 1672:     else
+[e :U 735 ]
+"1673
+[; ;../usb/src/usb_device.c: 1673:     {
+{
+"1674
+[; ;../usb/src/usb_device.c: 1674:   if(SetupPkt.DataDir == (0x80>>7))
+[e $ ! == -> . . _SetupPkt 2 2 `i >> -> 128 `i -> 7 `i 740  ]
+"1675
+[; ;../usb/src/usb_device.c: 1675:   {
+{
+"1676
+[; ;../usb/src/usb_device.c: 1676:    controlTransferState = 1;
+[e = _controlTransferState -> -> 1 `i `uc ]
+"1690
+[; ;../usb/src/usb_device.c: 1690:    if(USBDeferINDataStagePackets == 0)
+[e $ ! == -> _USBDeferINDataStagePackets `i -> 0 `i 741  ]
+"1691
+[; ;../usb/src/usb_device.c: 1691:             {
+{
+"1692
+[; ;../usb/src/usb_device.c: 1692:                 USBCtrlEPAllowDataStage();
+[e ( _USBCtrlEPAllowDataStage ..  ]
+"1693
+[; ;../usb/src/usb_device.c: 1693:    }
+}
+[e :U 741 ]
+"1715
+[; ;../usb/src/usb_device.c: 1715:             USBStatusStageEnabledFlag2 = 0;
+[e = _USBStatusStageEnabledFlag2 -> -> 0 `i `a ]
+"1716
+[; ;../usb/src/usb_device.c: 1716:             USBStatusStageEnabledFlag1 = 0;
+[e = _USBStatusStageEnabledFlag1 -> -> 0 `i `a ]
+"1717
+[; ;../usb/src/usb_device.c: 1717:             if(USBDeferStatusStagePacket == 0)
+[e $ ! == -> _USBDeferStatusStagePacket `i -> 0 `i 742  ]
+"1718
+[; ;../usb/src/usb_device.c: 1718:             {
+{
+"1719
+[; ;../usb/src/usb_device.c: 1719:                 USBCtrlEPAllowStatusStage();
+[e ( _USBCtrlEPAllowStatusStage ..  ]
+"1720
+[; ;../usb/src/usb_device.c: 1720:             }
+}
+[e :U 742 ]
+"1721
+[; ;../usb/src/usb_device.c: 1721:   }
+}
+[e $U 743  ]
+"1722
+[; ;../usb/src/usb_device.c: 1722:   else
+[e :U 740 ]
+"1723
+[; ;../usb/src/usb_device.c: 1723:   {
+{
+"1734
+[; ;../usb/src/usb_device.c: 1734:    controlTransferState = 2;
+[e = _controlTransferState -> -> 2 `i `uc ]
+"1737
+[; ;../usb/src/usb_device.c: 1737:    pBDTEntryEP0OutNext->CNT = 8;
+[e = . . *U _pBDTEntryEP0OutNext 0 1 -> -> 8 `i `uc ]
+"1738
+[; ;../usb/src/usb_device.c: 1738:    pBDTEntryEP0OutNext->ADR = ((uint16_t)(&SetupPkt));
+[e = . . *U _pBDTEntryEP0OutNext 1 2 -> &U _SetupPkt `us ]
+"1739
+[; ;../usb/src/usb_device.c: 1739:    pBDTEntryEP0OutNext->STAT.Val = 0x04;
+[e = . . . *U _pBDTEntryEP0OutNext 0 0 0 -> -> 4 `i `uc ]
+"1740
+[; ;../usb/src/usb_device.c: 1740:             pBDTEntryEP0OutNext->STAT.Val |= 0x80;
+[e =| . . . *U _pBDTEntryEP0OutNext 0 0 0 -> -> 128 `i `Vuc ]
+"1743
+[; ;../usb/src/usb_device.c: 1743:             USBStatusStageEnabledFlag2 = 0;
+[e = _USBStatusStageEnabledFlag2 -> -> 0 `i `a ]
+"1744
+[; ;../usb/src/usb_device.c: 1744:             USBStatusStageEnabledFlag1 = 0;
+[e = _USBStatusStageEnabledFlag1 -> -> 0 `i `a ]
+"1745
+[; ;../usb/src/usb_device.c: 1745:    if(USBDeferStatusStagePacket == 0)
+[e $ ! == -> _USBDeferStatusStagePacket `i -> 0 `i 744  ]
+"1746
+[; ;../usb/src/usb_device.c: 1746:             {
+{
+"1747
+[; ;../usb/src/usb_device.c: 1747:                 USBCtrlEPAllowStatusStage();
+[e ( _USBCtrlEPAllowStatusStage ..  ]
+"1748
+[; ;../usb/src/usb_device.c: 1748:             }
+}
+[e :U 744 ]
+"1749
+[; ;../usb/src/usb_device.c: 1749:   }
+}
+[e :U 743 ]
+"1751
+[; ;../usb/src/usb_device.c: 1751:     }
+}
+[e :U 739 ]
+"1753
+[; ;../usb/src/usb_device.c: 1753: }
+[e :UE 734 ]
+}
+"1776
+[; ;../usb/src/usb_device.c: 1776: static void USBCtrlTrfTxService(void)
+[v _USBCtrlTrfTxService `(v ~T0 @X0 1 sf ]
+"1777
+[; ;../usb/src/usb_device.c: 1777: {
+{
+[e :U _USBCtrlTrfTxService ]
+[f ]
+"1778
+[; ;../usb/src/usb_device.c: 1778:     uint8_t byteToSend;
+[v _byteToSend `uc ~T0 @X0 1 a ]
+"1782
+[; ;../usb/src/usb_device.c: 1782:     byteToSend = 8;
+[e = _byteToSend -> -> 8 `i `uc ]
+"1783
+[; ;../usb/src/usb_device.c: 1783:     if(inPipes[0].wCount.Val < (uint8_t)8)
+[e $ ! < -> . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 0 `ui -> -> -> 8 `i `uc `ui 746  ]
+"1784
+[; ;../usb/src/usb_device.c: 1784:     {
+{
+"1785
+[; ;../usb/src/usb_device.c: 1785:         byteToSend = inPipes[0].wCount.Val;
+[e = _byteToSend -> . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 0 `uc ]
+"1792
+[; ;../usb/src/usb_device.c: 1792:         if(shortPacketStatus == 0)
+[e $ ! == -> _shortPacketStatus `i -> 0 `i 747  ]
+"1793
+[; ;../usb/src/usb_device.c: 1793:         {
+{
+"1794
+[; ;../usb/src/usb_device.c: 1794:             shortPacketStatus = 1;
+[e = _shortPacketStatus -> -> 1 `i `uc ]
+"1795
+[; ;../usb/src/usb_device.c: 1795:         }
+}
+[e $U 748  ]
+"1796
+[; ;../usb/src/usb_device.c: 1796:         else if(shortPacketStatus == 1)
+[e :U 747 ]
+[e $ ! == -> _shortPacketStatus `i -> 1 `i 749  ]
+"1797
+[; ;../usb/src/usb_device.c: 1797:         {
+{
+"1798
+[; ;../usb/src/usb_device.c: 1798:             shortPacketStatus = 2;
+[e = _shortPacketStatus -> -> 2 `i `uc ]
+"1799
+[; ;../usb/src/usb_device.c: 1799:         }
+}
+[e :U 749 ]
+[e :U 748 ]
+"1800
+[; ;../usb/src/usb_device.c: 1800:     }
+}
+[e :U 746 ]
+"1804
+[; ;../usb/src/usb_device.c: 1804:     inPipes[0].wCount.Val -= byteToSend;
+[e =- . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 0 -> _byteToSend `Vus ]
+"1809
+[; ;../usb/src/usb_device.c: 1809:     pBDTEntryIn[0]->CNT = byteToSend;
+[e = . . *U *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux 0 1 _byteToSend ]
+"1813
+[; ;../usb/src/usb_device.c: 1813:     pDst = (volatile uint8_t*)CtrlTrfData;
+[e = _pDst &U _CtrlTrfData ]
+"1814
+[; ;../usb/src/usb_device.c: 1814:     if(inPipes[0].info.bits.ctrl_trf_mem == 0x00)
+[e $ ! == -> . . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 0 0 `i -> 0 `i 750  ]
+"1815
+[; ;../usb/src/usb_device.c: 1815:     {
+{
+"1816
+[; ;../usb/src/usb_device.c: 1816:         while(byteToSend)
+[e $U 751  ]
+[e :U 752 ]
+"1817
+[; ;../usb/src/usb_device.c: 1817:         {
+{
+"1818
+[; ;../usb/src/usb_device.c: 1818:             *pDst++ = *inPipes[0].pSrc.bRom++;
+[e = *U ++ _pDst * -> -> 1 `i `x -> -> # *U _pDst `i `x *U ++ . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 1 * -> -> 1 `i `x -> -> # *U . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 1 `i `x ]
+"1819
+[; ;../usb/src/usb_device.c: 1819:             byteToSend--;
+[e -- _byteToSend -> -> 1 `i `uc ]
+"1820
+[; ;../usb/src/usb_device.c: 1820:         }
+}
+[e :U 751 ]
+"1816
+[; ;../usb/src/usb_device.c: 1816:         while(byteToSend)
+[e $ != -> _byteToSend `i -> 0 `i 752  ]
+[e :U 753 ]
+"1821
+[; ;../usb/src/usb_device.c: 1821:     }
+}
+[e $U 754  ]
+"1822
+[; ;../usb/src/usb_device.c: 1822:     else
+[e :U 750 ]
+"1823
+[; ;../usb/src/usb_device.c: 1823:     {
+{
+"1824
+[; ;../usb/src/usb_device.c: 1824:         while(byteToSend)
+[e $U 755  ]
+[e :U 756 ]
+"1825
+[; ;../usb/src/usb_device.c: 1825:         {
+{
+"1826
+[; ;../usb/src/usb_device.c: 1826:             *pDst++ = *inPipes[0].pSrc.bRam++;
+[e = *U ++ _pDst * -> -> 1 `i `x -> -> # *U _pDst `i `x *U ++ . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 0 * -> -> 1 `i `x -> -> # *U . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 0 `i `x ]
+"1827
+[; ;../usb/src/usb_device.c: 1827:             byteToSend--;
+[e -- _byteToSend -> -> 1 `i `uc ]
+"1828
+[; ;../usb/src/usb_device.c: 1828:         }
+}
+[e :U 755 ]
+"1824
+[; ;../usb/src/usb_device.c: 1824:         while(byteToSend)
+[e $ != -> _byteToSend `i -> 0 `i 756  ]
+[e :U 757 ]
+"1829
+[; ;../usb/src/usb_device.c: 1829:     }
+}
+[e :U 754 ]
+"1830
+[; ;../usb/src/usb_device.c: 1830: }
+[e :UE 745 ]
+}
+"1857
+[; ;../usb/src/usb_device.c: 1857: static void USBCtrlTrfRxService(void)
+[v _USBCtrlTrfRxService `(v ~T0 @X0 1 sf ]
+"1858
+[; ;../usb/src/usb_device.c: 1858: {
+{
+[e :U _USBCtrlTrfRxService ]
+[f ]
+"1859
+[; ;../usb/src/usb_device.c: 1859:     uint8_t byteToRead;
+[v _byteToRead `uc ~T0 @X0 1 a ]
+"1860
+[; ;../usb/src/usb_device.c: 1860:     uint8_t i;
+[v _i `uc ~T0 @X0 1 a ]
+"1864
+[; ;../usb/src/usb_device.c: 1864:     byteToRead = pBDTEntryEP0OutCurrent->CNT;
+[e = _byteToRead . . *U _pBDTEntryEP0OutCurrent 0 1 ]
+"1870
+[; ;../usb/src/usb_device.c: 1870:     if(byteToRead > outPipes[0].wCount.Val)
+[e $ ! > -> _byteToRead `ui -> . . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 2 0 `ui 759  ]
+"1871
+[; ;../usb/src/usb_device.c: 1871:     {
+{
+"1872
+[; ;../usb/src/usb_device.c: 1872:         byteToRead = outPipes[0].wCount.Val;
+[e = _byteToRead -> . . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 2 0 `uc ]
+"1873
+[; ;../usb/src/usb_device.c: 1873:     }
+}
+[e :U 759 ]
+"1875
+[; ;../usb/src/usb_device.c: 1875:     outPipes[0].wCount.Val -= byteToRead;
+[e =- . . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 2 0 -> _byteToRead `Vus ]
+"1879
+[; ;../usb/src/usb_device.c: 1879:     for(i=0;i<byteToRead;i++)
+{
+[e = _i -> -> 0 `i `uc ]
+[e $U 763  ]
+[e :U 760 ]
+"1880
+[; ;../usb/src/usb_device.c: 1880:     {
+{
+"1881
+[; ;../usb/src/usb_device.c: 1881:         *outPipes[0].pDst.bRam++ = CtrlTrfData[i];
+[e = *U ++ . . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 0 0 * -> -> 1 `i `x -> -> # *U . . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 0 0 `i `x *U + &U _CtrlTrfData * -> _i `ux -> -> # *U &U _CtrlTrfData `ui `ux ]
+"1882
+[; ;../usb/src/usb_device.c: 1882:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 763 ]
+[e $ < -> _i `i -> _byteToRead `i 760  ]
+[e :U 761 ]
+}
+"1886
+[; ;../usb/src/usb_device.c: 1886:     if(outPipes[0].wCount.Val > 0)
+[e $ ! > -> . . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 2 0 `ui -> -> 0 `i `ui 764  ]
+"1887
+[; ;../usb/src/usb_device.c: 1887:     {
+{
+"1888
+[; ;../usb/src/usb_device.c: 1888:         pBDTEntryEP0OutNext->CNT = 8;
+[e = . . *U _pBDTEntryEP0OutNext 0 1 -> -> 8 `i `uc ]
+"1889
+[; ;../usb/src/usb_device.c: 1889:         pBDTEntryEP0OutNext->ADR = ((uint16_t)(&CtrlTrfData));
+[e = . . *U _pBDTEntryEP0OutNext 1 2 -> &U _CtrlTrfData `us ]
+"1890
+[; ;../usb/src/usb_device.c: 1890:         if(pBDTEntryEP0OutCurrent->STAT.DTS == 0)
+[e $ ! == -> . . . . *U _pBDTEntryEP0OutCurrent 0 0 1 6 `i -> 0 `i 765  ]
+"1891
+[; ;../usb/src/usb_device.c: 1891:         {
+{
+"1892
+[; ;../usb/src/usb_device.c: 1892:             pBDTEntryEP0OutNext->STAT.Val = 0x40|(0x08 & 0x08);
+[e = . . . *U _pBDTEntryEP0OutNext 0 0 0 -> | -> 64 `i & -> 8 `i -> 8 `i `uc ]
+"1893
+[; ;../usb/src/usb_device.c: 1893:             pBDTEntryEP0OutNext->STAT.Val |= 0x80;
+[e =| . . . *U _pBDTEntryEP0OutNext 0 0 0 -> -> 128 `i `Vuc ]
+"1894
+[; ;../usb/src/usb_device.c: 1894:         }
+}
+[e $U 766  ]
+"1895
+[; ;../usb/src/usb_device.c: 1895:         else
+[e :U 765 ]
+"1896
+[; ;../usb/src/usb_device.c: 1896:         {
+{
+"1897
+[; ;../usb/src/usb_device.c: 1897:             pBDTEntryEP0OutNext->STAT.Val = 0x00|(0x08 & 0x08);
+[e = . . . *U _pBDTEntryEP0OutNext 0 0 0 -> | -> 0 `i & -> 8 `i -> 8 `i `uc ]
+"1898
+[; ;../usb/src/usb_device.c: 1898:             pBDTEntryEP0OutNext->STAT.Val |= 0x80;
+[e =| . . . *U _pBDTEntryEP0OutNext 0 0 0 -> -> 128 `i `Vuc ]
+"1899
+[; ;../usb/src/usb_device.c: 1899:         }
+}
+[e :U 766 ]
+"1900
+[; ;../usb/src/usb_device.c: 1900:     }
+}
+[e $U 767  ]
+"1901
+[; ;../usb/src/usb_device.c: 1901:     else
+[e :U 764 ]
+"1902
+[; ;../usb/src/usb_device.c: 1902:     {
+{
+"1906
+[; ;../usb/src/usb_device.c: 1906:         pBDTEntryEP0OutNext->CNT = 8;
+[e = . . *U _pBDTEntryEP0OutNext 0 1 -> -> 8 `i `uc ]
+"1907
+[; ;../usb/src/usb_device.c: 1907:         pBDTEntryEP0OutNext->ADR = ((uint16_t)(&SetupPkt));
+[e = . . *U _pBDTEntryEP0OutNext 1 2 -> &U _SetupPkt `us ]
+"1911
+[; ;../usb/src/usb_device.c: 1911:         pBDTEntryEP0OutNext->STAT.Val = 0x04;
+[e = . . . *U _pBDTEntryEP0OutNext 0 0 0 -> -> 4 `i `uc ]
+"1912
+[; ;../usb/src/usb_device.c: 1912:         pBDTEntryEP0OutNext->STAT.Val |= 0x80;
+[e =| . . . *U _pBDTEntryEP0OutNext 0 0 0 -> -> 128 `i `Vuc ]
+"1919
+[; ;../usb/src/usb_device.c: 1919:         if(outPipes[0].pFunc != ((void*)0))
+[e $ ! != . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 3 -> -> -> 0 `i `*v `*F5384 768  ]
+"1920
+[; ;../usb/src/usb_device.c: 1920:         {
+{
+"1926
+[e ( *U . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 3 ..  ]
+"1931
+}
+[e :U 768 ]
+"1932
+[e = . . . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 1 0 1 -> -> 0 `i `uc ]
+"1946
+[; ;../usb/src/usb_device.c: 1946:         if(USBDeferStatusStagePacket == 0)
+[e $ ! == -> _USBDeferStatusStagePacket `i -> 0 `i 769  ]
+"1947
+[; ;../usb/src/usb_device.c: 1947:         {
+{
+"1948
+[; ;../usb/src/usb_device.c: 1948:             USBCtrlEPAllowStatusStage();
+[e ( _USBCtrlEPAllowStatusStage ..  ]
+"1949
+[; ;../usb/src/usb_device.c: 1949:         }
+}
+[e :U 769 ]
+"1950
+[; ;../usb/src/usb_device.c: 1950:     }
+}
+[e :U 767 ]
+"1952
+[; ;../usb/src/usb_device.c: 1952: }
+[e :UE 758 ]
+}
+"1924
+[p k ]
+"1925
+[p n 1088 ]
+"1927
+[p o ]
+"1973
+[; ;../usb/src/usb_device.c: 1973: static void USBStdSetCfgHandler(void)
+[v _USBStdSetCfgHandler `(v ~T0 @X0 1 sf ]
+"1974
+[; ;../usb/src/usb_device.c: 1974: {
+{
+[e :U _USBStdSetCfgHandler ]
+[f ]
+"1975
+[; ;../usb/src/usb_device.c: 1975:     uint8_t i;
+[v _i `uc ~T0 @X0 1 a ]
+"1978
+[; ;../usb/src/usb_device.c: 1978:     inPipes[0].info.bits.busy = 1;
+[e = . . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 0 3 -> -> 1 `i `uc ]
+"1981
+[; ;../usb/src/usb_device.c: 1981:     memset((void*)&UEP1,0x00,(1));;
+[e ( _memset (3 , , -> &U _UEP1 `*v -> 0 `i -> -> 1 `i `ui ]
+"1984
+[; ;../usb/src/usb_device.c: 1984:     memset((void*)&BDT[0], 0x00, sizeof(BDT));
+[e ( _memset (3 , , -> &U *U + &U _BDT * -> -> -> 0 `i `ui `ux -> -> # *U &U _BDT `ui `ux `*v -> 0 `i -> # _BDT `ui ]
+"1987
+[; ;../usb/src/usb_device.c: 1987:     UCONbits.PPBRST = 1;
+[e = . . _UCONbits 0 6 -> -> 1 `i `uc ]
+"1992
+[; ;../usb/src/usb_device.c: 1992:  for(i = 0; i < (uint8_t)(1 +1u); i++)
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> -> + -> -> 1 `i `ui -> 1 `ui `uc `i 771  ]
+[e $U 772  ]
+[e :U 771 ]
+"1993
+[; ;../usb/src/usb_device.c: 1993:  {
+{
+"1994
+[; ;../usb/src/usb_device.c: 1994:   ep_data_in[i].Val = 0u;
+[e = . *U + &U _ep_data_in * -> _i `ux -> -> # *U &U _ep_data_in `ui `ux 1 -> -> 0 `ui `uc ]
+"1995
+[; ;../usb/src/usb_device.c: 1995:         ep_data_out[i].Val = 0u;
+[e = . *U + &U _ep_data_out * -> _i `ux -> -> # *U &U _ep_data_out `ui `ux 1 -> -> 0 `ui `uc ]
+"1996
+[; ;../usb/src/usb_device.c: 1996:  }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> -> + -> -> 1 `i `ui -> 1 `ui `uc `i 771  ]
+[e :U 772 ]
+}
+"1999
+[; ;../usb/src/usb_device.c: 1999:     memset((void*)&USBAlternateInterface,0x00,1);
+[e ( _memset (3 , , -> &U _USBAlternateInterface `*v -> 0 `i -> -> 1 `i `ui ]
+"2002
+[; ;../usb/src/usb_device.c: 2002:     UCONbits.PPBRST = 0;
+[e = . . _UCONbits 0 6 -> -> 0 `i `uc ]
+"2004
+[; ;../usb/src/usb_device.c: 2004:     pBDTEntryIn[0] = (volatile BDT_ENTRY*)&BDT[2];
+[e = *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux &U *U + &U _BDT * -> -> -> 2 `i `ui `ux -> -> # *U &U _BDT `ui `ux ]
+"2007
+[; ;../usb/src/usb_device.c: 2007:     pBDTEntryEP0OutCurrent = (volatile BDT_ENTRY*)&BDT[0];
+[e = _pBDTEntryEP0OutCurrent &U *U + &U _BDT * -> -> -> 0 `i `ui `ux -> -> # *U &U _BDT `ui `ux ]
+"2008
+[; ;../usb/src/usb_device.c: 2008:     pBDTEntryEP0OutNext = pBDTEntryEP0OutCurrent;
+[e = _pBDTEntryEP0OutNext _pBDTEntryEP0OutCurrent ]
+"2011
+[; ;../usb/src/usb_device.c: 2011:     USBActiveConfiguration = SetupPkt.bConfigurationValue;
+[e = _USBActiveConfiguration . . _SetupPkt 6 2 ]
+"2014
+[; ;../usb/src/usb_device.c: 2014:     if(USBActiveConfiguration == 0)
+[e $ ! == -> _USBActiveConfiguration `i -> 0 `i 774  ]
+"2015
+[; ;../usb/src/usb_device.c: 2015:     {
+{
+"2017
+[; ;../usb/src/usb_device.c: 2017:         USBDeviceState = ADDRESS_STATE;
+[e = _USBDeviceState . `E5031 5 ]
+"2018
+[; ;../usb/src/usb_device.c: 2018:     }
+}
+[e $U 775  ]
+"2019
+[; ;../usb/src/usb_device.c: 2019:     else
+[e :U 774 ]
+"2020
+[; ;../usb/src/usb_device.c: 2020:     {
+{
+"2022
+[; ;../usb/src/usb_device.c: 2022:         USER_USB_CALLBACK_EVENT_HANDLER((USB_EVENT)EVENT_CONFIGURED,(void*)&USBActiveConfiguration,1);
+[e ( _USER_USB_CALLBACK_EVENT_HANDLER (3 , , -> . `E5040 0 `E4972 -> &U _USBActiveConfiguration `*v -> -> 1 `i `us ]
+"2027
+[; ;../usb/src/usb_device.c: 2027:         USBDeviceState = CONFIGURED_STATE;
+[e = _USBDeviceState . `E5031 6 ]
+"2028
+[; ;../usb/src/usb_device.c: 2028:     }
+}
+[e :U 775 ]
+"2029
+[; ;../usb/src/usb_device.c: 2029: }
+[e :UE 770 ]
+}
+"2048
+[; ;../usb/src/usb_device.c: 2048: static void USBStdGetDscHandler(void)
+[v _USBStdGetDscHandler `(v ~T0 @X0 1 sf ]
+"2049
+[; ;../usb/src/usb_device.c: 2049: {
+{
+[e :U _USBStdGetDscHandler ]
+[f ]
+"2050
+[; ;../usb/src/usb_device.c: 2050:     if(SetupPkt.bmRequestType == 0x80)
+[e $ ! == -> . . _SetupPkt 0 0 `i -> 128 `i 777  ]
+"2051
+[; ;../usb/src/usb_device.c: 2051:     {
+{
+"2052
+[; ;../usb/src/usb_device.c: 2052:         inPipes[0].info.Val = 0x00 | 0x80 | 0x40;
+[e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 1 -> | | -> 0 `i -> 128 `i -> 64 `i `uc ]
+"2054
+[; ;../usb/src/usb_device.c: 2054:         switch(SetupPkt.bDescriptorType)
+[e $U 779  ]
+"2055
+[; ;../usb/src/usb_device.c: 2055:         {
+{
+"2056
+[; ;../usb/src/usb_device.c: 2056:             case 0x01:
+[e :U 780 ]
+"2060
+[; ;../usb/src/usb_device.c: 2060:                     inPipes[0].pSrc.bRom = (const uint8_t*)&device_dsc;
+[e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 1 -> &U _device_dsc `*Cuc ]
+"2062
+[; ;../usb/src/usb_device.c: 2062:                 inPipes[0].wCount.Val = sizeof(device_dsc);
+[e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 0 -> -> # `CS609 `ui `us ]
+"2063
+[; ;../usb/src/usb_device.c: 2063:                 break;
+[e $U 778  ]
+"2064
+[; ;../usb/src/usb_device.c: 2064:             case 0x02:
+[e :U 781 ]
+"2068
+[; ;../usb/src/usb_device.c: 2068:                 if(SetupPkt.bDscIndex < 1)
+[e $ ! < -> . . _SetupPkt 4 2 `i -> 1 `i 782  ]
+"2069
+[; ;../usb/src/usb_device.c: 2069:                 {
+{
+"2073
+[; ;../usb/src/usb_device.c: 2073:                         inPipes[0].pSrc.bRom = *(USB_CD_Ptr+SetupPkt.bDscIndex);
+[e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 1 *U + &U _USB_CD_Ptr * -> -> . . _SetupPkt 4 2 `i `x -> -> # *U &U _USB_CD_Ptr `i `x ]
+"2079
+[; ;../usb/src/usb_device.c: 2079:                     inPipes[0].wCount.byte.LB = *(inPipes[0].pSrc.bRom+2);
+[e = . . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 2 0 *U + . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 1 * -> -> 2 `i `x -> -> # *U . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 1 `i `x ]
+"2080
+[; ;../usb/src/usb_device.c: 2080:                     inPipes[0].wCount.byte.HB = *(inPipes[0].pSrc.bRom+3);
+[e = . . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 2 1 *U + . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 1 * -> -> 3 `i `x -> -> # *U . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 1 `i `x ]
+"2081
+[; ;../usb/src/usb_device.c: 2081:                 }
+}
+[e $U 783  ]
+"2082
+[; ;../usb/src/usb_device.c: 2082:     else
+[e :U 782 ]
+"2083
+[; ;../usb/src/usb_device.c: 2083:     {
+{
+"2084
+[; ;../usb/src/usb_device.c: 2084:      inPipes[0].info.Val = 0;
+[e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 1 -> -> 0 `i `uc ]
+"2085
+[; ;../usb/src/usb_device.c: 2085:     }
+}
+[e :U 783 ]
+"2086
+[; ;../usb/src/usb_device.c: 2086:                 break;
+[e $U 778  ]
+"2087
+[; ;../usb/src/usb_device.c: 2087:             case 0x03:
+[e :U 784 ]
+"2091
+[; ;../usb/src/usb_device.c: 2091:                 if(SetupPkt.bDscIndex<3)
+[e $ ! < -> . . _SetupPkt 4 2 `i -> 3 `i 785  ]
+"2092
+[; ;../usb/src/usb_device.c: 2092:                 {
+{
+"2094
+[; ;../usb/src/usb_device.c: 2094:                     inPipes[0].pSrc.bRom = *(USB_SD_Ptr+SetupPkt.bDscIndex);
+[e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 1 *U + &U _USB_SD_Ptr * -> -> . . _SetupPkt 4 2 `i `x -> -> # *U &U _USB_SD_Ptr `i `x ]
+"2096
+[; ;../usb/src/usb_device.c: 2096:                     inPipes[0].wCount.Val = *inPipes[0].pSrc.bRom;
+[e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 0 -> *U . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 1 `us ]
+"2097
+[; ;../usb/src/usb_device.c: 2097:                 }
+}
+[e $U 786  ]
+"2107
+[; ;../usb/src/usb_device.c: 2107:                 else
+[e :U 785 ]
+"2108
+[; ;../usb/src/usb_device.c: 2108:                 {
+{
+"2109
+[; ;../usb/src/usb_device.c: 2109:                     inPipes[0].info.Val = 0;
+[e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 1 -> -> 0 `i `uc ]
+"2110
+[; ;../usb/src/usb_device.c: 2110:                 }
+}
+[e :U 786 ]
+"2111
+[; ;../usb/src/usb_device.c: 2111:                 break;
+[e $U 778  ]
+"2112
+[; ;../usb/src/usb_device.c: 2112:             default:
+[e :U 787 ]
+"2113
+[; ;../usb/src/usb_device.c: 2113:                 inPipes[0].info.Val = 0;
+[e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 1 -> -> 0 `i `uc ]
+"2114
+[; ;../usb/src/usb_device.c: 2114:                 break;
+[e $U 778  ]
+"2115
+[; ;../usb/src/usb_device.c: 2115:         }
+}
+[e $U 778  ]
+[e :U 779 ]
+[e [\ -> . . _SetupPkt 4 3 `i , $ -> 1 `i 780
+ , $ -> 2 `i 781
+ , $ -> 3 `i 784
+ 787 ]
+[e :U 778 ]
+"2116
+[; ;../usb/src/usb_device.c: 2116:     }
+}
+[e :U 777 ]
+"2117
+[; ;../usb/src/usb_device.c: 2117: }
+[e :UE 776 ]
+}
+"2134
+[; ;../usb/src/usb_device.c: 2134: static void USBStdGetStatusHandler(void)
+[v _USBStdGetStatusHandler `(v ~T0 @X0 1 sf ]
+"2135
+[; ;../usb/src/usb_device.c: 2135: {
+{
+[e :U _USBStdGetStatusHandler ]
+[f ]
+"2136
+[; ;../usb/src/usb_device.c: 2136:     CtrlTrfData[0] = 0;
+[e = *U + &U _CtrlTrfData * -> -> -> 0 `i `ui `ux -> -> # *U &U _CtrlTrfData `ui `ux -> -> 0 `i `uc ]
+"2137
+[; ;../usb/src/usb_device.c: 2137:     CtrlTrfData[1] = 0;
+[e = *U + &U _CtrlTrfData * -> -> -> 1 `i `ui `ux -> -> # *U &U _CtrlTrfData `ui `ux -> -> 0 `i `uc ]
+"2139
+[; ;../usb/src/usb_device.c: 2139:     switch(SetupPkt.Recipient)
+[e $U 790  ]
+"2140
+[; ;../usb/src/usb_device.c: 2140:     {
+{
+"2141
+[; ;../usb/src/usb_device.c: 2141:         case (0x00):
+[e :U 791 ]
+"2142
+[; ;../usb/src/usb_device.c: 2142:             inPipes[0].info.bits.busy = 1;
+[e = . . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 0 3 -> -> 1 `i `uc ]
+"2147
+[; ;../usb/src/usb_device.c: 2147:             if(0 == 1)
+[e $ ! == -> 0 `i -> 1 `i 792  ]
+"2148
+[; ;../usb/src/usb_device.c: 2148:             {
+{
+"2149
+[; ;../usb/src/usb_device.c: 2149:                 CtrlTrfData[0]|=0x01;
+[e =| *U + &U _CtrlTrfData * -> -> -> 0 `i `ui `ux -> -> # *U &U _CtrlTrfData `ui `ux -> -> 1 `i `uc ]
+"2150
+[; ;../usb/src/usb_device.c: 2150:             }
+}
+[e :U 792 ]
+"2152
+[; ;../usb/src/usb_device.c: 2152:             if(RemoteWakeup == 1)
+[e $ ! == -> _RemoteWakeup `i -> 1 `i 793  ]
+"2153
+[; ;../usb/src/usb_device.c: 2153:             {
+{
+"2154
+[; ;../usb/src/usb_device.c: 2154:                 CtrlTrfData[0]|=0x02;
+[e =| *U + &U _CtrlTrfData * -> -> -> 0 `i `ui `ux -> -> # *U &U _CtrlTrfData `ui `ux -> -> 2 `i `uc ]
+"2155
+[; ;../usb/src/usb_device.c: 2155:             }
+}
+[e :U 793 ]
+"2156
+[; ;../usb/src/usb_device.c: 2156:             break;
+[e $U 789  ]
+"2157
+[; ;../usb/src/usb_device.c: 2157:         case (0x01):
+[e :U 794 ]
+"2158
+[; ;../usb/src/usb_device.c: 2158:             inPipes[0].info.bits.busy = 1;
+[e = . . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 0 3 -> -> 1 `i `uc ]
+"2159
+[; ;../usb/src/usb_device.c: 2159:             break;
+[e $U 789  ]
+"2160
+[; ;../usb/src/usb_device.c: 2160:         case (0x02):
+[e :U 795 ]
+"2161
+[; ;../usb/src/usb_device.c: 2161:             inPipes[0].info.bits.busy = 1;
+[e = . . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 0 3 -> -> 1 `i `uc ]
+"2165
+[; ;../usb/src/usb_device.c: 2165:             if(SetupPkt.EPNum != 0)
+[e $ ! != -> . . _SetupPkt 9 4 `i -> 0 `i 796  ]
+"2166
+[; ;../usb/src/usb_device.c: 2166:             {
+{
+"2167
+[; ;../usb/src/usb_device.c: 2167:                 BDT_ENTRY *p;
+[v _p `*S655 ~T0 @X0 1 a ]
+"2169
+[; ;../usb/src/usb_device.c: 2169:                 if(SetupPkt.EPDir == 0)
+[e $ ! == -> . . _SetupPkt 9 6 `i -> 0 `i 797  ]
+"2170
+[; ;../usb/src/usb_device.c: 2170:                 {
+{
+"2171
+[; ;../usb/src/usb_device.c: 2171:                     p = (BDT_ENTRY*)pBDTEntryOut[SetupPkt.EPNum];
+[e = _p -> *U + &U _pBDTEntryOut * -> . . _SetupPkt 9 4 `ux -> -> # *U &U _pBDTEntryOut `ui `ux `*S655 ]
+"2172
+[; ;../usb/src/usb_device.c: 2172:                 }
+}
+[e $U 798  ]
+"2173
+[; ;../usb/src/usb_device.c: 2173:                 else
+[e :U 797 ]
+"2174
+[; ;../usb/src/usb_device.c: 2174:                 {
+{
+"2175
+[; ;../usb/src/usb_device.c: 2175:                     p = (BDT_ENTRY*)pBDTEntryIn[SetupPkt.EPNum];
+[e = _p -> *U + &U _pBDTEntryIn * -> . . _SetupPkt 9 4 `ux -> -> # *U &U _pBDTEntryIn `ui `ux `*S655 ]
+"2176
+[; ;../usb/src/usb_device.c: 2176:                 }
+}
+[e :U 798 ]
+"2178
+[; ;../usb/src/usb_device.c: 2178:                 if((p->STAT.UOWN == 1) && (p->STAT.BSTALL == 1))
+[e $ ! && == -> . . . . *U _p 0 0 1 7 `i -> 1 `i == -> . . . . *U _p 0 0 1 2 `i -> 1 `i 799  ]
+"2179
+[; ;../usb/src/usb_device.c: 2179:                 {
+{
+"2180
+[; ;../usb/src/usb_device.c: 2180:                     CtrlTrfData[0]=0x01;
+[e = *U + &U _CtrlTrfData * -> -> -> 0 `i `ui `ux -> -> # *U &U _CtrlTrfData `ui `ux -> -> 1 `i `uc ]
+"2181
+[; ;../usb/src/usb_device.c: 2181:                 }
+}
+[e :U 799 ]
+"2182
+[; ;../usb/src/usb_device.c: 2182:             }
+}
+[e :U 796 ]
+"2183
+[; ;../usb/src/usb_device.c: 2183:             break;
+[e $U 789  ]
+"2184
+[; ;../usb/src/usb_device.c: 2184:     }
+}
+[e $U 789  ]
+[e :U 790 ]
+[e [\ -> . . _SetupPkt 2 0 `i , $ -> 0 `i 791
+ , $ -> 1 `i 794
+ , $ -> 2 `i 795
+ 789 ]
+[e :U 789 ]
+"2186
+[; ;../usb/src/usb_device.c: 2186:     if(inPipes[0].info.bits.busy == 1)
+[e $ ! == -> . . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 0 3 `i -> 1 `i 800  ]
+"2187
+[; ;../usb/src/usb_device.c: 2187:     {
+{
+"2188
+[; ;../usb/src/usb_device.c: 2188:         inPipes[0].pSrc.bRam = (uint8_t*)&CtrlTrfData;
+[e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 0 -> &U _CtrlTrfData `*uc ]
+"2189
+[; ;../usb/src/usb_device.c: 2189:         inPipes[0].info.bits.ctrl_trf_mem = 0x01;
+[e = . . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 0 0 -> -> 1 `i `uc ]
+"2190
+[; ;../usb/src/usb_device.c: 2190:         inPipes[0].wCount.v[0] = 2;
+[e = *U + &U . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 1 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 1 `ui `ux -> -> 2 `i `uc ]
+"2191
+[; ;../usb/src/usb_device.c: 2191:     }
+}
+[e :U 800 ]
+"2192
+[; ;../usb/src/usb_device.c: 2192: }
+[e :UE 788 ]
+}
+"2210
+[; ;../usb/src/usb_device.c: 2210: static void USBStallHandler(void)
+[v _USBStallHandler `(v ~T0 @X0 1 sf ]
+"2211
+[; ;../usb/src/usb_device.c: 2211: {
+{
+[e :U _USBStallHandler ]
+[f ]
+"2222
+[; ;../usb/src/usb_device.c: 2222:     if(UEP0bits.EPSTALL == 1)
+[e $ ! == -> . . _UEP0bits 0 0 `i -> 1 `i 802  ]
+"2223
+[; ;../usb/src/usb_device.c: 2223:     {
+{
+"2225
+[; ;../usb/src/usb_device.c: 2225:         if((pBDTEntryEP0OutCurrent->STAT.Val == 0x80) && (pBDTEntryIn[0]->STAT.Val == (0x80|0x04)))
+[e $ ! && == -> . . . *U _pBDTEntryEP0OutCurrent 0 0 0 `i -> 128 `i == -> . . . *U *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux 0 0 0 `i | -> 128 `i -> 4 `i 803  ]
+"2226
+[; ;../usb/src/usb_device.c: 2226:         {
+{
+"2228
+[; ;../usb/src/usb_device.c: 2228:             pBDTEntryEP0OutCurrent->STAT.Val = 0x00|(0x08 & 0x08)|0x04;
+[e = . . . *U _pBDTEntryEP0OutCurrent 0 0 0 -> | | -> 0 `i & -> 8 `i -> 8 `i -> 4 `i `uc ]
+"2229
+[; ;../usb/src/usb_device.c: 2229:             pBDTEntryEP0OutCurrent->STAT.Val |= 0x80;
+[e =| . . . *U _pBDTEntryEP0OutCurrent 0 0 0 -> -> 128 `i `Vuc ]
+"2230
+[; ;../usb/src/usb_device.c: 2230:         }
+}
+[e :U 803 ]
+"2231
+[; ;../usb/src/usb_device.c: 2231:         UEP0bits.EPSTALL = 0;
+[e = . . _UEP0bits 0 0 -> -> 0 `i `uc ]
+"2232
+[; ;../usb/src/usb_device.c: 2232:     }
+}
+[e :U 802 ]
+"2234
+[; ;../usb/src/usb_device.c: 2234:     (UIR &= 0xDF);
+[e =& _UIR -> -> 223 `i `Vuc ]
+"2235
+[; ;../usb/src/usb_device.c: 2235: }
+[e :UE 801 ]
+}
+"2253
+[; ;../usb/src/usb_device.c: 2253: static void USBSuspend(void)
+[v _USBSuspend `(v ~T0 @X0 1 sf ]
+"2254
+[; ;../usb/src/usb_device.c: 2254: {
+{
+[e :U _USBSuspend ]
+[f ]
+"2278
+[; ;../usb/src/usb_device.c: 2278:     UIEbits.ACTVIE = 1;
+[e = . . _UIEbits 0 2 -> -> 1 `i `uc ]
+"2279
+[; ;../usb/src/usb_device.c: 2279:     (UIR &= 0xEF);
+[e =& _UIR -> -> 239 `i `Vuc ]
+"2282
+[; ;../usb/src/usb_device.c: 2282:         UCONbits.SUSPND = 1;
+[e = . . _UCONbits 0 1 -> -> 1 `i `uc ]
+"2285
+[; ;../usb/src/usb_device.c: 2285:     USBBusIsSuspended = 1;
+[e = _USBBusIsSuspended -> -> 1 `i `a ]
+"2286
+[; ;../usb/src/usb_device.c: 2286:     USBTicksSinceSuspendEnd = 0;
+[e = _USBTicksSinceSuspendEnd -> -> 0 `i `uc ]
+"2293
+[; ;../usb/src/usb_device.c: 2293:     USER_USB_CALLBACK_EVENT_HANDLER((USB_EVENT)EVENT_SUSPEND,0,0);
+[e ( _USER_USB_CALLBACK_EVENT_HANDLER (3 , , -> . `E4972 19 `E4972 -> -> 0 `i `*v -> -> 0 `i `us ]
+"2294
+[; ;../usb/src/usb_device.c: 2294: }
+[e :UE 804 ]
+}
+"2311
+[; ;../usb/src/usb_device.c: 2311: static void USBWakeFromSuspend(void)
+[v _USBWakeFromSuspend `(v ~T0 @X0 1 sf ]
+"2312
+[; ;../usb/src/usb_device.c: 2312: {
+{
+[e :U _USBWakeFromSuspend ]
+[f ]
+"2313
+[; ;../usb/src/usb_device.c: 2313:     USBBusIsSuspended = 0;
+[e = _USBBusIsSuspended -> -> 0 `i `a ]
+"2319
+[; ;../usb/src/usb_device.c: 2319:     USER_USB_CALLBACK_EVENT_HANDLER((USB_EVENT)EVENT_RESUME,0,0);
+[e ( _USER_USB_CALLBACK_EVENT_HANDLER (3 , , -> . `E4972 18 `E4972 -> -> 0 `i `*v -> -> 0 `i `us ]
+"2326
+[; ;../usb/src/usb_device.c: 2326:         UCONbits.SUSPND = 0;
+[e = . . _UCONbits 0 1 -> -> 0 `i `uc ]
+"2331
+[; ;../usb/src/usb_device.c: 2331:     UIEbits.ACTVIE = 0;
+[e = . . _UIEbits 0 2 -> -> 0 `i `uc ]
+"2349
+[; ;../usb/src/usb_device.c: 2349:     while(UIRbits.ACTVIF)
+[e $U 806  ]
+[e :U 807 ]
+"2351
+[; ;../usb/src/usb_device.c: 2351:     {
+{
+"2352
+[; ;../usb/src/usb_device.c: 2352:         (UIR &= 0xFB);
+[e =& _UIR -> -> 251 `i `Vuc ]
+"2353
+[; ;../usb/src/usb_device.c: 2353:     }
+}
+[e :U 806 ]
+"2349
+[; ;../usb/src/usb_device.c: 2349:     while(UIRbits.ACTVIF)
+[e $ != -> . . _UIRbits 0 2 `i -> 0 `i 807  ]
+[e :U 808 ]
+"2355
+[; ;../usb/src/usb_device.c: 2355:     USBTicksSinceSuspendEnd = 0;
+[e = _USBTicksSinceSuspendEnd -> -> 0 `i `uc ]
+"2357
+[; ;../usb/src/usb_device.c: 2357: }
+[e :UE 805 ]
+}
+"2380
+[; ;../usb/src/usb_device.c: 2380: static void USBCtrlEPService(void)
+[v _USBCtrlEPService `(v ~T0 @X0 1 sf ]
+"2381
+[; ;../usb/src/usb_device.c: 2381: {
+{
+[e :U _USBCtrlEPService ]
+[f ]
+"2386
+[; ;../usb/src/usb_device.c: 2386:         USBStatusStageTimeoutCounter = (uint8_t)45;
+[e = _USBStatusStageTimeoutCounter -> -> 45 `i `uc ]
+"2390
+[; ;../usb/src/usb_device.c: 2390:     if((USTATcopy.Val & ~0x02) == 0x00)
+[e $ ! == & -> . _USTATcopy 1 `i ~ -> 2 `i -> 0 `i 810  ]
+"2391
+[; ;../usb/src/usb_device.c: 2391:     {
+{
+"2394
+[; ;../usb/src/usb_device.c: 2394:             pBDTEntryEP0OutCurrent = (volatile BDT_ENTRY*)&BDT[(USTATcopy.Val & 0x7E)>>1];
+[e = _pBDTEntryEP0OutCurrent &U *U + &U _BDT * -> -> >> & -> . _USTATcopy 1 `i -> 126 `i -> 1 `i `ui `ux -> -> # *U &U _BDT `ui `ux ]
+"2402
+[; ;../usb/src/usb_device.c: 2402:         pBDTEntryEP0OutNext = pBDTEntryEP0OutCurrent;
+[e = _pBDTEntryEP0OutNext _pBDTEntryEP0OutCurrent ]
+"2404
+[; ;../usb/src/usb_device.c: 2404:         pBDTEntryEP0OutNext = (volatile BDT_ENTRY*)(((uint16_t)pBDTEntryEP0OutNext) ^ 0x0004);
+[e = _pBDTEntryEP0OutNext -> ^ -> -> _pBDTEntryEP0OutNext `us `ui -> -> 4 `i `ui `*VS655 ]
+"2407
+[; ;../usb/src/usb_device.c: 2407:         if(pBDTEntryEP0OutCurrent->STAT.PID == 0xD)
+[e $ ! == -> . . . . *U _pBDTEntryEP0OutCurrent 0 0 3 1 `i -> 13 `i 811  ]
+"2408
+[; ;../usb/src/usb_device.c: 2408:         {
+{
+"2413
+[; ;../usb/src/usb_device.c: 2413:             memcpy((uint8_t*)&SetupPkt, (uint8_t*)((void *)(pBDTEntryEP0OutCurrent->ADR)), 8);
+[e ( _memcpy (3 , , -> -> &U _SetupPkt `*uc `*v -> -> -> . . *U _pBDTEntryEP0OutCurrent 1 2 `*v `*uc `*Cv -> -> 8 `i `ui ]
+"2416
+[; ;../usb/src/usb_device.c: 2416:             USBCtrlTrfSetupHandler();
+[e ( _USBCtrlTrfSetupHandler ..  ]
+"2417
+[; ;../usb/src/usb_device.c: 2417:         }
+}
+[e $U 812  ]
+"2418
+[; ;../usb/src/usb_device.c: 2418:         else
+[e :U 811 ]
+"2419
+[; ;../usb/src/usb_device.c: 2419:         {
+{
+"2421
+[; ;../usb/src/usb_device.c: 2421:             USBCtrlTrfOutHandler();
+[e ( _USBCtrlTrfOutHandler ..  ]
+"2422
+[; ;../usb/src/usb_device.c: 2422:         }
+}
+[e :U 812 ]
+"2423
+[; ;../usb/src/usb_device.c: 2423:     }
+}
+[e $U 813  ]
+"2424
+[; ;../usb/src/usb_device.c: 2424:     else if((USTATcopy.Val & ~0x02) == 0x04)
+[e :U 810 ]
+[e $ ! == & -> . _USTATcopy 1 `i ~ -> 2 `i -> 4 `i 814  ]
+"2425
+[; ;../usb/src/usb_device.c: 2425:     {
+{
+"2428
+[; ;../usb/src/usb_device.c: 2428:         USBCtrlTrfInHandler();
+[e ( _USBCtrlTrfInHandler ..  ]
+"2429
+[; ;../usb/src/usb_device.c: 2429:     }
+}
+[e :U 814 ]
+[e :U 813 ]
+"2431
+[; ;../usb/src/usb_device.c: 2431: }
+[e :UE 809 ]
+}
+"2473
+[; ;../usb/src/usb_device.c: 2473: static void USBCtrlTrfSetupHandler(void)
+[v _USBCtrlTrfSetupHandler `(v ~T0 @X0 1 sf ]
+"2474
+[; ;../usb/src/usb_device.c: 2474: {
+{
+[e :U _USBCtrlTrfSetupHandler ]
+[f ]
+"2478
+[; ;../usb/src/usb_device.c: 2478:     shortPacketStatus = 0;
+[e = _shortPacketStatus -> -> 0 `i `uc ]
+"2479
+[; ;../usb/src/usb_device.c: 2479:     USBDeferStatusStagePacket = 0;
+[e = _USBDeferStatusStagePacket -> -> 0 `i `a ]
+"2480
+[; ;../usb/src/usb_device.c: 2480:     USBDeferINDataStagePackets = 0;
+[e = _USBDeferINDataStagePackets -> -> 0 `i `a ]
+"2481
+[; ;../usb/src/usb_device.c: 2481:     USBDeferOUTDataStagePackets = 0;
+[e = _USBDeferOUTDataStagePackets -> -> 0 `i `a ]
+"2482
+[; ;../usb/src/usb_device.c: 2482:     BothEP0OutUOWNsSet = 0;
+[e = _BothEP0OutUOWNsSet -> -> 0 `i `a ]
+"2483
+[; ;../usb/src/usb_device.c: 2483:     controlTransferState = 0;
+[e = _controlTransferState -> -> 0 `i `uc ]
+"2492
+[; ;../usb/src/usb_device.c: 2492:     pBDTEntryIn[0]->STAT.Val &= ~(0x80);
+[e =& . . . *U *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux 0 0 0 -> ~ -> 128 `i `Vuc ]
+"2494
+[; ;../usb/src/usb_device.c: 2494:     pBDTEntryIn[0] = (volatile BDT_ENTRY*)(((uint16_t)pBDTEntryIn[0]) ^ 0x0004);
+[e = *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux -> ^ -> -> *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux `us `ui -> -> 4 `i `ui `*VS655 ]
+"2495
+[; ;../usb/src/usb_device.c: 2495:     pBDTEntryIn[0]->STAT.Val &= ~(0x80);
+[e =& . . . *U *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux 0 0 0 -> ~ -> 128 `i `Vuc ]
+"2496
+[; ;../usb/src/usb_device.c: 2496:     pBDTEntryIn[0] = (volatile BDT_ENTRY*)(((uint16_t)pBDTEntryIn[0]) ^ 0x0004);
+[e = *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux -> ^ -> -> *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux `us `ui -> -> 4 `i `ui `*VS655 ]
+"2497
+[; ;../usb/src/usb_device.c: 2497:     pBDTEntryEP0OutNext->STAT.Val &= ~(0x80);
+[e =& . . . *U _pBDTEntryEP0OutNext 0 0 0 -> ~ -> 128 `i `Vuc ]
+"2499
+[; ;../usb/src/usb_device.c: 2499:     inPipes[0].info.Val = 0;
+[e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 1 -> -> 0 `i `uc ]
+"2500
+[; ;../usb/src/usb_device.c: 2500:     inPipes[0].wCount.Val = 0;
+[e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 0 -> -> 0 `i `us ]
+"2501
+[; ;../usb/src/usb_device.c: 2501:     outPipes[0].info.Val = 0;
+[e = . . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 1 1 -> -> 0 `i `uc ]
+"2502
+[; ;../usb/src/usb_device.c: 2502:     outPipes[0].wCount.Val = 0;
+[e = . . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 2 0 -> -> 0 `i `us ]
+"2508
+[; ;../usb/src/usb_device.c: 2508:     USBCheckStdRequest();
+[e ( _USBCheckStdRequest ..  ]
+"2509
+[; ;../usb/src/usb_device.c: 2509:     USER_USB_CALLBACK_EVENT_HANDLER((USB_EVENT)EVENT_EP0_REQUEST,0,0);
+[e ( _USER_USB_CALLBACK_EVENT_HANDLER (3 , , -> . `E5040 2 `E4972 -> -> 0 `i `*v -> -> 0 `i `us ]
+"2522
+[; ;../usb/src/usb_device.c: 2522:     USBCtrlEPServiceComplete();
+[e ( _USBCtrlEPServiceComplete ..  ]
+"2523
+[; ;../usb/src/usb_device.c: 2523: }
+[e :UE 815 ]
+}
+"2546
+[; ;../usb/src/usb_device.c: 2546: static void USBCtrlTrfOutHandler(void)
+[v _USBCtrlTrfOutHandler `(v ~T0 @X0 1 sf ]
+"2547
+[; ;../usb/src/usb_device.c: 2547: {
+{
+[e :U _USBCtrlTrfOutHandler ]
+[f ]
+"2548
+[; ;../usb/src/usb_device.c: 2548:     if(controlTransferState == 2)
+[e $ ! == -> _controlTransferState `i -> 2 `i 817  ]
+"2549
+[; ;../usb/src/usb_device.c: 2549:     {
+{
+"2550
+[; ;../usb/src/usb_device.c: 2550:         USBCtrlTrfRxService();
+[e ( _USBCtrlTrfRxService ..  ]
+"2551
+[; ;../usb/src/usb_device.c: 2551:     }
+}
+[e $U 818  ]
+"2552
+[; ;../usb/src/usb_device.c: 2552:     else
+[e :U 817 ]
+"2553
+[; ;../usb/src/usb_device.c: 2553:     {
+{
+"2556
+[; ;../usb/src/usb_device.c: 2556:         controlTransferState = 0;
+[e = _controlTransferState -> -> 0 `i `uc ]
+"2563
+[; ;../usb/src/usb_device.c: 2563:         if(BothEP0OutUOWNsSet == 0)
+[e $ ! == -> _BothEP0OutUOWNsSet `i -> 0 `i 819  ]
+"2564
+[; ;../usb/src/usb_device.c: 2564:         {
+{
+"2565
+[; ;../usb/src/usb_device.c: 2565:             pBDTEntryEP0OutNext->CNT = 8;
+[e = . . *U _pBDTEntryEP0OutNext 0 1 -> -> 8 `i `uc ]
+"2566
+[; ;../usb/src/usb_device.c: 2566:             pBDTEntryEP0OutNext->ADR = ((uint16_t)(&SetupPkt));
+[e = . . *U _pBDTEntryEP0OutNext 1 2 -> &U _SetupPkt `us ]
+"2567
+[; ;../usb/src/usb_device.c: 2567:             pBDTEntryEP0OutNext->STAT.Val = 0x00|(0x08 & 0x08)|0x04;
+[e = . . . *U _pBDTEntryEP0OutNext 0 0 0 -> | | -> 0 `i & -> 8 `i -> 8 `i -> 4 `i `uc ]
+"2568
+[; ;../usb/src/usb_device.c: 2568:             pBDTEntryEP0OutNext->STAT.Val |= 0x80;
+[e =| . . . *U _pBDTEntryEP0OutNext 0 0 0 -> -> 128 `i `Vuc ]
+"2569
+[; ;../usb/src/usb_device.c: 2569:         }
+}
+[e $U 820  ]
+"2570
+[; ;../usb/src/usb_device.c: 2570:         else
+[e :U 819 ]
+"2571
+[; ;../usb/src/usb_device.c: 2571:         {
+{
+"2572
+[; ;../usb/src/usb_device.c: 2572:             BothEP0OutUOWNsSet = 0;
+[e = _BothEP0OutUOWNsSet -> -> 0 `i `a ]
+"2573
+[; ;../usb/src/usb_device.c: 2573:         }
+}
+[e :U 820 ]
+"2574
+[; ;../usb/src/usb_device.c: 2574:     }
+}
+[e :U 818 ]
+"2575
+[; ;../usb/src/usb_device.c: 2575: }
+[e :UE 816 ]
+}
+"2600
+[; ;../usb/src/usb_device.c: 2600: static void USBCtrlTrfInHandler(void)
+[v _USBCtrlTrfInHandler `(v ~T0 @X0 1 sf ]
+"2601
+[; ;../usb/src/usb_device.c: 2601: {
+{
+[e :U _USBCtrlTrfInHandler ]
+[f ]
+"2602
+[; ;../usb/src/usb_device.c: 2602:     uint8_t lastDTS;
+[v _lastDTS `uc ~T0 @X0 1 a ]
+"2604
+[; ;../usb/src/usb_device.c: 2604:     lastDTS = pBDTEntryIn[0]->STAT.DTS;
+[e = _lastDTS . . . . *U *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux 0 0 1 6 ]
+"2607
+[; ;../usb/src/usb_device.c: 2607:     pBDTEntryIn[0] = (volatile BDT_ENTRY*)(((uint16_t)pBDTEntryIn[0]) ^ 0x0004);
+[e = *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux -> ^ -> -> *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux `us `ui -> -> 4 `i `ui `*VS655 ]
+"2612
+[; ;../usb/src/usb_device.c: 2612:     if(USBDeviceState == ADR_PENDING_STATE)
+[e $ ! == -> _USBDeviceState `ui -> . `E5031 4 `ui 822  ]
+"2613
+[; ;../usb/src/usb_device.c: 2613:     {
+{
+"2614
+[; ;../usb/src/usb_device.c: 2614:         UADDR = (SetupPkt.bDevADR & 0x7F);
+[e = _UADDR -> & -> . . _SetupPkt 5 2 `i -> 127 `i `uc ]
+"2615
+[; ;../usb/src/usb_device.c: 2615:         if(UADDR != 0u)
+[e $ ! != -> _UADDR `ui -> 0 `ui 823  ]
+"2616
+[; ;../usb/src/usb_device.c: 2616:         {
+{
+"2617
+[; ;../usb/src/usb_device.c: 2617:             USBDeviceState=ADDRESS_STATE;
+[e = _USBDeviceState . `E5031 5 ]
+"2618
+[; ;../usb/src/usb_device.c: 2618:         }
+}
+[e $U 824  ]
+"2619
+[; ;../usb/src/usb_device.c: 2619:         else
+[e :U 823 ]
+"2620
+[; ;../usb/src/usb_device.c: 2620:         {
+{
+"2621
+[; ;../usb/src/usb_device.c: 2621:             USBDeviceState=DEFAULT_STATE;
+[e = _USBDeviceState . `E5031 3 ]
+"2622
+[; ;../usb/src/usb_device.c: 2622:         }
+}
+[e :U 824 ]
+"2623
+[; ;../usb/src/usb_device.c: 2623:     }
+}
+[e :U 822 ]
+"2626
+[; ;../usb/src/usb_device.c: 2626:     if(controlTransferState == 1)
+[e $ ! == -> _controlTransferState `i -> 1 `i 825  ]
+"2627
+[; ;../usb/src/usb_device.c: 2627:     {
+{
+"2628
+[; ;../usb/src/usb_device.c: 2628:         pBDTEntryIn[0]->ADR = ((uint16_t)(CtrlTrfData));
+[e = . . *U *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux 1 2 -> &U _CtrlTrfData `us ]
+"2629
+[; ;../usb/src/usb_device.c: 2629:         USBCtrlTrfTxService();
+[e ( _USBCtrlTrfTxService ..  ]
+"2635
+[; ;../usb/src/usb_device.c: 2635:         if(shortPacketStatus == 2)
+[e $ ! == -> _shortPacketStatus `i -> 2 `i 826  ]
+"2636
+[; ;../usb/src/usb_device.c: 2636:         {
+{
+"2639
+[; ;../usb/src/usb_device.c: 2639:             pBDTEntryIn[0]->STAT.Val = 0x04;
+[e = . . . *U *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux 0 0 0 -> -> 4 `i `uc ]
+"2640
+[; ;../usb/src/usb_device.c: 2640:             pBDTEntryIn[0]->STAT.Val |= 0x80;
+[e =| . . . *U *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux 0 0 0 -> -> 128 `i `Vuc ]
+"2641
+[; ;../usb/src/usb_device.c: 2641:         }
+}
+[e $U 827  ]
+"2642
+[; ;../usb/src/usb_device.c: 2642:         else
+[e :U 826 ]
+"2643
+[; ;../usb/src/usb_device.c: 2643:         {
+{
+"2644
+[; ;../usb/src/usb_device.c: 2644:             if(lastDTS == 0)
+[e $ ! == -> _lastDTS `i -> 0 `i 828  ]
+"2645
+[; ;../usb/src/usb_device.c: 2645:             {
+{
+"2646
+[; ;../usb/src/usb_device.c: 2646:                 pBDTEntryIn[0]->STAT.Val = 0x40|(0x08 & 0x08);
+[e = . . . *U *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux 0 0 0 -> | -> 64 `i & -> 8 `i -> 8 `i `uc ]
+"2647
+[; ;../usb/src/usb_device.c: 2647:                 pBDTEntryIn[0]->STAT.Val |= 0x80;
+[e =| . . . *U *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux 0 0 0 -> -> 128 `i `Vuc ]
+"2648
+[; ;../usb/src/usb_device.c: 2648:             }
+}
+[e $U 829  ]
+"2649
+[; ;../usb/src/usb_device.c: 2649:             else
+[e :U 828 ]
+"2650
+[; ;../usb/src/usb_device.c: 2650:             {
+{
+"2651
+[; ;../usb/src/usb_device.c: 2651:                 pBDTEntryIn[0]->STAT.Val = 0x00|(0x08 & 0x08);
+[e = . . . *U *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux 0 0 0 -> | -> 0 `i & -> 8 `i -> 8 `i `uc ]
+"2652
+[; ;../usb/src/usb_device.c: 2652:                 pBDTEntryIn[0]->STAT.Val |= 0x80;
+[e =| . . . *U *U + &U _pBDTEntryIn * -> -> -> 0 `i `ui `ux -> -> # *U &U _pBDTEntryIn `ui `ux 0 0 0 -> -> 128 `i `Vuc ]
+"2653
+[; ;../usb/src/usb_device.c: 2653:             }
+}
+[e :U 829 ]
+"2654
+[; ;../usb/src/usb_device.c: 2654:         }
+}
+[e :U 827 ]
+"2655
+[; ;../usb/src/usb_device.c: 2655:     }
+}
+[e $U 830  ]
+"2656
+[; ;../usb/src/usb_device.c: 2656:  else
+[e :U 825 ]
+"2657
+[; ;../usb/src/usb_device.c: 2657:  {
+{
+"2661
+[; ;../usb/src/usb_device.c: 2661:         if(outPipes[0].info.bits.busy == 1)
+[e $ ! == -> . . . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 1 0 1 `i -> 1 `i 831  ]
+"2662
+[; ;../usb/src/usb_device.c: 2662:         {
+{
+"2663
+[; ;../usb/src/usb_device.c: 2663:             if(outPipes[0].pFunc != ((void*)0))
+[e $ ! != . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 3 -> -> -> 0 `i `*v `*F5419 832  ]
+"2664
+[; ;../usb/src/usb_device.c: 2664:             {
+{
+"2665
+[; ;../usb/src/usb_device.c: 2665:                 outPipes[0].pFunc();
+[e ( *U . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 3 ..  ]
+"2666
+[; ;../usb/src/usb_device.c: 2666:             }
+}
+[e :U 832 ]
+"2667
+[; ;../usb/src/usb_device.c: 2667:             outPipes[0].info.bits.busy = 0;
+[e = . . . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 1 0 1 -> -> 0 `i `uc ]
+"2668
+[; ;../usb/src/usb_device.c: 2668:         }
+}
+[e :U 831 ]
+"2670
+[; ;../usb/src/usb_device.c: 2670:         controlTransferState = 0;
+[e = _controlTransferState -> -> 0 `i `uc ]
+"2673
+[; ;../usb/src/usb_device.c: 2673:  }
+}
+[e :U 830 ]
+"2675
+[; ;../usb/src/usb_device.c: 2675: }
+[e :UE 821 ]
+}
+"2694
+[; ;../usb/src/usb_device.c: 2694: static void USBCheckStdRequest(void)
+[v _USBCheckStdRequest `(v ~T0 @X0 1 sf ]
+"2695
+[; ;../usb/src/usb_device.c: 2695: {
+{
+[e :U _USBCheckStdRequest ]
+[f ]
+"2696
+[; ;../usb/src/usb_device.c: 2696:     if(SetupPkt.RequestType != (0x00>>5)) return;
+[e $ ! != -> . . _SetupPkt 2 1 `i >> -> 0 `i -> 5 `i 834  ]
+[e $UE 833  ]
+[e :U 834 ]
+"2698
+[; ;../usb/src/usb_device.c: 2698:     switch(SetupPkt.bRequest)
+[e $U 836  ]
+"2699
+[; ;../usb/src/usb_device.c: 2699:     {
+{
+"2700
+[; ;../usb/src/usb_device.c: 2700:         case 5:
+[e :U 837 ]
+"2701
+[; ;../usb/src/usb_device.c: 2701:             inPipes[0].info.bits.busy = 1;
+[e = . . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 0 3 -> -> 1 `i `uc ]
+"2702
+[; ;../usb/src/usb_device.c: 2702:             USBDeviceState = ADR_PENDING_STATE;
+[e = _USBDeviceState . `E5031 4 ]
+"2704
+[; ;../usb/src/usb_device.c: 2704:             break;
+[e $U 835  ]
+"2705
+[; ;../usb/src/usb_device.c: 2705:         case 6:
+[e :U 838 ]
+"2706
+[; ;../usb/src/usb_device.c: 2706:             USBStdGetDscHandler();
+[e ( _USBStdGetDscHandler ..  ]
+"2707
+[; ;../usb/src/usb_device.c: 2707:             break;
+[e $U 835  ]
+"2708
+[; ;../usb/src/usb_device.c: 2708:         case 9:
+[e :U 839 ]
+"2709
+[; ;../usb/src/usb_device.c: 2709:             USBStdSetCfgHandler();
+[e ( _USBStdSetCfgHandler ..  ]
+"2710
+[; ;../usb/src/usb_device.c: 2710:             break;
+[e $U 835  ]
+"2711
+[; ;../usb/src/usb_device.c: 2711:         case 8:
+[e :U 840 ]
+"2712
+[; ;../usb/src/usb_device.c: 2712:             inPipes[0].pSrc.bRam = (uint8_t*)&USBActiveConfiguration;
+[e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 0 -> &U _USBActiveConfiguration `*uc ]
+"2713
+[; ;../usb/src/usb_device.c: 2713:             inPipes[0].info.bits.ctrl_trf_mem = 0x01;
+[e = . . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 0 0 -> -> 1 `i `uc ]
+"2714
+[; ;../usb/src/usb_device.c: 2714:             inPipes[0].wCount.v[0] = 1;
+[e = *U + &U . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 1 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 1 `ui `ux -> -> 1 `i `uc ]
+"2715
+[; ;../usb/src/usb_device.c: 2715:             inPipes[0].info.bits.busy = 1;
+[e = . . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 0 3 -> -> 1 `i `uc ]
+"2716
+[; ;../usb/src/usb_device.c: 2716:             break;
+[e $U 835  ]
+"2717
+[; ;../usb/src/usb_device.c: 2717:         case 0:
+[e :U 841 ]
+"2718
+[; ;../usb/src/usb_device.c: 2718:             USBStdGetStatusHandler();
+[e ( _USBStdGetStatusHandler ..  ]
+"2719
+[; ;../usb/src/usb_device.c: 2719:             break;
+[e $U 835  ]
+"2720
+[; ;../usb/src/usb_device.c: 2720:         case 1:
+[e :U 842 ]
+"2721
+[; ;../usb/src/usb_device.c: 2721:         case 3:
+[e :U 843 ]
+"2722
+[; ;../usb/src/usb_device.c: 2722:             USBStdFeatureReqHandler();
+[e ( _USBStdFeatureReqHandler ..  ]
+"2723
+[; ;../usb/src/usb_device.c: 2723:             break;
+[e $U 835  ]
+"2724
+[; ;../usb/src/usb_device.c: 2724:         case 10:
+[e :U 844 ]
+"2725
+[; ;../usb/src/usb_device.c: 2725:             inPipes[0].pSrc.bRam = (uint8_t*)&USBAlternateInterface[SetupPkt.bIntfID];
+[e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 0 -> &U *U + &U _USBAlternateInterface * -> . . _SetupPkt 7 4 `ux -> -> # *U &U _USBAlternateInterface `ui `ux `*uc ]
+"2726
+[; ;../usb/src/usb_device.c: 2726:             inPipes[0].info.bits.ctrl_trf_mem = 0x01;
+[e = . . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 0 0 -> -> 1 `i `uc ]
+"2727
+[; ;../usb/src/usb_device.c: 2727:             inPipes[0].wCount.v[0] = 1;
+[e = *U + &U . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 1 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 1 `ui `ux -> -> 1 `i `uc ]
+"2728
+[; ;../usb/src/usb_device.c: 2728:             inPipes[0].info.bits.busy = 1;
+[e = . . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 0 3 -> -> 1 `i `uc ]
+"2729
+[; ;../usb/src/usb_device.c: 2729:             break;
+[e $U 835  ]
+"2730
+[; ;../usb/src/usb_device.c: 2730:         case 11:
+[e :U 845 ]
+"2731
+[; ;../usb/src/usb_device.c: 2731:             inPipes[0].info.bits.busy = 1;
+[e = . . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 0 3 -> -> 1 `i `uc ]
+"2732
+[; ;../usb/src/usb_device.c: 2732:             USBAlternateInterface[SetupPkt.bIntfID] = SetupPkt.bAltID;
+[e = *U + &U _USBAlternateInterface * -> . . _SetupPkt 7 4 `ux -> -> # *U &U _USBAlternateInterface `ui `ux . . _SetupPkt 7 2 ]
+"2733
+[; ;../usb/src/usb_device.c: 2733:             break;
+[e $U 835  ]
+"2734
+[; ;../usb/src/usb_device.c: 2734:         case 7:
+[e :U 846 ]
+"2735
+[; ;../usb/src/usb_device.c: 2735:             USER_USB_CALLBACK_EVENT_HANDLER((USB_EVENT)EVENT_SET_DESCRIPTOR,0,0);
+[e ( _USER_USB_CALLBACK_EVENT_HANDLER (3 , , -> . `E5040 1 `E4972 -> -> 0 `i `*v -> -> 0 `i `us ]
+"2736
+[; ;../usb/src/usb_device.c: 2736:             break;
+[e $U 835  ]
+"2737
+[; ;../usb/src/usb_device.c: 2737:         case 12:
+[e :U 847 ]
+"2738
+[; ;../usb/src/usb_device.c: 2738:         default:
+[e :U 848 ]
+"2739
+[; ;../usb/src/usb_device.c: 2739:             break;
+[e $U 835  ]
+"2740
+[; ;../usb/src/usb_device.c: 2740:     }
+}
+[e $U 835  ]
+[e :U 836 ]
+[e [\ -> . . _SetupPkt 0 1 `i , $ -> 5 `i 837
+ , $ -> 6 `i 838
+ , $ -> 9 `i 839
+ , $ -> 8 `i 840
+ , $ -> 0 `i 841
+ , $ -> 1 `i 842
+ , $ -> 3 `i 843
+ , $ -> 10 `i 844
+ , $ -> 11 `i 845
+ , $ -> 7 `i 846
+ , $ -> 12 `i 847
+ 848 ]
+[e :U 835 ]
+"2741
+[; ;../usb/src/usb_device.c: 2741: }
+[e :UE 833 ]
+}
+"2762
+[; ;../usb/src/usb_device.c: 2762: static void USBStdFeatureReqHandler(void)
+[v _USBStdFeatureReqHandler `(v ~T0 @X0 1 sf ]
+"2763
+[; ;../usb/src/usb_device.c: 2763: {
+{
+[e :U _USBStdFeatureReqHandler ]
+[f ]
+"2764
+[; ;../usb/src/usb_device.c: 2764:     BDT_ENTRY *p;
+[v _p `*S655 ~T0 @X0 1 a ]
+"2765
+[; ;../usb/src/usb_device.c: 2765:     EP_STATUS current_ep_data;
+[v _current_ep_data `S662 ~T0 @X0 1 a ]
+"2769
+[; ;../usb/src/usb_device.c: 2769:         unsigned char* pUEP;
+[v _pUEP `*uc ~T0 @X0 1 a ]
+"2773
+[; ;../usb/src/usb_device.c: 2773:     if((SetupPkt.bFeature == 1)&&
+[e $ ! && == -> . . _SetupPkt 2 4 `i -> 1 `i == -> . . _SetupPkt 2 0 `i -> 0 `i 850  ]
+"2775
+[; ;../usb/src/usb_device.c: 2775:     {
+{
+"2776
+[; ;../usb/src/usb_device.c: 2776:         inPipes[0].info.bits.busy = 1;
+[e = . . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 0 3 -> -> 1 `i `uc ]
+"2777
+[; ;../usb/src/usb_device.c: 2777:         if(SetupPkt.bRequest == 3)
+[e $ ! == -> . . _SetupPkt 0 1 `i -> 3 `i 851  ]
+"2778
+[; ;../usb/src/usb_device.c: 2778:             RemoteWakeup = 1;
+[e = _RemoteWakeup -> -> 1 `i `a ]
+[e $U 852  ]
+"2779
+[; ;../usb/src/usb_device.c: 2779:         else
+[e :U 851 ]
+"2780
+[; ;../usb/src/usb_device.c: 2780:             RemoteWakeup = 0;
+[e = _RemoteWakeup -> -> 0 `i `a ]
+[e :U 852 ]
+"2781
+[; ;../usb/src/usb_device.c: 2781:     }
+}
+[e :U 850 ]
+"2784
+[; ;../usb/src/usb_device.c: 2784:     if((SetupPkt.bFeature == 0)&&
+[e $ ! && && && && == -> . . _SetupPkt 2 4 `i -> 0 `i == -> . . _SetupPkt 2 0 `i -> 2 `i != -> . . _SetupPkt 9 4 `i -> 0 `i <= -> . . _SetupPkt 9 4 `i -> 1 `i == -> _USBDeviceState `ui -> . `E5031 6 `ui 853  ]
+"2788
+[; ;../usb/src/usb_device.c: 2788:     {
+{
+"2791
+[; ;../usb/src/usb_device.c: 2791:   inPipes[0].info.bits.busy = 1;
+[e = . . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 0 3 -> -> 1 `i `uc ]
+"2794
+[; ;../usb/src/usb_device.c: 2794:         if(SetupPkt.EPDir == 0)
+[e $ ! == -> . . _SetupPkt 9 6 `i -> 0 `i 854  ]
+"2795
+[; ;../usb/src/usb_device.c: 2795:         {
+{
+"2796
+[; ;../usb/src/usb_device.c: 2796:             p = (BDT_ENTRY*)pBDTEntryOut[SetupPkt.EPNum];
+[e = _p -> *U + &U _pBDTEntryOut * -> . . _SetupPkt 9 4 `ux -> -> # *U &U _pBDTEntryOut `ui `ux `*S655 ]
+"2797
+[; ;../usb/src/usb_device.c: 2797:             current_ep_data.Val = ep_data_out[SetupPkt.EPNum].Val;
+[e = . _current_ep_data 1 . *U + &U _ep_data_out * -> . . _SetupPkt 9 4 `ux -> -> # *U &U _ep_data_out `ui `ux 1 ]
+"2798
+[; ;../usb/src/usb_device.c: 2798:         }
+}
+[e $U 855  ]
+"2799
+[; ;../usb/src/usb_device.c: 2799:         else
+[e :U 854 ]
+"2800
+[; ;../usb/src/usb_device.c: 2800:         {
+{
+"2801
+[; ;../usb/src/usb_device.c: 2801:             p = (BDT_ENTRY*)pBDTEntryIn[SetupPkt.EPNum];
+[e = _p -> *U + &U _pBDTEntryIn * -> . . _SetupPkt 9 4 `ux -> -> # *U &U _pBDTEntryIn `ui `ux `*S655 ]
+"2802
+[; ;../usb/src/usb_device.c: 2802:             current_ep_data.Val = ep_data_in[SetupPkt.EPNum].Val;
+[e = . _current_ep_data 1 . *U + &U _ep_data_in * -> . . _SetupPkt 9 4 `ux -> -> # *U &U _ep_data_in `ui `ux 1 ]
+"2803
+[; ;../usb/src/usb_device.c: 2803:         }
+}
+[e :U 855 ]
+"2809
+[; ;../usb/src/usb_device.c: 2809:             if(current_ep_data.bits.ping_pong_state == 0)
+[e $ ! == -> . . _current_ep_data 0 0 `i -> 0 `i 856  ]
+"2810
+[; ;../usb/src/usb_device.c: 2810:             {
+{
+"2811
+[; ;../usb/src/usb_device.c: 2811:                 p = (BDT_ENTRY*)(((uint16_t)p) & (~0x0004));
+[e = _p -> & -> -> _p `us `ui -> ~ -> 4 `i `ui `*S655 ]
+"2812
+[; ;../usb/src/usb_device.c: 2812:             }
+}
+[e $U 857  ]
+"2813
+[; ;../usb/src/usb_device.c: 2813:             else
+[e :U 856 ]
+"2814
+[; ;../usb/src/usb_device.c: 2814:             {
+{
+"2815
+[; ;../usb/src/usb_device.c: 2815:                 p = (BDT_ENTRY*)(((uint16_t)p) | 0x0004);
+[e = _p -> | -> -> _p `us `ui -> -> 4 `i `ui `*S655 ]
+"2816
+[; ;../usb/src/usb_device.c: 2816:             }
+}
+[e :U 857 ]
+"2821
+[; ;../usb/src/usb_device.c: 2821:         if(SetupPkt.EPDir == 0)
+[e $ ! == -> . . _SetupPkt 9 6 `i -> 0 `i 858  ]
+"2822
+[; ;../usb/src/usb_device.c: 2822:         {
+{
+"2823
+[; ;../usb/src/usb_device.c: 2823:             pBDTEntryOut[SetupPkt.EPNum] = (volatile BDT_ENTRY *)p;
+[e = *U + &U _pBDTEntryOut * -> . . _SetupPkt 9 4 `ux -> -> # *U &U _pBDTEntryOut `ui `ux -> _p `*VS655 ]
+"2824
+[; ;../usb/src/usb_device.c: 2824:         }
+}
+[e $U 859  ]
+"2825
+[; ;../usb/src/usb_device.c: 2825:         else
+[e :U 858 ]
+"2826
+[; ;../usb/src/usb_device.c: 2826:         {
+{
+"2827
+[; ;../usb/src/usb_device.c: 2827:             pBDTEntryIn[SetupPkt.EPNum] = (volatile BDT_ENTRY *)p;
+[e = *U + &U _pBDTEntryIn * -> . . _SetupPkt 9 4 `ux -> -> # *U &U _pBDTEntryIn `ui `ux -> _p `*VS655 ]
+"2828
+[; ;../usb/src/usb_device.c: 2828:         }
+}
+[e :U 859 ]
+"2831
+[; ;../usb/src/usb_device.c: 2831:         if(SetupPkt.bRequest == 3)
+[e $ ! == -> . . _SetupPkt 0 1 `i -> 3 `i 860  ]
+"2832
+[; ;../usb/src/usb_device.c: 2832:         {
+{
+"2833
+[; ;../usb/src/usb_device.c: 2833:             if(p->STAT.UOWN == 1)
+[e $ ! == -> . . . . *U _p 0 0 1 7 `i -> 1 `i 861  ]
+"2834
+[; ;../usb/src/usb_device.c: 2834:             {
+{
+"2837
+[; ;../usb/src/usb_device.c: 2837:                 if(SetupPkt.EPDir == 0)
+[e $ ! == -> . . _SetupPkt 9 6 `i -> 0 `i 862  ]
+"2838
+[; ;../usb/src/usb_device.c: 2838:                 {
+{
+"2839
+[; ;../usb/src/usb_device.c: 2839:                     ep_data_out[SetupPkt.EPNum].bits.transfer_terminated = 1;
+[e = . . *U + &U _ep_data_out * -> . . _SetupPkt 9 4 `ux -> -> # *U &U _ep_data_out `ui `ux 0 1 -> -> 1 `i `uc ]
+"2840
+[; ;../usb/src/usb_device.c: 2840:                 }
+}
+[e $U 863  ]
+"2841
+[; ;../usb/src/usb_device.c: 2841:                 else
+[e :U 862 ]
+"2842
+[; ;../usb/src/usb_device.c: 2842:                 {
+{
+"2843
+[; ;../usb/src/usb_device.c: 2843:                     ep_data_in[SetupPkt.EPNum].bits.transfer_terminated = 1;
+[e = . . *U + &U _ep_data_in * -> . . _SetupPkt 9 4 `ux -> -> # *U &U _ep_data_in `ui `ux 0 1 -> -> 1 `i `uc ]
+"2844
+[; ;../usb/src/usb_device.c: 2844:                 }
+}
+[e :U 863 ]
+"2845
+[; ;../usb/src/usb_device.c: 2845:             }
+}
+[e :U 861 ]
+"2848
+[; ;../usb/src/usb_device.c: 2848:             p->STAT.Val |= 0x04;
+[e =| . . . *U _p 0 0 0 -> -> 4 `i `uc ]
+"2849
+[; ;../usb/src/usb_device.c: 2849:             p->STAT.Val |= 0x80;
+[e =| . . . *U _p 0 0 0 -> -> 128 `i `uc ]
+"2850
+[; ;../usb/src/usb_device.c: 2850:         }
+}
+[e $U 864  ]
+"2851
+[; ;../usb/src/usb_device.c: 2851:         else
+[e :U 860 ]
+"2852
+[; ;../usb/src/usb_device.c: 2852:         {
+{
+"2856
+[; ;../usb/src/usb_device.c: 2856:                 p = (BDT_ENTRY*)(((uint16_t)p) ^ 0x0004);
+[e = _p -> ^ -> -> _p `us `ui -> -> 4 `i `ui `*S655 ]
+"2858
+[; ;../usb/src/usb_device.c: 2858:                 if(p->STAT.UOWN == 1)
+[e $ ! == -> . . . . *U _p 0 0 1 7 `i -> 1 `i 865  ]
+"2859
+[; ;../usb/src/usb_device.c: 2859:                 {
+{
+"2862
+[; ;../usb/src/usb_device.c: 2862:                     p->STAT.Val &= (~0x80);
+[e =& . . . *U _p 0 0 0 -> ~ -> 128 `i `uc ]
+"2863
+[; ;../usb/src/usb_device.c: 2863:                     p->STAT.Val |= 0x40;
+[e =| . . . *U _p 0 0 0 -> -> 64 `i `uc ]
+"2864
+[; ;../usb/src/usb_device.c: 2864:                     USER_USB_CALLBACK_EVENT_HANDLER((USB_EVENT)EVENT_TRANSFER_TERMINATED,p,sizeof(p));
+[e ( _USER_USB_CALLBACK_EVENT_HANDLER (3 , , -> . `E5040 4 `E4972 -> _p `*v -> -> # _p `ui `us ]
+"2865
+[; ;../usb/src/usb_device.c: 2865:                 }
+}
+[e $U 866  ]
+"2866
+[; ;../usb/src/usb_device.c: 2866:                 else
+[e :U 865 ]
+"2867
+[; ;../usb/src/usb_device.c: 2867:                 {
+{
+"2869
+[; ;../usb/src/usb_device.c: 2869:      p->STAT.Val |= 0x40;
+[e =| . . . *U _p 0 0 0 -> -> 64 `i `uc ]
+"2870
+[; ;../usb/src/usb_device.c: 2870:                 }
+}
+[e :U 866 ]
+"2874
+[; ;../usb/src/usb_device.c: 2874:                 p = (BDT_ENTRY*)(((uint16_t)p) ^ 0x0004);
+[e = _p -> ^ -> -> _p `us `ui -> -> 4 `i `ui `*S655 ]
+"2880
+[; ;../usb/src/usb_device.c: 2880:                 if((current_ep_data.bits.transfer_terminated != 0) || (p->STAT.UOWN == 1))
+[e $ ! || != -> . . _current_ep_data 0 1 `i -> 0 `i == -> . . . . *U _p 0 0 1 7 `i -> 1 `i 867  ]
+"2881
+[; ;../usb/src/usb_device.c: 2881:                 {
+{
+"2882
+[; ;../usb/src/usb_device.c: 2882:                     if(SetupPkt.EPDir == 0)
+[e $ ! == -> . . _SetupPkt 9 6 `i -> 0 `i 868  ]
+"2883
+[; ;../usb/src/usb_device.c: 2883:                     {
+{
+"2884
+[; ;../usb/src/usb_device.c: 2884:                         ep_data_out[SetupPkt.EPNum].bits.transfer_terminated = 0;
+[e = . . *U + &U _ep_data_out * -> . . _SetupPkt 9 4 `ux -> -> # *U &U _ep_data_out `ui `ux 0 1 -> -> 0 `i `uc ]
+"2885
+[; ;../usb/src/usb_device.c: 2885:                     }
+}
+[e $U 869  ]
+"2886
+[; ;../usb/src/usb_device.c: 2886:                     else
+[e :U 868 ]
+"2887
+[; ;../usb/src/usb_device.c: 2887:                     {
+{
+"2888
+[; ;../usb/src/usb_device.c: 2888:                         ep_data_in[SetupPkt.EPNum].bits.transfer_terminated = 0;
+[e = . . *U + &U _ep_data_in * -> . . _SetupPkt 9 4 `ux -> -> # *U &U _ep_data_in `ui `ux 0 1 -> -> 0 `i `uc ]
+"2889
+[; ;../usb/src/usb_device.c: 2889:                     }
+}
+[e :U 869 ]
+"2891
+[; ;../usb/src/usb_device.c: 2891:                     p->STAT.Val &= ~(0x80 | 0x40 | 0x04);
+[e =& . . . *U _p 0 0 0 -> ~ | | -> 128 `i -> 64 `i -> 4 `i `uc ]
+"2894
+[; ;../usb/src/usb_device.c: 2894:                     USER_USB_CALLBACK_EVENT_HANDLER((USB_EVENT)EVENT_TRANSFER_TERMINATED,p,sizeof(p));
+[e ( _USER_USB_CALLBACK_EVENT_HANDLER (3 , , -> . `E5040 4 `E4972 -> _p `*v -> -> # _p `ui `us ]
+"2895
+[; ;../usb/src/usb_device.c: 2895:                 }
+}
+[e $U 870  ]
+"2896
+[; ;../usb/src/usb_device.c: 2896:                 else
+[e :U 867 ]
+"2897
+[; ;../usb/src/usb_device.c: 2897:                 {
+{
+"2899
+[; ;../usb/src/usb_device.c: 2899:                     p->STAT.Val &= ~(0x80 | 0x40 | 0x04);
+[e =& . . . *U _p 0 0 0 -> ~ | | -> 128 `i -> 64 `i -> 4 `i `uc ]
+"2900
+[; ;../usb/src/usb_device.c: 2900:                 }
+}
+[e :U 870 ]
+"2947
+[; ;../usb/src/usb_device.c: 2947:                 pUEP = (unsigned char*)(&UEP0+SetupPkt.EPNum);
+[e = _pUEP -> + &U _UEP0 * -> -> . . _SetupPkt 9 4 `i `x -> -> # *U &U _UEP0 `i `x `*uc ]
+"2951
+[; ;../usb/src/usb_device.c: 2951:             *pUEP &= ~0x0001;
+[e =& *U _pUEP -> ~ -> 1 `i `uc ]
+"2952
+[; ;../usb/src/usb_device.c: 2952:         }
+}
+[e :U 864 ]
+"2953
+[; ;../usb/src/usb_device.c: 2953:     }
+}
+[e :U 853 ]
+"2954
+[; ;../usb/src/usb_device.c: 2954: }
+[e :UE 849 ]
+}
+"2999
+[; ;../usb/src/usb_device.c: 2999: void USBIncrement1msInternalTimers(void)
+[v _USBIncrement1msInternalTimers `(v ~T0 @X0 1 ef ]
+"3000
+[; ;../usb/src/usb_device.c: 3000: {
+{
+[e :U _USBIncrement1msInternalTimers ]
+[f ]
+"3007
+[; ;../usb/src/usb_device.c: 3007:     USB1msTickCount++;
+[e ++ _USB1msTickCount -> -> 1 `i `Vul ]
+"3008
+[; ;../usb/src/usb_device.c: 3008:     if(USBBusIsSuspended == 0)
+[e $ ! == -> _USBBusIsSuspended `i -> 0 `i 872  ]
+"3009
+[; ;../usb/src/usb_device.c: 3009:     {
+{
+"3010
+[; ;../usb/src/usb_device.c: 3010:         USBTicksSinceSuspendEnd++;
+[e ++ _USBTicksSinceSuspendEnd -> -> 1 `i `Vuc ]
+"3012
+[; ;../usb/src/usb_device.c: 3012:         if(USBTicksSinceSuspendEnd == 0)
+[e $ ! == -> _USBTicksSinceSuspendEnd `i -> 0 `i 873  ]
+"3013
+[; ;../usb/src/usb_device.c: 3013:         {
+{
+"3014
+[; ;../usb/src/usb_device.c: 3014:             USBTicksSinceSuspendEnd = 255;
+[e = _USBTicksSinceSuspendEnd -> -> 255 `i `uc ]
+"3015
+[; ;../usb/src/usb_device.c: 3015:         }
+}
+[e :U 873 ]
+"3016
+[; ;../usb/src/usb_device.c: 3016:     }
+}
+[e :U 872 ]
+"3017
+[; ;../usb/src/usb_device.c: 3017: }
+[e :UE 871 ]
+}
+"3078
+[; ;../usb/src/usb_device.c: 3078: uint32_t USBGet1msTickCount(void)
+[v _USBGet1msTickCount `(ul ~T0 @X0 1 ef ]
+"3079
+[; ;../usb/src/usb_device.c: 3079: {
+{
+[e :U _USBGet1msTickCount ]
+[f ]
+"3081
+[; ;../usb/src/usb_device.c: 3081:         uint32_t localContextValue;
+[v _localContextValue `ul ~T0 @X0 1 a ]
+"3086
+[; ;../usb/src/usb_device.c: 3086:         do
+[e :U 877 ]
+"3087
+[; ;../usb/src/usb_device.c: 3087:         {
+{
+"3088
+[; ;../usb/src/usb_device.c: 3088:             localContextValue = USB1msTickCount;
+[e = _localContextValue _USB1msTickCount ]
+"3089
+[; ;../usb/src/usb_device.c: 3089:         }while(localContextValue != USB1msTickCount);
+}
+[e $ != _localContextValue _USB1msTickCount 877  ]
+[e :U 876 ]
+"3091
+[; ;../usb/src/usb_device.c: 3091:         return localContextValue;
+[e ) _localContextValue ]
+[e $UE 874  ]
+"3096
+[; ;../usb/src/usb_device.c: 3096: }
+[e :UE 874 ]
+}
